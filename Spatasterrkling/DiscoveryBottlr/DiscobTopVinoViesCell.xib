@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -62,6 +63,12 @@
                 <constraint firstItem="CLO-Tx-I4K" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="16" id="zn8-QA-Sgx"/>
             </constraints>
             <size key="customSize" width="276" height="250"/>
+            <connections>
+                <outlet property="aerationEffect" destination="t8Z-Vu-JDJ" id="g4m-h2-QK1"/>
+                <outlet property="flawDetection" destination="4zP-cy-Z3I" id="Gce-Zz-13Z"/>
+                <outlet property="qualityIndicator" destination="CLO-Tx-I4K" id="1Yt-3a-7cm"/>
+                <outlet property="temperatureImpact" destination="Ww5-DZ-Dqp" id="uXI-x1-bn3"/>
+            </connections>
             <point key="canvasLocation" x="18.320610687022899" y="57.04225352112676"/>
         </collectionViewCell>
     </objects>

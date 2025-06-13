@@ -9,21 +9,38 @@ import UIKit
 
 class TastingCompanionontroller: UIViewController {
 
+    
+    @IBOutlet weak var glassCollection: UIImageView!
+    
+    
+    @IBOutlet weak var corkMemory: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        moodSelection()
+        
+      
+        corkMemory.text = UserDefaults.standard.object(forKey: "winemakingProcess") as? String
+        
+        if let szuiyu =  UserDefaults.standard.object(forKey: "vineyardInsights") as? String{
+            glassCollection.dessertSweetness(ournal: szuiyu)
+        }
+        
+       
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func horizontalComparison(_ sender: UIButton) {
     }
-    */
+    
+    
+    func moodSelection(){
+       
+        glassCollection.layer.cornerRadius = 32
+        glassCollection.contentMode = .scaleAspectFill
+        glassCollection.layer.masksToBounds = true
+        
+    }
 
 }

@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SDWebImage
 protocol DiscobTopiVinoViewDelegate {
     func kineticAlgorithm(cheiu:Dictionary<String,Any>)
 }
@@ -27,12 +28,12 @@ class DiscobTopiVinoView: UIView {
         alide.register(UINib(nibName: "DiscobTopVinoViesCell", bundle: nil), forCellWithReuseIdentifier: "DiscobTopVinoViesCell")
         alide.delegate = self
         alide.dataSource = self
-        
+        alide.backgroundColor = .clear
         return alide
     }()
     override init(frame: CGRect) {
         super.init(frame: frame)
-        
+        self.backgroundColor = .clear
         let asdsdsa = UIImageView(image: UIImage.init(named: "sdgasdsdg"))
         asdsdsa.contentMode = .scaleAspectFill
         asdsdsa.frame = CGRect(x: 16, y: 0, width: 79, height: 26)
@@ -40,7 +41,7 @@ class DiscobTopiVinoView: UIView {
         
         self.addSubview(glideMotion)
         self.addSubview(WineWisdomlal)
-        WineWisdomlal.frame = CGRect.init(x: 16, y: 26 + 11 + 252 + 32, width: 100, height: 55)
+        WineWisdomlal.frame = CGRect.init(x: 16, y: 26 + 11 + 252 + 12, width: 180, height: 55)
     }
     
     required init?(coder: NSCoder) {
@@ -51,12 +52,27 @@ class DiscobTopiVinoView: UIView {
         let Feveralb = UILabel.init()
         Feveralb.textColor = UIColor.white
         Feveralb.text = "Wine Wisdom"
-        Feveralb.font = UIFont.systemFont(ofSize: 36, weight: .medium)
+        Feveralb.font = UIFont.systemFont(ofSize: 18, weight: .bold)
         return Feveralb
     }()
     
 }
-
+extension UIImageView{
+    func dessertSweetness(ournal:String)  {
+        guard let glassRecommender = URL(string: ournal) else{
+        
+            return
+        }
+       
+        self.sd_setImage(with:glassRecommender,
+                         placeholderImage: nil,
+                        options: .continueInBackground,
+                        context: [.imageTransformer: SDImageResizingTransformer(
+                            size: CGSize(width: 320, height: 320),
+                            scaleMode: .aspectFill
+                        ),.storeCacheType : SDImageCacheType.memory.rawValue])
+    }
+}
 extension DiscobTopiVinoView:UICollectionViewDelegate,UICollectionViewDataSource{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         phoenixSync.count
@@ -64,6 +80,8 @@ extension DiscobTopiVinoView:UICollectionViewDelegate,UICollectionViewDataSource
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cedddd = collectionView.dequeueReusableCell(withReuseIdentifier: "DiscobTopVinoViesCell", for: indexPath) as!  DiscobTopVinoViesCell
+        
+        cedddd.blindChallenge(iuuu: phoenixSync[indexPath.row])
         return cedddd
         
     }

@@ -1,17 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Uai Culite Flauo-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Spatasterrkling" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="jUaiCuliteFlauo" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="jUaiCuliteFlauo" customModule="Spatasterrkling" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -65,6 +66,9 @@
                                 </constraints>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" image="newWorld"/>
+                                <connections>
+                                    <action selector="ethicsConsideration:" destination="s3W-Qq-aTG" eventType="touchUpInside" id="d1h-96-P6R"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PIH-qV-OQE">
                                 <rect key="frame" x="16" y="64" width="176" height="37"/>
@@ -75,6 +79,9 @@
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" backgroundImage="naturalStyle"/>
                                 <state key="selected" backgroundImage="naturalStyleCheck"/>
+                                <connections>
+                                    <action selector="celebrationPour:" destination="s3W-Qq-aTG" eventType="touchUpInside" id="KdR-WB-qwQ"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Uw5-fX-vbV"/>
@@ -95,6 +102,9 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="" image="camelCase2" selectedImage="camelCase2jio" id="BJe-Pt-IMf"/>
+                    <connections>
+                        <outlet property="vineyardWanderlust" destination="TEa-4Q-PXF" id="6Gw-f8-gEh"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kIc-qY-cCh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -119,6 +129,7 @@
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="oJK-Pp-cuP">
                                 <rect key="frame" x="16" y="139" width="64" height="64"/>
+                                <color key="backgroundColor" systemColor="systemGreenColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="64" id="EHu-r2-YbF"/>
                                     <constraint firstAttribute="height" constant="64" id="XWi-mS-G7U"/>
@@ -139,6 +150,9 @@
                                 </constraints>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" backgroundImage="ahueiAoi"/>
+                                <connections>
+                                    <action selector="horizontalComparison:" destination="K7i-EE-NgO" eventType="touchUpInside" id="z3w-LG-KQk"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RhR-21-eca">
                                 <rect key="frame" x="322" y="71" width="37" height="37"/>
@@ -149,9 +163,12 @@
                                 </constraints>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" image="GsiteBUil"/>
+                                <connections>
+                                    <action selector="horizontalComparison:" destination="K7i-EE-NgO" eventType="touchUpInside" id="5wm-YZ-6Ih"/>
+                                </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Blance" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Shf-Fj-qzx">
-                                <rect key="frame" x="265.5" y="82.5" width="39.5" height="14.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Coins" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Shf-Fj-qzx">
+                                <rect key="frame" x="272" y="82.5" width="33" height="14.5"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="12"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -165,24 +182,39 @@
                                 </constraints>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" image="sdhuikOPK"/>
+                                <connections>
+                                    <action selector="horizontalComparison:" destination="K7i-EE-NgO" eventType="touchUpInside" id="PrP-Bg-qcE"/>
+                                </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="yVl-O4-WsO">
                                 <rect key="frame" x="16" y="217" width="343" height="50"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OoZ-l4-Wbo">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OoZ-l4-Wbo">
                                         <rect key="frame" x="0.0" y="0.0" width="114.5" height="50"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Collection"/>
+                                        <connections>
+                                            <action selector="horizontalComparison:" destination="K7i-EE-NgO" eventType="touchUpInside" id="Ntg-DK-p2E"/>
+                                        </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="87M-XM-IsR">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="87M-XM-IsR">
                                         <rect key="frame" x="114.5" y="0.0" width="114" height="50"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Fans"/>
+                                        <connections>
+                                            <action selector="horizontalComparison:" destination="K7i-EE-NgO" eventType="touchUpInside" id="apt-yP-Vro"/>
+                                        </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wrS-7R-aSn">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wrS-7R-aSn">
                                         <rect key="frame" x="228.5" y="0.0" width="114.5" height="50"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Following"/>
+                                        <connections>
+                                            <action selector="horizontalComparison:" destination="K7i-EE-NgO" eventType="touchUpInside" id="GGq-fy-v5D"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -241,6 +273,10 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="" image="camelCase3" selectedImage="camelCase3jio" id="7Xy-Ya-cFJ"/>
+                    <connections>
+                        <outlet property="corkMemory" destination="dJF-C2-6F3" id="Lvz-uS-Ass"/>
+                        <outlet property="glassCollection" destination="oJK-Pp-cuP" id="pM5-7z-KdT"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cBk-z1-jr1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -257,12 +293,15 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="terroirExpression" translatesAutoresizingMaskIntoConstraints="NO" id="R9n-W7-QPw">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="odQ-n1-h4S">
+                            <button opaque="NO" tag="235" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="odQ-n1-h4S">
                                 <rect key="frame" x="97" y="292.5" width="68" height="37"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="New"/>
                                 <state key="selected" backgroundImage="grapeCompanion"/>
+                                <connections>
+                                    <action selector="celebrationPour:" destination="0W8-0U-hZR" eventType="touchUpInside" id="F1P-BU-5Zl"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jSM-YW-0sk">
                                 <rect key="frame" x="270" y="66.5" width="37" height="37"/>
@@ -273,6 +312,9 @@
                                 </constraints>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" image="newWorld"/>
+                                <connections>
+                                    <action selector="ethicsConsideration:" destination="0W8-0U-hZR" eventType="touchUpInside" id="dI9-zc-I9j"/>
+                                </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="servingTemp" translatesAutoresizingMaskIntoConstraints="NO" id="gYx-vQ-R92">
                                 <rect key="frame" x="16" y="64" width="179" height="42"/>
@@ -290,6 +332,9 @@
                                 </constraints>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" image="orangeWine"/>
+                                <connections>
+                                    <action selector="ethicsConsideration:" destination="0W8-0U-hZR" eventType="touchUpInside" id="MGf-xJ-HIj"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yn9-mx-ux7">
                                 <rect key="frame" x="16" y="124" width="343" height="146"/>
@@ -298,8 +343,11 @@
                                 </constraints>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" backgroundImage="mouthfeelTexture"/>
+                                <connections>
+                                    <action selector="ethicsConsideration:" destination="0W8-0U-hZR" eventType="touchUpInside" id="aTO-Eq-lft"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n5I-u8-RfS">
+                            <button opaque="NO" tag="234" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n5I-u8-RfS">
                                 <rect key="frame" x="16" y="294" width="68" height="34"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="34" id="gO3-2g-dSl"/>
@@ -309,6 +357,9 @@
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="For you"/>
                                 <state key="selected" backgroundImage="grapeCompanion"/>
+                                <connections>
+                                    <action selector="celebrationPour:" destination="0W8-0U-hZR" eventType="touchUpInside" id="wqh-60-zPm"/>
+                                </connections>
                             </button>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="xQR-98-rmo">
                                 <rect key="frame" x="16" y="343.5" width="343" height="323.5"/>
@@ -321,12 +372,15 @@
                                 </collectionViewFlowLayout>
                                 <cells/>
                             </collectionView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ty3-MI-7GT">
+                            <button opaque="NO" tag="236" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ty3-MI-7GT">
                                 <rect key="frame" x="177" y="296.5" width="75" height="29"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="Following"/>
                                 <state key="selected" backgroundImage="grapeCompanion"/>
+                                <connections>
+                                    <action selector="celebrationPour:" destination="0W8-0U-hZR" eventType="touchUpInside" id="ERV-iF-r1g"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="ckw-PP-dg5"/>
@@ -361,15 +415,18 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="" image="camelCase1" selectedImage="camelCase1jio" id="fKL-QG-nMh"/>
+                    <connections>
+                        <outlet property="vineyardWanderlust" destination="xQR-98-rmo" id="Cyv-T9-mAA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4uq-bT-QME" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="641.98473282442751" y="-412.67605633802822"/>
         </scene>
-        <!--View Controller-->
+        <!--Discovery Bottlr Controller-->
         <scene sceneID="zNI-cV-ICT">
             <objects>
-                <viewController id="ipI-dg-Wfq" sceneMemberID="viewController">
+                <viewController id="ipI-dg-Wfq" customClass="DiscoveryBottlrController" customModule="Spatasterrkling" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="xbj-ko-TDC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -395,11 +452,11 @@
                             </button>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="GXy-QT-w94">
                                 <rect key="frame" x="16" y="134" width="359" height="52"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="52" id="6Yf-7L-By8"/>
                                 </constraints>
-                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="ful-ej-pKx">
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="ful-ej-pKx">
                                     <size key="itemSize" width="128" height="128"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
@@ -407,7 +464,7 @@
                                 </collectionViewFlowLayout>
                                 <cells/>
                             </collectionView>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="jTZ-jp-0tC">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="jTZ-jp-0tC">
                                 <rect key="frame" x="0.0" y="202" width="375" height="465"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </tableView>
@@ -433,6 +490,11 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="" image="camelCase0" selectedImage="camelCase0jio" id="amx-Zt-hkc"/>
+                    <connections>
+                        <outlet property="acidityBaLalalance" destination="iRb-sp-VWR" id="bam-kr-ybM"/>
+                        <outlet property="palateDepth" destination="GXy-QT-w94" id="yES-eR-J0R"/>
+                        <outlet property="vintageTreasure" destination="jTZ-jp-0tC" id="UtK-KF-DF3"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4iY-Xn-RQl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -441,7 +503,7 @@
         <!--Navigation Controller-->
         <scene sceneID="fuS-Nn-zGc">
             <objects>
-                <navigationController id="Cck-vu-zl0" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="OrnaiSpa" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Cck-vu-zl0" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" hidden="YES" contentMode="scaleToFill" id="2jh-GT-tmh">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -505,6 +567,9 @@
         <image name="vintageYear" width="375" height="812"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
