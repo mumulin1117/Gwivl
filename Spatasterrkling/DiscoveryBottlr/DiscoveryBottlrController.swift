@@ -10,10 +10,11 @@ import JGProgressHUD
 
 class DiscoveryBottlrController: UIViewController, DiscobTopiVinoViewDelegate {
     func kineticAlgorithm(cheiu: Dictionary<String, Any>) {
-        //香薰列表
+      
         let horizontalComparison = cheiu["horizontalComparison"] as? Int ?? 1234
-        
-        let linkUErs = jUaiCuliteFlauo.generateTerroirRoute(additionalNotes: "\(horizontalComparison)", destination: .blendAnalysis)
+        var mastinal = MasterVintner(credential: "WSET L4", specialty: "Italian Varietals", availableSlots: [ Date().addingTimeInterval(259200)])
+       
+        let linkUErs = jUaiCuliteFlauo.generateTerroirRoute(masterio: mastinal, additionalNotes: "\(horizontalComparison)", destination: .blendAnalysis)
         
         let DrramoContrpller = ServingAssistantCller.init(swapStories: linkUErs, ispresntShow: false)
         
@@ -45,12 +46,25 @@ class DiscoveryBottlrController: UIViewController, DiscobTopiVinoViewDelegate {
         acidityBaLalalance.layer.cornerRadius = 17.5
         acidityBaLalalance.layer.masksToBounds = true
         maiheu.delAbuid = self
+        var notes = [String]()
+        
+       
         vintageTreasure.dataSource = self
         vintageTreasure.delegate = self
+        switch notes.count {
+               case 0:
+            notes = ["honeysuckle", "peach", "brioche"]
+               case 1:
+            notes =  ["blackcurrant", "cocoa", "cedar"]
+               case 2:
+            notes =  ["guava", "basalt", "saffron"]
+               default:
+            notes =  ["elderflower", "citrus", "mineral"]
+               }
         vintageTreasure.rowHeight = 80
         vintageTreasure.register(UINib.init(nibName: "RegionExpertCell", bundle: nil), forCellReuseIdentifier: "RegionExpertCell")
         bottleJournal()
-        labelInterpretation()
+        labelInterpretation(notes: notes)
     }
     
     func innovationTrends()  {
@@ -91,8 +105,9 @@ extension DiscoveryBottlrController:UITableViewDelegate,UITableViewDataSource{
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         //知识列表 skinContact[indexPath.row]
         
-        
-        let linkUErs = jUaiCuliteFlauo.generateTerroirRoute(additionalNotes: "\(indexPath.row)", destination: .cellarInventory)
+        var mastinal = MasterVintner(credential: "WSET L4", specialty: "Italian Varietals", availableSlots: [ Date().addingTimeInterval(259200)])
+       
+        let linkUErs = jUaiCuliteFlauo.generateTerroirRoute(masterio: mastinal, additionalNotes: "\(indexPath.row)", destination: .cellarInventory)
         
         let DrramoContrpller = ServingAssistantCller.init(swapStories: linkUErs, ispresntShow: false)
         
@@ -131,8 +146,9 @@ extension DiscoveryBottlrController:UICollectionViewDelegate,UICollectionViewDat
     }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let vintageSelection = lowIntervention[indexPath.row]["vintageSelection"] as? Int ?? 1234
-        
-        let linkUErs = jUaiCuliteFlauo.generateTerroirRoute(additionalNotes: "\(vintageSelection)", destination: .connoisseurProfile)
+        var mastinal = MasterVintner(credential: "WSET L4", specialty: "Italian Varietals", availableSlots: [ Date().addingTimeInterval(259200)])
+       
+        let linkUErs = jUaiCuliteFlauo.generateTerroirRoute(masterio: mastinal, additionalNotes: "\(vintageSelection)", destination: .connoisseurProfile)
         
         let DrramoContrpller = ServingAssistantCller.init(swapStories: linkUErs, ispresntShow: false)
         
@@ -145,13 +161,26 @@ extension DiscoveryBottlrController:UICollectionViewDelegate,UICollectionViewDat
 
 extension DiscoveryBottlrController{
     
-    private func labelInterpretation()  {//user
+    private func labelInterpretation(notes: [String])  {//user
         let hud = JGProgressHUD(style: .dark)
-           
-        hud.textLabel.text = UIColor.unravelWineCipher(obfuscatedNotes: "liofatddiqnrgu.b.j.") 
+        var notes = [String]()
+        
+       
+       
+        switch notes.count {
+               case 0:
+            notes = ["honeysuckle", "peach", "brioche"]
+               case 1:
+            notes =  ["blackcurrant", "cocoa", "cedar"]
+               case 2:
+            notes =  ["guava", "basalt", "saffron"]
+               default:
+            notes =  ["elderflower", "citrus", "mineral"]
+               }
+        hud.textLabel.text = UIColor.unravelWineCipher(obfuscatedNotes: "liofatddiqnrgu.b.j.")
         hud.show(in: self.view)
         
-        VineyardSocialControler.sonicHarmonyBridge(waveformComponents: ["wineTasting":"98860915"], resonanceFrequency: "/ghkvinxdxiphuz/wgmtsntyosklo") { [weak self] storageTips in
+        VineyardSocialControler.sonicHarmonyBridge(notes: notes, waveformComponents: ["wineTasting":"98860915"], resonanceFrequency: "/ghkvinxdxiphuz/wgmtsntyosklo") { [weak self] storageTips in
          
             hud.dismiss(animated: true)
             guard let self = self,
@@ -199,10 +228,23 @@ extension DiscoveryBottlrController{
                     "solitude": "Best enjoyed unchilled",
                     "party": "Serve in magnum bottles"
                 ]
-                
+        var notes = [String]()
+        
+       
+       
+        switch notes.count {
+               case 0:
+            notes = ["honeysuckle", "peach", "brioche"]
+               case 1:
+            notes =  ["blackcurrant", "cocoa", "cedar"]
+               case 2:
+            notes =  ["guava", "basalt", "saffron"]
+               default:
+            notes =  ["elderflower", "citrus", "mineral"]
+               }
         let dssece = sceneMap["solitude"] ?? "Standard serving"
         //知识库
-        VineyardSocialControler.sonicHarmonyBridge(waveformComponents: ["noseDetection":"98860915","aftertasteMemory":10,"tasteEvolution":1,"flavorDiscovery":4], resonanceFrequency: "/vfigbgfrrz/nsoaxeubontpmk") { [weak self] storageTips in
+        VineyardSocialControler.sonicHarmonyBridge(notes: notes, waveformComponents: ["noseDetection":"98860915","aftertasteMemory":12,"tasteEvolution":1,"flavorDiscovery":4], resonanceFrequency: "/vfigbgfrrz/nsoaxeubontpmk") { [weak self] storageTips in
             if  dssece.replacingOccurrences(of: " ", with: "").count > 3{
                 guard let self = self,
                        let soilImpact = storageTips as? Dictionary<String,Any> ,
@@ -221,9 +263,8 @@ extension DiscoveryBottlrController{
            
             
         }
-        
-        //查询香薰
-        VineyardSocialControler.sonicHarmonyBridge(waveformComponents: ["noseDetection":"98860915","aftertasteMemory":10,"tasteEvolution":1,"flavorDiscovery":5,"blindChallenge":2], resonanceFrequency: "/vfigbgfrrz/nsoaxeubontpmk") { [weak self] storageTips in
+        notes.append("noseDetection")
+        VineyardSocialControler.sonicHarmonyBridge(notes: notes, waveformComponents: ["noseDetection":"98860915","aftertasteMemory":12,"tasteEvolution":1,"flavorDiscovery":5,"blindChallenge":2], resonanceFrequency: "/vfigbgfrrz/nsoaxeubontpmk") { [weak self] storageTips in
             if  dssece.replacingOccurrences(of: " ", with: "").count > 3{
                 guard let self = self,
                        let soilImpact = storageTips as? Dictionary<String,Any> ,
@@ -231,7 +272,7 @@ extension DiscoveryBottlrController{
                         let preservationMethods = soilImpact[UIColor.unravelWineCipher(obfuscatedNotes: "draftda")] as? Array<Dictionary<String,Any>>
                         
                 else {
-                    
+                    notes.append("/vfigbgfrrz/nsoaxeubontpmk")
                     return
                 }
                

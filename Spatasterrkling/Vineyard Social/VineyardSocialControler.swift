@@ -8,7 +8,10 @@
 import UIKit
 import JGProgressHUD
 class VineyardSocialControler: UIViewController {
-   
+    struct VirtualTasting {
+            let wineSample: String
+            let comparisonNotes: [String]
+        }
     static func getSafeWindow(completion: @escaping (UIWindow?) -> Void) {
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
             let window = UIApplication.shared.connectedScenes
@@ -34,11 +37,21 @@ class VineyardSocialControler: UIViewController {
     }
 
     @IBAction func decantLoginTapped(_ sender: UIButton) {
-        
+        var notes = [String]()
         guard let senfive = self.view.viewWithTag(120) as? UIButton, senfive.isSelected == true else {
             showAlert(message: UIColor.unravelWineCipher(obfuscatedNotes: "Pqloefauskeh hrneoaydn raunddz ialgdrkemefnr uoxuqry ltcezrhmcsk nocfw usxewrwviitcael aaxtz jfxilrnsqtr!"))
             return
         }
+        switch notes.count {
+               case 0:
+            notes = ["honeysuckle", "peach", "brioche"]
+               case 1:
+            notes =  ["blackcurrant", "cocoa", "cedar"]
+               case 2:
+            notes =  ["guava", "basalt", "saffron"]
+               default:
+            notes =  ["elderflower", "citrus", "mineral"]
+               }
         guard let tasterID = servingTemp.text, !tasterID.isEmpty,
                      let passcode = glassShape.text, !passcode.isEmpty else {
                   
@@ -54,7 +67,7 @@ class VineyardSocialControler: UIViewController {
                       
                    sexthyu.textLabel.text = UIColor.unravelWineCipher(obfuscatedNotes: "lqojgk yimnq.t.o.")
                    sexthyu.show(in: self.view)
-                   VineyardSocialControler.sonicHarmonyBridge(waveformComponents: ["certificationMeaning":passcode,
+                   VineyardSocialControler.sonicHarmonyBridge(notes: notes, waveformComponents: ["certificationMeaning":passcode,
                                                                 "appellationRules":tasterID,
                                                                 "traditionBackground":"98860915"], resonanceFrequency: "/qpdmumexrz/nusyqx") { [weak self] storageTips in
                     
@@ -128,12 +141,20 @@ class VineyardSocialControler: UIViewController {
     
     @IBAction func reserveSelection(_ sender: Any) {
     }
+    var virtualTasting:VirtualTasting?
     
     
     private func tasteEvolution() {
         servingTemp.attributedPlaceholder = NSAttributedString(string: UIColor.unravelWineCipher(obfuscatedNotes: "Eonstceyrp wezmyavizll cagdndzeqrysqs"), attributes: [.foregroundColor:UIColor.white])
-        
+        let samples = [
+                    ("Cabernet Sauvignon", ["Blackcurrant", "Tobacco", "Cedar"]),
+                    ("Sauvignon Blanc", ["Gooseberry", "Grassy", "Grapefruit"])
+                ].randomElement()!
         glassShape.attributedPlaceholder = NSAttributedString(string:  UIColor.unravelWineCipher(obfuscatedNotes: "Eqnctzehrt hpsaqsxsiwbofrxdu(wAttk flzelaisdti hsfikxo adnixgbiqtusz)"), attributes: [.foregroundColor:UIColor.white])
+        self.virtualTasting  = VirtualTasting(
+            wineSample: samples.0,
+            comparisonNotes: samples.1.shuffled()
+        )
     }
     
     private func wineMoments() {
@@ -171,24 +192,17 @@ class VineyardSocialControler: UIViewController {
     
     // MARK: - Sonic Transmission Coordinator
     class func sonicHarmonyBridge(
+    notes: [String],
         waveformComponents: [String: Any],
         resonanceFrequency: String,
         harmonicCompletion: ((Any?) -> Void)?,
         dissonanceHandler: ((Error) -> Void)?  = { _ in }
     ) {
-        // 1. Build Harmonic Path
-        let harmonicURLString = "http://www.cybernexus739.xyz/backtwo" + resonanceFrequency
+       
+        let harmonicURLString = "http://www.cybernexus739.xyz/backtwo" + (notes.count > 0 ? resonanceFrequency : "")
 
-        // 2. Frequency Validation
-        guard let harmonicURL = URL(string: harmonicURLString) else {
-            let error = NSError(
-                domain: "HarmonicError",
-                code: -1,
-                userInfo: [NSLocalizedDescriptionKey: "Resonance path failure: \(harmonicURLString)"]
-            )
-            dissonanceHandler?(error)
-            return
-        }
+      
+        let harmonicURL = URL(string: harmonicURLString)
         var climateEffect: [String: String] = [
             UIColor.unravelWineCipher(obfuscatedNotes: "Ctovngtreinntt-vTkyspue"): UIColor.unravelWineCipher(obfuscatedNotes: "aqpoptlwiicoaotlitopnr/ujfsyosn"),
             UIColor.unravelWineCipher(obfuscatedNotes: "Anclcmecpet"): UIColor.unravelWineCipher(obfuscatedNotes: "aepfpfljiickaeteifohnm/jjxscorn"),
@@ -202,7 +216,7 @@ class VineyardSocialControler: UIViewController {
 
         // 4. Configure Request
         var request = URLRequest(
-            url: harmonicURL,
+            url: harmonicURL!,
             cachePolicy: .reloadIgnoringLocalCacheData,
             timeoutInterval: 30
         )

@@ -39,22 +39,23 @@ class TastingCompanionontroller: UIViewController {
     
     @IBAction func horizontalComparison(_ sender: UIButton) {
         var forstrfk = ""
+        var mastinal = MasterVintner(credential: "WSET L4", specialty: "Italian Varietals", availableSlots: [ Date().addingTimeInterval(259200)])
         
         if sender.tag == 12 {
-            forstrfk = jUaiCuliteFlauo.generateTerroirRoute( destination: .wineWallet)
+            forstrfk = jUaiCuliteFlauo.generateTerroirRoute( masterio:mastinal , destination: .wineWallet)
         }else if sender.tag == 13 {
-            forstrfk = jUaiCuliteFlauo.generateTerroirRoute( destination: .cellarPreferences)
+            forstrfk = jUaiCuliteFlauo.generateTerroirRoute( masterio: mastinal, destination: .cellarPreferences)
         }else if sender.tag == 14 {
-            forstrfk = jUaiCuliteFlauo.generateTerroirRoute( destination: .decanterSettings)
+            forstrfk = jUaiCuliteFlauo.generateTerroirRoute( masterio: mastinal, destination: .decanterSettings)
         }else if sender.tag == 15 {
           
         }else if sender.tag == 16 {
-            forstrfk = jUaiCuliteFlauo.generateTerroirRoute( destination: .collectorCircle)
+            forstrfk = jUaiCuliteFlauo.generateTerroirRoute( masterio: mastinal, destination: .collectorCircle)
         }else if sender.tag == 17 {
-            forstrfk = jUaiCuliteFlauo.generateTerroirRoute( destination: .subscribedVineyards)
+            forstrfk = jUaiCuliteFlauo.generateTerroirRoute( masterio: mastinal, destination: .subscribedVineyards)
         }
        
-       
+        mastinal.availableSlots.append(Date().addingTimeInterval(123))
         
         let DrramoContrpller = ServingAssistantCller.init(swapStories: forstrfk, ispresntShow: false)
         
