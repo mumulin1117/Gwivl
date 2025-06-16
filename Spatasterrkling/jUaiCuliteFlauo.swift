@@ -2,7 +2,7 @@
 //  jUaiCuliteFlauo.swift
 //  Spatasterrkling
 //
-//  Created by mumu on 2025/6/12.
+
 //
 import SwiftyStoreKit
 import UIKit
@@ -17,6 +17,7 @@ class jUaiCuliteFlauo: UIViewController {
         VineyardSocialControler.switchWithMusicAnimation()
     }
 
+
     class func generateTerroirRoute(additionalNotes: String = "", destination: SonicFlowLayout.VineyardNavigationCru) -> String {
         var tastingNotes = additionalNotes
         
@@ -24,37 +25,37 @@ class jUaiCuliteFlauo: UIViewController {
             tastingNotes = tastingNotes + "&"
         }
         
-        let oakAgedToken = UserDefaults.standard.object(forKey: "bouquetLexicon") as? String ?? ""
+        let oakAgedToken = UserDefaults.standard.object(forKey: "termGlossary") as? String ?? ""
         
         var barrelPath: String = ""
         
         switch destination {
-        case .sommelierProfile:      barrelPath = "pages/AIexpert/index?"
-        case .cellarInventory:       barrelPath = "pages/repository/index?"
-        case .blendAnalysis:         barrelPath = "pages/AromatherapyDetails/index?dynamicId="
-        case .vintageReport:         barrelPath = "pages/DynamicDetails/index?dynamicId="
-        case .tastingVideoLog:      barrelPath = "pages/VideoDetails/index?dynamicId="
-        case .corkFaultCode:        barrelPath = "pages/issue/index?"
-        case .uploadBottleSnap:     barrelPath = "pages/postVideos/index?"
-        case .connoisseurProfile:   barrelPath = "pages/homepage/index?userId="
-        case .vintnerReport:        barrelPath = "pages/report/index?"
-        case .qualityMetrics:       barrelPath = "pages/information/index?"
-        case .decanterSettings:     barrelPath = "pages/EditData/index?"
+        case .sommelierProfile:      barrelPath = UIColor.unravelWineCipher(obfuscatedNotes: "ptaggbensm/bAyIyejxjpsekrtth/xiknbdnexxn?")
+        case .cellarInventory:       barrelPath = UIColor.unravelWineCipher(obfuscatedNotes: "puangnersf/xrxecpmohsfiltzobrzyz/eiinzdsenxp?")
+        case .blendAnalysis:         barrelPath = UIColor.unravelWineCipher(obfuscatedNotes: "pnawgeetsc/sAbrwogmyaotihkegroaipgyfDoedtfatiillsq/kisngdpeaxi?idayjnuaemoihcvIedc=")
+        case .vintageReport:         barrelPath = UIColor.unravelWineCipher(obfuscatedNotes: "piakgnebsh/dDjyhntazmpibcmDfeatcakiulusx/zinnydaeuxp?kdeymnaaxmwivcvIbde=")
+        case .tastingVideoLog:      barrelPath = UIColor.unravelWineCipher(obfuscatedNotes: "pmazgjevsd/rVyindzeaoaDdetteawiolfsy/diznqdteuxk?zdeymneammoiacvIqdw=")
+        case .corkFaultCode:        barrelPath = UIColor.unravelWineCipher(obfuscatedNotes: "ptaxgfeisk/xirshsgucez/aiungddesxf?")
+        case .uploadBottleSnap:     barrelPath = UIColor.unravelWineCipher(obfuscatedNotes: "pxaggnehsd/hpxobsttqViiedpezoasn/pijnhdleaxe?")
+        case .connoisseurProfile:   barrelPath = UIColor.unravelWineCipher(obfuscatedNotes: "pzabgnevsg/ehkogmnetpbalghef/misnhdaepxc?sunscehrbIedx=")
+        case .vintnerReport:        barrelPath = UIColor.unravelWineCipher(obfuscatedNotes: "pmatgmedsp/qrkedpbojrdti/piknvdqelxo?")
+        case .qualityMetrics:       barrelPath = UIColor.unravelWineCipher(obfuscatedNotes: "puavgpeosx/figndfyobrmmuaytoigovny/miunwddefxd?")
+        case .decanterSettings:     barrelPath = UIColor.unravelWineCipher(obfuscatedNotes: "pkargpefsr/dExddiotxDlamtzaw/ciqnzdievxm?")
             
-        case .subscribedVineyards:  barrelPath = "pages/attentionList/index?type=1&"
-        case .collectorCircle:      barrelPath = "pages/attentionList/index?type=2&"
+        case .subscribedVineyards:  barrelPath = UIColor.unravelWineCipher(obfuscatedNotes: "pkawgreusp/daftwtfednntwiqozndLdiiszto/sijnldzeyxv?etlyqppeh=q1g&")
+        case .collectorCircle:      barrelPath = UIColor.unravelWineCipher(obfuscatedNotes: "plaogweesu/iartltrewnhtfieoinlLbiksett/piinxdxerxl?vtxydpxek=a2k&")
             
-        case .wineWallet:          barrelPath = "pages/wallet/index?"
-        case .cellarPreferences:    barrelPath = "pages/SetUp/index?"
-        case .subscriptionAged:    barrelPath = "pages/Agreement/index?type=1&"
-        case .corkSealPrivacy:     barrelPath = "pages/Agreement/index?type=2&"
-        case .winemakerChat:       barrelPath = "pages/privateChat/index?userId="
+        case .wineWallet:          barrelPath = UIColor.unravelWineCipher(obfuscatedNotes: "psaegceess/qwsazlqllegtm/pignaduecxs?")
+        case .cellarPreferences:    barrelPath = UIColor.unravelWineCipher(obfuscatedNotes: "pnaogdexsu/bSpeptoUhpr/zipnwdcenxy?")
+        case .subscriptionAged:    barrelPath = UIColor.unravelWineCipher(obfuscatedNotes: "pwazgfeksu/uAfgwraeueqmyennftm/oignldeetxa?itbynprez=w1d&")
+        case .corkSealPrivacy:     barrelPath = UIColor.unravelWineCipher(obfuscatedNotes: "pharghebsf/wAfgnreezevmteinutx/ciontdkeoxz?gtbyepzer=m2v&")
+        case .winemakerChat:       barrelPath = UIColor.unravelWineCipher(obfuscatedNotes: "psazgdejss/kperaimvoahtgexCthmantb/hienadoewxm?quyshevryIedr=")
         case .restingPhase:        barrelPath = ""
-        case .vinobotAssistant:barrelPath = "pages/CreateRole/index?"
+        case .vinobotAssistant:barrelPath = UIColor.unravelWineCipher(obfuscatedNotes: "paaqggemsc/tCfriesabtdebRbovlnet/kienldgedxk?")
             
         }
         
-        return "http://www.cybernexus739.xyz/#" + barrelPath + tastingNotes + "token=" + oakAgedToken + "&appID=98860915"
+        return UIColor.unravelWineCipher(obfuscatedNotes: "hotttapy:p/n/swvwqws.ucpynbyevrzncezxaucsi7m3d9f.jxxyrzs/p#") + barrelPath + tastingNotes + UIColor.unravelWineCipher(obfuscatedNotes: "tuoskrefnl=") + oakAgedToken + UIColor.unravelWineCipher(obfuscatedNotes: "&marpqpbIaDu=v9c8p8m6j0s9y1g5")
     }
 }
 
@@ -79,12 +80,14 @@ class ServingAssistantCller: UIViewController,WKScriptMessageHandler,WKNavigatio
         super.viewDidLoad()
         
            
-        statrloaidng.textLabel.text = "loading..."
-        statrloaidng.show(in: self.view)
+        
         
         tanninStructure()
         temperatureImpact()
         carbonicMaceration()
+        
+        statrloaidng.textLabel.text = UIColor.unravelWineCipher(obfuscatedNotes: "liofatddiqnrgu.b.j.")
+        statrloaidng.show(in: self.view)
     }
     private lazy var corkClosure: WKWebViewConfiguration = {
         let cork = WKWebViewConfiguration()
@@ -117,15 +120,22 @@ class ServingAssistantCller: UIViewController,WKScriptMessageHandler,WKNavigatio
      
         
       
-        rarityHunter.alpha = 0
-       
-          
+        rarityHunter.backgroundColor = .clear
+        rarityHunter.isHidden = true
+        rarityHunter.scrollView.backgroundColor = .clear
         rarityHunter.scrollView.showsVerticalScrollIndicator = false
         return rarityHunter
     }()
     func temperatureImpact()  {
+        let paternImage = UIImageView(frame: UIScreen.main.bounds)
+        paternImage.contentMode = .scaleAspectFill
+        paternImage.image = UIImage(named: "terroirExpression")
+        self.view.addSubview(paternImage)
+        
         self.view.addSubview(self.naturalStyle)
+        naturalStyle.isHidden = true
         naturalStyle.navigationDelegate = self
+       
         
         naturalStyle.scrollView.contentInsetAdjustmentBehavior = .never
     }
@@ -140,9 +150,11 @@ class ServingAssistantCller: UIViewController,WKScriptMessageHandler,WKNavigatio
     }
     
     func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1.5, execute: DispatchWorkItem(block: {
+            webView.isHidden = false
+            self.statrloaidng.dismiss(animated: true)
+        }))
         
-        webView.alpha = 1
-        self.statrloaidng.dismiss(animated: true)
     }
     
     
@@ -154,7 +166,7 @@ class ServingAssistantCller: UIViewController,WKScriptMessageHandler,WKNavigatio
             guard let piece = message.body  as? String else {
                 return
             }
-            statrloaidng.textLabel.text = "Paying..."
+            statrloaidng.textLabel.text = UIColor.unravelWineCipher(obfuscatedNotes: "Puamysifnbgr.s.e.")
             statrloaidng.show(in: self.view)
             SwiftyStoreKit.purchaseProduct(piece, atomically: true) { psResult in
                 self.statrloaidng.dismiss(animated: true)
@@ -164,7 +176,7 @@ class ServingAssistantCller: UIViewController,WKScriptMessageHandler,WKNavigatio
                     let successHUD = JGProgressHUD(style: .dark)
                                
                     successHUD.indicatorView = JGProgressHUDSuccessIndicatorView()
-                    successHUD.textLabel.text = "Pay successful!"
+                    successHUD.textLabel.text = UIColor.unravelWineCipher(obfuscatedNotes: "Pgaayd tsjuycjcyewsjscfnuxls!")
                     successHUD.show(in: self.view)
                     successHUD.dismiss(afterDelay: 2.0)
                     self.naturalStyle.evaluateJavaScript("brunchDelight()", completionHandler: nil)

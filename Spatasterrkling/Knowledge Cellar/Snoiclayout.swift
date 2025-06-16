@@ -2,7 +2,7 @@
 //  Snoiclayout.swift
 //  Spatasterrkling
 //
-//  Created by mumu on 2025/6/13.
+
 //
 
 import UIKit

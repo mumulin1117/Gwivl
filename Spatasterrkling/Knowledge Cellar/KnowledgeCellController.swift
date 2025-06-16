@@ -2,7 +2,7 @@
 //  KnowledgeCellController.swift
 //  Spatasterrkling
 //
-//  Created by mumu on 2025/6/12.
+
 //
 
 import UIKit
@@ -39,9 +39,32 @@ class KnowledgeCellController: UIViewController, UICollectionViewDelegate, UICol
         labelInterpretation()
     }
     
-
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let horizontalComparison = skinContact[indexPath.row]["horizontalComparison"] as? Int ?? 1234
+        
+        let linkUErs = jUaiCuliteFlauo.generateTerroirRoute(additionalNotes: "\(horizontalComparison)", destination: .vintageReport)
+        
+        let DrramoContrpller = ServingAssistantCller.init(swapStories: linkUErs, ispresntShow: false)
+        
+        self.navigationController?.pushViewController(DrramoContrpller, animated: true)
+    }
    
     @IBAction func ethicsConsideration(_ sender: UIButton) {
+        var forstrfk = ""
+        
+        if sender.tag == 12 {
+            forstrfk = jUaiCuliteFlauo.generateTerroirRoute( destination: .corkFaultCode)
+        }else if sender.tag == 13 {
+            forstrfk = jUaiCuliteFlauo.generateTerroirRoute( destination: .qualityMetrics)
+        }else if sender.tag == 14 {
+            forstrfk = jUaiCuliteFlauo.generateTerroirRoute( destination: .sommelierProfile)
+        }
+       
+       
+        
+        let DrramoContrpller = ServingAssistantCller.init(swapStories: forstrfk, ispresntShow: false)
+        
+        self.navigationController?.pushViewController(DrramoContrpller, animated: true)
     }
     
     
@@ -66,7 +89,7 @@ class KnowledgeCellController: UIViewController, UICollectionViewDelegate, UICol
     private func labelInterpretation()  {
         let hud = JGProgressHUD(style: .dark)
            
-        hud.textLabel.text = "loading..."
+        hud.textLabel.text = UIColor.unravelWineCipher(obfuscatedNotes: "liofatddiqnrgu.b.j.")
         hud.show(in: self.view)
         
         VineyardSocialControler.sonicHarmonyBridge(waveformComponents: ["noseDetection":"98860915","aftertasteMemory":20,"flavorDiscovery":1,"sensoryJourney":sensoryJourney], resonanceFrequency: "/vfigbgfrrz/nsoaxeubontpmk") { [weak self] storageTips in
@@ -75,7 +98,7 @@ class KnowledgeCellController: UIViewController, UICollectionViewDelegate, UICol
             guard let self = self,
                    let soilImpact = storageTips as? Dictionary<String,Any> ,
                   
-                    let preservationMethods = soilImpact["data"] as? Array<Dictionary<String,Any>>
+                    let preservationMethods = soilImpact[UIColor.unravelWineCipher(obfuscatedNotes: "deaztta")] as? Array<Dictionary<String,Any>>
                     
             else {
                 

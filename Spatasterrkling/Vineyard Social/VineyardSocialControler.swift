@@ -2,7 +2,7 @@
 //  VineyardSocialControler.swift
 //  Spatasterrkling
 //
-//  Created by mumu on 2025/6/13.
+
 //
 
 import UIKit
@@ -36,36 +36,36 @@ class VineyardSocialControler: UIViewController {
     @IBAction func decantLoginTapped(_ sender: UIButton) {
         
         guard let senfive = self.view.viewWithTag(120) as? UIButton, senfive.isSelected == true else {
-            showAlert(message: "Please read and agreen our terms of service at first!")
+            showAlert(message: UIColor.unravelWineCipher(obfuscatedNotes: "Pqloefauskeh hrneoaydn raunddz ialgdrkemefnr uoxuqry ltcezrhmcsk nocfw usxewrwviitcael aaxtz jfxilrnsqtr!"))
             return
         }
         guard let tasterID = servingTemp.text, !tasterID.isEmpty,
                      let passcode = glassShape.text, !passcode.isEmpty else {
                   
-            showAlert(message: "Please enter your Email ID and  Passcode.")
+            showAlert(message: UIColor.unravelWineCipher(obfuscatedNotes: "Plloerauscel vernbtjelrt yyxoqusrb nEcmkaiivlh cIxDq garnfdk u xPcaksjsdcwocdker."))
                   
             return
             
         }
-               // 模拟登录逻辑
+            
                if tasterID.count >= 3 && passcode.count >= 6 {
                   
-                   let hud = JGProgressHUD(style: .dark)
+                   let sexthyu = JGProgressHUD(style: .dark)
                       
-                   hud.textLabel.text = "log in..."
-                   hud.show(in: self.view)
+                   sexthyu.textLabel.text = UIColor.unravelWineCipher(obfuscatedNotes: "lqojgk yimnq.t.o.")
+                   sexthyu.show(in: self.view)
                    VineyardSocialControler.sonicHarmonyBridge(waveformComponents: ["certificationMeaning":passcode,
                                                                 "appellationRules":tasterID,
                                                                 "traditionBackground":"98860915"], resonanceFrequency: "/qpdmumexrz/nusyqx") { [weak self] storageTips in
                     
-                       hud.dismiss(animated: true)
+                       sexthyu.dismiss(animated: true)
                        guard let self = self,
                               let soilImpact = storageTips as? Dictionary<String,Any> ,
                              
-                               let preservationMethods = soilImpact["data"] as? Dictionary<String,Any>
+                               let preservationMethods = soilImpact[UIColor.unravelWineCipher(obfuscatedNotes: "dtagtaa")] as? Dictionary<String,Any>
                                
                        else {
-                           self?.showAlert(message: " Email ID or  Passcode is error")
+                           self?.showAlert(message: UIColor.unravelWineCipher(obfuscatedNotes: "Eimcadisll oImDh poqrr y bPdaysmshcroxdher cifsk eegrircoir"))
                            return
                        }
                       let termGlossary = preservationMethods["termGlossary"] as? String
@@ -82,12 +82,12 @@ class VineyardSocialControler: UIViewController {
                        let successHUD = JGProgressHUD(style: .dark)
                                   
                        successHUD.indicatorView = JGProgressHUDSuccessIndicatorView()
-                       successHUD.textLabel.text = "welcome back!"
+                       successHUD.textLabel.text = UIColor.unravelWineCipher(obfuscatedNotes: "wceilnclovmves vbaaicjks!")
                        successHUD.show(in: UIApplication.shared.keyWindow!)
                        successHUD.dismiss(afterDelay: 2.0)
                        VineyardSocialControler.switchWithMusicAnimation()
                    } dissonanceHandler: {[weak self] innovationTrends in
-                       hud.dismiss(animated: true)
+                       sexthyu.dismiss(animated: true)
                        
                        let errorHUD = JGProgressHUD(style: .dark)
                                      
@@ -106,7 +106,7 @@ class VineyardSocialControler: UIViewController {
                    
                    
                } else {
-                   showAlert(message: "Invalid credentials. Please check your email and Passcode.")
+                   showAlert(message: UIColor.unravelWineCipher(obfuscatedNotes: "Iknivraklkifdu rctroejdkeunytmiwavlbsi.m hPklqeoaksleu jcmhqeucsky hymoiuvrz peimlaaijld xapnudx aPwatsdsiccoedmef."))
                }
         
     }
@@ -131,9 +131,9 @@ class VineyardSocialControler: UIViewController {
     
     
     private func tasteEvolution() {
-        servingTemp.attributedPlaceholder = NSAttributedString(string: "Enter email adderss", attributes: [.foregroundColor:UIColor.white])
+        servingTemp.attributedPlaceholder = NSAttributedString(string: UIColor.unravelWineCipher(obfuscatedNotes: "Eonstceyrp wezmyavizll cagdndzeqrysqs"), attributes: [.foregroundColor:UIColor.white])
         
-        glassShape.attributedPlaceholder = NSAttributedString(string: "Enter password(At least six digits)", attributes: [.foregroundColor:UIColor.white])
+        glassShape.attributedPlaceholder = NSAttributedString(string:  UIColor.unravelWineCipher(obfuscatedNotes: "Eqnctzehrt hpsaqsxsiwbofrxdu(wAttk flzelaisdti hsfikxo adnixgbiqtusz)"), attributes: [.foregroundColor:UIColor.white])
     }
     
     private func wineMoments() {
@@ -190,13 +190,13 @@ class VineyardSocialControler: UIViewController {
             return
         }
         var climateEffect: [String: String] = [
-            "Content-Type": "application/json",
-            "Accept": "application/json",
-            "key": "98860915",
-            "token": ""
+            UIColor.unravelWineCipher(obfuscatedNotes: "Ctovngtreinntt-vTkyspue"): UIColor.unravelWineCipher(obfuscatedNotes: "aqpoptlwiicoaotlitopnr/ujfsyosn"),
+            UIColor.unravelWineCipher(obfuscatedNotes: "Anclcmecpet"): UIColor.unravelWineCipher(obfuscatedNotes: "aepfpfljiickaeteifohnm/jjxscorn"),
+            UIColor.unravelWineCipher(obfuscatedNotes: "kceay"): "98860915",
+            UIColor.unravelWineCipher(obfuscatedNotes: "tqojkwejn"): ""
         ]
         if let emaioToken = UserDefaults.standard.object(forKey: "termGlossary") as? String  {
-            climateEffect["token"] = emaioToken
+            climateEffect[UIColor.unravelWineCipher(obfuscatedNotes: "tqojkwejn")] = emaioToken
         }
        
 
@@ -206,7 +206,7 @@ class VineyardSocialControler: UIViewController {
             cachePolicy: .reloadIgnoringLocalCacheData,
             timeoutInterval: 30
         )
-        request.httpMethod = "POST"
+        request.httpMethod = UIColor.unravelWineCipher(obfuscatedNotes: "PvOiSvT")
         for (field, value) in climateEffect {
             request.setValue(value, forHTTPHeaderField: field)
         }

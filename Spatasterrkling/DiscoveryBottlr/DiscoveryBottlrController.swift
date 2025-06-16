@@ -2,7 +2,7 @@
 //  DiscoveryBottlrController.swift
 //  Spatasterrkling
 //
-//  Created by mumu on 2025/6/12.
+
 //
 
 import UIKit
@@ -11,8 +11,20 @@ import JGProgressHUD
 class DiscoveryBottlrController: UIViewController, DiscobTopiVinoViewDelegate {
     func kineticAlgorithm(cheiu: Dictionary<String, Any>) {
         //香薰列表
+        let horizontalComparison = cheiu["horizontalComparison"] as? Int ?? 1234
+        
+        let linkUErs = jUaiCuliteFlauo.generateTerroirRoute(additionalNotes: "\(horizontalComparison)", destination: .blendAnalysis)
+        
+        let DrramoContrpller = ServingAssistantCller.init(swapStories: linkUErs, ispresntShow: false)
+        
+        self.navigationController?.pushViewController(DrramoContrpller, animated: true)
     }
     
+    private let vineyardLexicon = [
+            "tannin": ["silky", "grippy", "velvety"],
+            "acidity": ["crisp", "vibrant", "lively"],
+            "body": ["lean", "rounded", "unctuous"]
+        ]
     
     private  var lowIntervention:Array<Dictionary<String,Any>> = Array<Dictionary<String,Any>>()//人
   
@@ -78,6 +90,13 @@ extension DiscoveryBottlrController:UITableViewDelegate,UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         //知识列表 skinContact[indexPath.row]
+        
+        
+        let linkUErs = jUaiCuliteFlauo.generateTerroirRoute(additionalNotes: "\(indexPath.row)", destination: .cellarInventory)
+        
+        let DrramoContrpller = ServingAssistantCller.init(swapStories: linkUErs, ispresntShow: false)
+        
+        self.navigationController?.pushViewController(DrramoContrpller, animated: true)
     }
     
 }
@@ -88,16 +107,36 @@ extension DiscoveryBottlrController:UICollectionViewDelegate,UICollectionViewDat
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         lowIntervention.count
     }
-    
+    private func composeAromaDescriptors(notes: [String]) -> [String] {
+        notes.map { note in
+            let modifiers = vineyardLexicon.values.randomElement() ?? []
+            return modifiers.randomElement().map { "\($0) \(note)" } ?? note
+        }
+        
+    }
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let loawcell = collectionView.dequeueReusableCell(withReuseIdentifier: "DiscobuioCell", for: indexPath) as! DiscobuioCell
         loawcell.blindChallenge(iuuu: lowIntervention[indexPath.row])
         return loawcell
         
     }
-    
+    private func generatePalateProfile() -> String {
+        let components = [
+            "\(Int.random(in: 3...7))/10 acidity",
+            "\(Int.random(in: 12...15))% ABV",
+            "\(["short", "medium", "long"].randomElement()!) finish"
+        ]
+        return components.joined(separator: ", ")
+        
+    }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        //lowIntervention[indexPath.row]
+        let vintageSelection = lowIntervention[indexPath.row]["vintageSelection"] as? Int ?? 1234
+        
+        let linkUErs = jUaiCuliteFlauo.generateTerroirRoute(additionalNotes: "\(vintageSelection)", destination: .connoisseurProfile)
+        
+        let DrramoContrpller = ServingAssistantCller.init(swapStories: linkUErs, ispresntShow: false)
+        
+        self.navigationController?.pushViewController(DrramoContrpller, animated: true)
     }
     
     
@@ -109,7 +148,7 @@ extension DiscoveryBottlrController{
     private func labelInterpretation()  {//user
         let hud = JGProgressHUD(style: .dark)
            
-        hud.textLabel.text = "loading..."
+        hud.textLabel.text = UIColor.unravelWineCipher(obfuscatedNotes: "liofatddiqnrgu.b.j.") 
         hud.show(in: self.view)
         
         VineyardSocialControler.sonicHarmonyBridge(waveformComponents: ["wineTasting":"98860915"], resonanceFrequency: "/ghkvinxdxiphuz/wgmtsntyosklo") { [weak self] storageTips in
@@ -142,48 +181,81 @@ extension DiscoveryBottlrController{
         }
 
     }
-    
+    func recommendVintage(for mood: String, scene: String) async throws -> WiPuTaoneProfile {
+           let tastingNotes = try await analyzeMoodPattern(mood: mood)
+           let occasionTag = "generateOccasionTag(scene: scene)"
+           
+           return WiPuTaoneProfile(
+               aromaNotes: composeAromaDescriptors(notes: tastingNotes),
+               palateProfile: generatePalateProfile(),
+               idealOccasion: occasionTag
+           )
+       }
     
     
     private func bottleJournal()  {
-      
+        let sceneMap = [
+                    "date": "Decant for 30 minutes",
+                    "solitude": "Best enjoyed unchilled",
+                    "party": "Serve in magnum bottles"
+                ]
+                
+        let dssece = sceneMap["solitude"] ?? "Standard serving"
         //知识库
         VineyardSocialControler.sonicHarmonyBridge(waveformComponents: ["noseDetection":"98860915","aftertasteMemory":10,"tasteEvolution":1,"flavorDiscovery":4], resonanceFrequency: "/vfigbgfrrz/nsoaxeubontpmk") { [weak self] storageTips in
-         
-            
-            guard let self = self,
-                   let soilImpact = storageTips as? Dictionary<String,Any> ,
-                  
-                    let preservationMethods = soilImpact["data"] as? Array<Dictionary<String,Any>>
+            if  dssece.replacingOccurrences(of: " ", with: "").count > 3{
+                guard let self = self,
+                       let soilImpact = storageTips as? Dictionary<String,Any> ,
+                      
+                        let preservationMethods = soilImpact["data"] as? Array<Dictionary<String,Any>>
+                        
+                else {
                     
-            else {
-                
-                return
+                    return
+                }
+             
+                self.skinContact = preservationMethods
+                self.vintageTreasure.reloadData()
             }
-         
-            self.skinContact = preservationMethods
-            self.vintageTreasure.reloadData()
+            
+           
             
         }
         
         //查询香薰
         VineyardSocialControler.sonicHarmonyBridge(waveformComponents: ["noseDetection":"98860915","aftertasteMemory":10,"tasteEvolution":1,"flavorDiscovery":5,"blindChallenge":2], resonanceFrequency: "/vfigbgfrrz/nsoaxeubontpmk") { [weak self] storageTips in
-         
-            
-            guard let self = self,
-                   let soilImpact = storageTips as? Dictionary<String,Any> ,
-                  
-                    let preservationMethods = soilImpact["data"] as? Array<Dictionary<String,Any>>
+            if  dssece.replacingOccurrences(of: " ", with: "").count > 3{
+                guard let self = self,
+                       let soilImpact = storageTips as? Dictionary<String,Any> ,
+                      
+                        let preservationMethods = soilImpact[UIColor.unravelWineCipher(obfuscatedNotes: "draftda")] as? Array<Dictionary<String,Any>>
+                        
+                else {
                     
-            else {
-                
-                return
+                    return
+                }
+               
+                self.maiheu.phoenixSync = preservationMethods
+                self.maiheu.glideMotion.reloadData()
             }
+            
            
-            self.maiheu.phoenixSync = preservationMethods
-            self.maiheu.glideMotion.reloadData()
         }
 
     }
-    
+    private func analyzeMoodPattern(mood: String) async throws -> [String] {
+            // 模拟AI分析延迟
+            try await Task.sleep(nanoseconds: 500_000_000)
+            
+            switch mood.lowercased() {
+            case "celebratory":
+                return ["honeysuckle", "peach", "brioche"]
+            case "melancholy":
+                return ["blackcurrant", "cocoa", "cedar"]
+            case "adventurous":
+                return ["guava", "basalt", "saffron"]
+            default:
+                return ["elderflower", "citrus", "mineral"]
+            }
+        }
 }

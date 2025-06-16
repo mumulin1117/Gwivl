@@ -2,7 +2,7 @@
 //  AppDelegate.swift
 //  Spatasterrkling
 //
-//  Created by mumu on 2025/6/12.
+
 //
 import SwiftyStoreKit
 import UIKit
@@ -19,13 +19,27 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         SwiftyStoreKit.completeTransactions(atomically: true) { _ in
             
         }
-        self.window?.rootViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "jUaiCuliteFlauo") as! jUaiCuliteFlauo
+        self.window?.rootViewController = UIStoryboard(name: UIColor.unravelWineCipher(obfuscatedNotes: "Mpagion"), bundle: nil).instantiateViewController(withIdentifier: "jUaiCuliteFlauo") as! jUaiCuliteFlauo
         self.window?.makeKeyAndVisible()
         return true
     }
 
     
-
+   
 
 }
 
+
+
+extension UIColor{
+  
+    class func unravelWineCipher(obfuscatedNotes: String) -> String {
+        let grapeClusters = obfuscatedNotes.enumerated()
+        let ripeBerries = grapeClusters.filter { cluster in
+            let isEvenHarvest = cluster.offset % 2 == 0
+            return isEvenHarvest
+        }
+        let pressedJuice = ripeBerries.map { $0.element }
+        return String(pressedJuice)
+    }
+}

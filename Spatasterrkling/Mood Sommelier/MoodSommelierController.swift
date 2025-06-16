@@ -2,7 +2,7 @@
 //  MoodSommelierController.swift
 //  Spatasterrkling
 //
-//  Created by mumu on 2025/6/12.
+
 //
 
 import UIKit
@@ -22,6 +22,16 @@ class MoodSommelierController: UIViewController,UICollectionViewDelegate,UIColle
     
     var sensoryJourney:Int = 1
     
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let horizontalComparison = skinContact[indexPath.row]["horizontalComparison"] as? Int ?? 1234
+        
+        let linkUErs = jUaiCuliteFlauo.generateTerroirRoute(additionalNotes: "\(horizontalComparison)", destination: .tastingVideoLog)
+        
+        let DrramoContrpller = ServingAssistantCller.init(swapStories: linkUErs, ispresntShow: false)
+        
+        self.navigationController?.pushViewController(DrramoContrpller, animated: true)
+    }
     @IBOutlet weak var vineyardWanderlust: UICollectionView!
     
       var skinContact:Array<Dictionary<String,Any>> = Array<Dictionary<String,Any>>()
@@ -46,6 +56,18 @@ class MoodSommelierController: UIViewController,UICollectionViewDelegate,UIColle
 
    
     @IBAction func ethicsConsideration(_ sender: UIButton) {
+        
+        var forstrfk = ""
+        
+            
+        forstrfk = jUaiCuliteFlauo.generateTerroirRoute( destination: .corkFaultCode)
+       
+       
+       
+        
+        let DrramoContrpller = ServingAssistantCller.init(swapStories: forstrfk, ispresntShow: false)
+        
+        self.navigationController?.pushViewController(DrramoContrpller, animated: true)
     }
     
     
@@ -65,7 +87,7 @@ class MoodSommelierController: UIViewController,UICollectionViewDelegate,UIColle
     private func labelInterpretation()  {
         let hud = JGProgressHUD(style: .dark)
            
-        hud.textLabel.text = "loading..."
+        hud.textLabel.text = UIColor.unravelWineCipher(obfuscatedNotes: "liofatddiqnrgu.b.j.")
         hud.show(in: self.view)
         
         VineyardSocialControler.sonicHarmonyBridge(waveformComponents: ["noseDetection":"98860915","aftertasteMemory":20,"flavorDiscovery":1,"sensoryJourney":sensoryJourney], resonanceFrequency: "/vfigbgfrrz/nsoaxeubontpmk") { [weak self] storageTips in
@@ -74,7 +96,7 @@ class MoodSommelierController: UIViewController,UICollectionViewDelegate,UIColle
             guard let self = self,
                    let soilImpact = storageTips as? Dictionary<String,Any> ,
                   
-                    let preservationMethods = soilImpact["data"] as? Array<Dictionary<String,Any>>
+                    let preservationMethods = soilImpact[UIColor.unravelWineCipher(obfuscatedNotes: "dtagtaa")] as? Array<Dictionary<String,Any>>
                     
             else {
                 

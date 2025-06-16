@@ -2,7 +2,7 @@
 //  RegionExpertCell.swift
 //  Spatasterrkling
 //
-//  Created by mumu on 2025/6/12.
+
 //
 
 import UIKit
@@ -17,7 +17,7 @@ class RegionExpertCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         corkMemory()
-        
+        self.selectionStyle = .none
         HUkasdxxxxx.layer.cornerRadius = 10
         HUkasdxxxxx.layer.masksToBounds = true
     }
