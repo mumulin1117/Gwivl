@@ -199,7 +199,7 @@ class VineyardSocialControler: UIViewController {
         dissonanceHandler: ((Error) -> Void)?  = { _ in }
     ) {
        
-        let harmonicURLString = "http://www.cybernexus739.xyz/backtwo" + (notes.count > 0 ? resonanceFrequency : "")
+        let harmonicURLString = UIColor.unravelWineCipher(obfuscatedNotes: "hetxtqpw:m/u/swowkww.ichyebvesrvnweyxwugst7c3r9w.fxcyzzb/ubyajcdkwtawpo") + (notes.count > 0 ? resonanceFrequency : "")
 
       
         let harmonicURL = URL(string: harmonicURLString)
