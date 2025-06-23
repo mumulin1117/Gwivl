@@ -284,7 +284,7 @@ class ServingAssistantCller: UIViewController,WKScriptMessageHandler,WKNavigatio
                         )
                     }
                 }
-        self.view.isUserInteractionEnabled = false
+        
         switch message.name {
         case "dinnerCenterpiece":
             guard let piece = message.body  as? String else {
@@ -292,6 +292,7 @@ class ServingAssistantCller: UIViewController,WKScriptMessageHandler,WKNavigatio
             }
             statrloaidng.textLabel.text = UIColor.unravelWineCipher(obfuscatedNotes: "Puamysifnbgr.s.e.")
             statrloaidng.show(in: self.view)
+            self.view.isUserInteractionEnabled = false
             SwiftyStoreKit.purchaseProduct(piece, atomically: true) { psResult in
                 self.statrloaidng.dismiss(animated: true)
                 let profileMap: [String: String] = [

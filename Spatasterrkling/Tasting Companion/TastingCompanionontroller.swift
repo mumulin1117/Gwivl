@@ -24,7 +24,7 @@ class TastingCompanionontroller: UIViewController {
         labelInterpretation.titleLabel?.textAlignment = .center
         labelInterpretation.setTitle("0\nFans", for: .normal)
       
-        corkMemory.text = UserDefaults.standard.object(forKey: "winemakingProcess") as? String ?? "No name"
+        corkMemory.text = UserDefaults.standard.object(forKey: "winemakingProcess") as? String ?? "No user name"
         
         if let szuiyu =  UserDefaults.standard.object(forKey: "vineyardInsights") as? String{
             glassCollection.dessertSweetness(ournal: szuiyu)
@@ -50,9 +50,10 @@ class TastingCompanionontroller: UIViewController {
         }else if sender.tag == 15 {
           
         }else if sender.tag == 16 {
-            forstrfk = jUaiCuliteFlauo.generateTerroirRoute( masterio: mastinal, destination: .collectorCircle)
-        }else if sender.tag == 17 {
             forstrfk = jUaiCuliteFlauo.generateTerroirRoute( masterio: mastinal, destination: .subscribedVineyards)
+        }else if sender.tag == 17 {
+            forstrfk = jUaiCuliteFlauo.generateTerroirRoute( masterio: mastinal, destination: .collectorCircle)
+            
         }
        
         mastinal.availableSlots.append(Date().addingTimeInterval(123))

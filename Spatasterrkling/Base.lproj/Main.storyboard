@@ -127,7 +127,7 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="oJK-Pp-cuP">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Gwivl" translatesAutoresizingMaskIntoConstraints="NO" id="oJK-Pp-cuP">
                                 <rect key="frame" x="16" y="139" width="64" height="64"/>
                                 <color key="backgroundColor" systemColor="systemGreenColor"/>
                                 <constraints>
@@ -462,6 +462,7 @@ Following</string>
                                     <constraint firstAttribute="width" constant="37" id="JvN-0y-76G"/>
                                 </constraints>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" image="Gwivl"/>
                             </button>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="GXy-QT-w94">
                                 <rect key="frame" x="16" y="134" width="359" height="52"/>
@@ -556,6 +557,7 @@ Following</string>
     </scenes>
     <resources>
         <image name="GsiteBUil" width="37" height="37.5"/>
+        <image name="Gwivl" width="512" height="512"/>
         <image name="RectangleERT" width="30" height="3"/>
         <image name="WechatIMpreview" width="152" height="152"/>
         <image name="ahueiAoi" width="92" height="37.5"/>
