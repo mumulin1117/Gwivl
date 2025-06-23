@@ -16,10 +16,10 @@ workflows:
 #        APP_STORE_APPLE_ID: 6747651426
       xcode: latest
       cocoapods: default
-    scripts:
-      - name: Install CocoaPods dependencies
-        script: |
-          pod install
+#    scripts:
+#      - name: Install CocoaPods dependencies
+#        script: |
+#          pod install
       - name: Set up provisioning profiles settings on Xcode project
         script: xcode-project use-profiles
 #      - name: Increment build number
