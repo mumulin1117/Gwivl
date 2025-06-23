@@ -2,7 +2,7 @@
 //  TerroirInsight.swift
 //  Spatasterrkling
 //
-//  Created by mumu on 2025/6/16.
+//  Created by Spatasterrkling on 2025/6/16.
 //
 
 import UIKit
