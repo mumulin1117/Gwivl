@@ -16,7 +16,7 @@ workflows:
 #        APP_STORE_APPLE_ID: 6747651426
       xcode: latest
       cocoapods: default
-#    scripts:
+    scripts:
 #      - name: Install CocoaPods dependencies
 #        script: |
 #          pod install
