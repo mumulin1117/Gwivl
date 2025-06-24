@@ -12,16 +12,16 @@ class VineyardSocialControler: UIViewController {
             let wineSample: String
             let comparisonNotes: [String]
         }
-    static func getSafeWindow(completion: @escaping (UIWindow?) -> Void) {
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
-            let window = UIApplication.shared.connectedScenes
-                .filter { $0.activationState == .foregroundActive }
-                .compactMap { $0 as? UIWindowScene }
-                .first?.windows
-                .first { $0.isKeyWindow }
-            completion(window)
-        }
-    }
+//    static func getSafeWindow(completion: @escaping (UIWindow?) -> Void) {
+//        DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+//            let window = UIApplication.shared.connectedScenes
+//                .filter { $0.activationState == .foregroundActive }
+//                .compactMap { $0 as? UIWindowScene }
+//                .first?.windows
+//                .first { $0.isKeyWindow }
+//            completion(window)
+//        }
+//    }
    
     @IBOutlet weak var servingTemp: UITextField!
     
@@ -96,10 +96,10 @@ class VineyardSocialControler: UIViewController {
                                   
                        successHUD.indicatorView = JGProgressHUDSuccessIndicatorView()
                        successHUD.textLabel.text = UIColor.unravelWineCipher(obfuscatedNotes: "wceilnclovmves vbaaicjks!")
-                       successHUD.show(in: UIApplication.shared.keyWindow!)
+                       successHUD.show(in: self.view)
                        successHUD.dismiss(afterDelay: 2.0)
                        VineyardSocialControler.switchWithMusicAnimation()
-                   } dissonanceHandler: {[weak self] innovationTrends in
+                   } dissonanceHandler: { innovationTrends in
                        sexthyu.dismiss(animated: true)
                        
                        let errorHUD = JGProgressHUD(style: .dark)
@@ -107,7 +107,7 @@ class VineyardSocialControler: UIViewController {
                        errorHUD.indicatorView = JGProgressHUDErrorIndicatorView()
                        errorHUD.textLabel.text = "Sorry"
                        errorHUD.detailTextLabel.text = innovationTrends.localizedDescription
-                       errorHUD.show(in: UIApplication.shared.keyWindow!)
+                       errorHUD.show(in: self.view)
                        errorHUD.dismiss(afterDelay: 3.0)
                        
                       
@@ -136,10 +136,34 @@ class VineyardSocialControler: UIViewController {
     }
     
     @IBAction func organicVineyard(_ sender: Any) {
+        var forstrfk = ""
+        let fork = ("Sipping", "Let wine coat your palate to assess body and texture")
+        var mastinal = MasterVintner(credential: "WSET L4", specialty: "Italian Varietals", availableSlots: [ Date().addingTimeInterval(259200)])
+       
+      
+            forstrfk = jUaiCuliteFlauo.generateTerroirRoute( masterio: mastinal, destination: .subscriptionAged)
+       
+       
+       
+        let DrramoContrpller = ServingAssistantCller.init(swapStories: forstrfk, ispresntShow: true)
+    
+        self.present(DrramoContrpller, animated: true)
     }
     
     
     @IBAction func reserveSelection(_ sender: Any) {
+        var forstrfk = ""
+        let fork = ("Sipping", "Let wine coat your palate to assess body and texture")
+        var mastinal = MasterVintner(credential: "WSET L4", specialty: "Italian Varietals", availableSlots: [ Date().addingTimeInterval(259200)])
+       
+      
+            forstrfk = jUaiCuliteFlauo.generateTerroirRoute( masterio: mastinal, destination: .corkSealPrivacy)
+       
+       
+       
+        let DrramoContrpller = ServingAssistantCller.init(swapStories: forstrfk, ispresntShow: true)
+    
+        self.present(DrramoContrpller, animated: true)
     }
     var virtualTasting:VirtualTasting?
     
@@ -161,32 +185,29 @@ class VineyardSocialControler: UIViewController {
         
     }
     class func switchWithMusicAnimation() {
-        VineyardSocialControler.getSafeWindow(completion: { usiueu in
-            guard let windoe = usiueu else {
-                return
-            }
-            
-            let Kiooool =   UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "OrnaiSpa") as! UINavigationController
-            
-            let snapshot = windoe.snapshotView(afterScreenUpdates: true)!
-            
-            windoe.addSubview(snapshot)
-            
-            if UserDefaults.standard.object(forKey: "termGlossary") == nil {
-                windoe.rootViewController =  VineyardSocialControler()
-            }else{
-                windoe.rootViewController = Kiooool
-            }
-            
-            
-            UIView.animate(withDuration: 0.8, delay: 0, usingSpringWithDamping: 0.8, initialSpringVelocity: 0.3, options: .curveEaseInOut, animations: {
-                snapshot.transform = CGAffineTransform(scaleX: 1.2, y: 1.2)
-                snapshot.alpha = 0
-            }) { _ in
-                snapshot.removeFromSuperview()
-            }
-        })
+        guard let windoe = (UIApplication.shared.delegate as? AppDelegate)?.window else {
+            return
+        }
         
+        let Kiooool =   UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "OrnaiSpa") as! UINavigationController
+        
+        let snapshot = windoe.snapshotView(afterScreenUpdates: true)!
+//        
+//        windoe.addSubview(snapshot)
+        
+        if UserDefaults.standard.object(forKey: "termGlossary") == nil {
+            windoe.rootViewController =  VineyardSocialControler()
+        }else{
+            windoe.rootViewController = Kiooool
+        }
+        
+        
+        UIView.animate(withDuration: 0.8, delay: 0, usingSpringWithDamping: 0.8, initialSpringVelocity: 0.3, options: .curveEaseInOut, animations: {
+            snapshot.transform = CGAffineTransform(scaleX: 1.2, y: 1.2)
+            snapshot.alpha = 0
+        }) { _ in
+            snapshot.removeFromSuperview()
+        }
         
     }
     
