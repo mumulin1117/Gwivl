@@ -213,14 +213,16 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Spatasterrkling/Spatasterrkling.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = "";
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Spatasterrkling/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = Gwivl;
 				INFOPLIST_KEY_NSCameraUsageDescription = "Capture your favorite wine moments - from vineyard visits to perfect pours. Enable camera access to share label details, tasting setups, and celebrate with virtual toasts in our community.";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Unlock terroir-based connections: geotag your tasting locations, find fellow oenophiles nearby, and receive region-specific wine recommendations. We never share your precise coordinates.";
 				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Describe wine aromas aloud for AI analysis or chat with fellow enthusiasts. Microphone access enhances your tasting notes and enables voice interactions with our virtual sommelier.";
 				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Curate your personal wine journey by saving tasting notes, pairing photos, and memorable bottles. Photo access helps you build a visual cellar collection and share recommendations.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -233,7 +235,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.aunale.gwivl;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -252,14 +254,16 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Spatasterrkling/Spatasterrkling.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = "";
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Spatasterrkling/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = Gwivl;
 				INFOPLIST_KEY_NSCameraUsageDescription = "Capture your favorite wine moments - from vineyard visits to perfect pours. Enable camera access to share label details, tasting setups, and celebrate with virtual toasts in our community.";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Unlock terroir-based connections: geotag your tasting locations, find fellow oenophiles nearby, and receive region-specific wine recommendations. We never share your precise coordinates.";
 				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Describe wine aromas aloud for AI analysis or chat with fellow enthusiasts. Microphone access enhances your tasting notes and enables voice interactions with our virtual sommelier.";
 				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Curate your personal wine journey by saving tasting notes, pairing photos, and memorable bottles. Photo access helps you build a visual cellar collection and share recommendations.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -272,7 +276,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.aunale.gwivl;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
