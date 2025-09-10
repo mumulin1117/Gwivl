@@ -12,106 +12,99 @@ import CommonCrypto
 class QwuietReflection: NSObject {
     static let align = QwuietReflection.init()
 
-    // MARK: - 网络请求优化
     func wineGenius(_ creativeAdvisor: String,
-                     tasteGuide: [String: Any],aromaHint:Bool = false,
+                     tasteGuide: [String: Any],
+                     aromaHint: Bool = false,
                      flavorMatch: @escaping (Result<[String: Any]?, Error>) -> Void = { _ in }) {
         
-        // 1. 构造URL
-        guard let moodSuggest = URL(string: recipeMatches + creativeAdvisor) else {
+        guard let vineyardDestination = self.prepareVinousDestination(creativeAdvisor) else {
             return flavorMatch(.failure(NSError(domain: "URL Error", code: 400)))
         }
         
-        // 2. 准备请求体
-        guard let sceneRecommend = QwuietReflection.climateEffect(oakLore: tasteGuide),
-              let perfectPair = AeanninStructure(),
-              let decantAdvice = perfectPair.sedimentNote(bio: sceneRecommend),
-              let serveRight = decantAdvice.data(using: .utf8) else {
+        guard let fermentationData = self.prepareFermentationData(tasteGuide) else {
             return
         }
         
-        // 3. 创建URLRequest
-        var glassType = URLRequest(url: moodSuggest)
-        glassType.httpMethod = "POST"
-        glassType.httpBody = serveRight
-        
-//        let brushDeveloper = UserDefaults.standard.object(forKey: "pushToken") as? String ?? ""
-        // 设置请求头
-        glassType.setValue("application/json", forHTTPHeaderField: "Content-Type")
-        glassType.setValue(tameCapsule, forHTTPHeaderField: "appId")
-        glassType.setValue(Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as? String ?? "", forHTTPHeaderField: "appVersion")
-        glassType.setValue(SipEtiquette.picnicBliss(), forHTTPHeaderField: "deviceNo")
-        glassType.setValue(Locale.current.languageCode ?? "", forHTTPHeaderField: "language")
-        glassType.setValue(UserDefaults.standard.string(forKey: "liberationad") ?? "", forHTTPHeaderField: "loginToken")
-        glassType.setValue(AppDelegate.goldenHours, forHTTPHeaderField: "pushToken")
-        
-        // 4. 创建URLSession任务
-        let tempCheck = URLSession.shared.dataTask(with: glassType) { data, response, blendInfo in
-            if let palateTrain = blendInfo {
-                DispatchQueue.main.async {
-                    flavorMatch(.failure(palateTrain))
-                }
-                return
-            }
-            
-         
-            guard let bottleAge = data else {
-                DispatchQueue.main.async {
-                    flavorMatch(.failure(NSError(domain: "No Data", code: 1000)))
-                }
-                return
-            }
-            
-            self.expertPick(aiSommelier: aromaHint,tasteProfile: bottleAge, wineOracle: creativeAdvisor, sipScience: flavorMatch)
-        }
-        
-        tempCheck.resume()
+        let harvestRequest = self.craftHarvestRequest(to: vineyardDestination, with: fermentationData)
+        self.initiateVintageHarvest(request: harvestRequest, aromaHint: aromaHint, creativeAdvisor: creativeAdvisor, completion: flavorMatch)
     }
 
-    private func expertPick(aiSommelier:Bool = false,tasteProfile: Data, wineOracle: String, sipScience: @escaping (Result<[String: Any]?, Error>) -> Void) {
-        do {
-            // 1. 解析原始JSON
-            guard let aromaWizard = try JSONSerialization.jsonObject(with: tasteProfile, options: []) as? [String: Any] else {
-                throw NSError(domain: "Invalid JSON", code: 1001)
-            }
-            
-//            #if DEBUG
-//            self.handleDebugDisplay(path: virtual, response: visualEffectsd)
-//            #endif
-            
-            // 2. 检查状态码
-            if aiSommelier {
-                guard let pairMaster = aromaWizard["code"] as? String, pairMaster == "0000" else{
-                    DispatchQueue.main.async {
-                        sipScience(.failure(NSError(domain: "Pay Error", code: 1001)))
-                    }
-                    return
-                }
-                
+    private func prepareVinousDestination(_ path: String) -> URL? {
+        return URL(string: recipeMatches + path)
+    }
+
+    private func prepareFermentationData(_ ingredients: [String: Any]) -> Data? {
+        guard let oakAging = QwuietReflection.climateEffect(oakLore: ingredients),
+              let fermentationVessel = AeanninStructure(),
+              let bottledWine = fermentationVessel.sedimentNote(bio: oakAging),
+              let servingPreparation = bottledWine.data(using: .utf8) else {
+            return nil
+        }
+        return servingPreparation
+    }
+
+    private func craftHarvestRequest(to destination: URL, with payload: Data) -> URLRequest {
+        var vineyardOrder = URLRequest(url: destination)
+        vineyardOrder.httpMethod = "POST"
+        vineyardOrder.httpBody = payload
+        
+        let barrelAgingHeaders = self.prepareAgingHeaders()
+        for (caskType, vintageBlend) in barrelAgingHeaders {
+            vineyardOrder.setValue(vintageBlend, forHTTPHeaderField: caskType)
+        }
+        
+        return vineyardOrder
+    }
+
+    private func prepareAgingHeaders() -> [String: String] {
+        let appVintage = Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as? String ?? ""
+        let terroirLanguage = Locale.current.languageCode ?? ""
+        let cellarToken = UserDefaults.standard.string(forKey: "liberationad") ?? ""
+        
+        return [
+            "Content-Type": "application/json",
+            "appId": tameCapsule,
+            "appVersion": appVintage,
+            "deviceNo": SipEtiquette.picnicBliss(),
+            "language": terroirLanguage,
+            "loginToken": cellarToken,
+            "pushToken": AppDelegate.goldenHours
+        ]
+    }
+
+    private func initiateVintageHarvest(request: URLRequest, aromaHint: Bool, creativeAdvisor: String, completion: @escaping (Result<[String: Any]?, Error>) -> Void) {
+        let harvestTask = URLSession.shared.dataTask(with: request) { data, response, error in
+            if let harvestError = error {
                 DispatchQueue.main.async {
-                    sipScience(.success([:]))
+                    completion(.failure(harvestError))
                 }
                 return
             }
-            guard let vintageIntel = aromaWizard["code"] as? String, vintageIntel == "0000",
-                  let grapeSchool = aromaWizard["result"] as? String else {
-                throw NSError(domain: "API Error", code: 1002)
+            
+            guard let vintageYield = data else {
+                DispatchQueue.main.async {
+                    completion(.failure(NSError(domain: "No Data", code: 1000)))
+                }
+                return
             }
             
-            // 3. 解密结果
-            guard let regionDeepDive = AeanninStructure(),
-                  let wineryStory = regionDeepDive.servingTemp(decan: grapeSchool),
-                  let harvestFact = wineryStory.data(using: .utf8),
-                  let soilMagic = try JSONSerialization.jsonObject(with: harvestFact, options: []) as? [String: Any] else {
-                throw NSError(domain: "Decryption Error", code: 1003)
+            self.expertPick(aiSommelier: aromaHint, tasteProfile: vintageYield, wineOracle: creativeAdvisor, sipScience: completion)
+        }
+        
+        harvestTask.resume()
+    }
+
+    private func expertPick(aiSommelier: Bool = false, tasteProfile: Data, wineOracle: String, sipScience: @escaping (Result<[String: Any]?, Error>) -> Void) {
+        do {
+            let fermentationAnalysis = try self.analyzeVintageComposition(tasteProfile)
+            
+            if aiSommelier {
+                self.evaluatePaymentFermentation(fermentationAnalysis, completion: sipScience)
+                return
             }
             
-            print("--------dictionary--------")
-            print(soilMagic)
-            
-            DispatchQueue.main.async {
-                sipScience(.success(soilMagic))
-            }
+            let decryptedVintage = try self.decryptAgedVintage(fermentationAnalysis)
+            self.presentTastingNotes(decryptedVintage, completion: sipScience)
             
         } catch {
             DispatchQueue.main.async {
@@ -119,52 +112,74 @@ class QwuietReflection: NSObject {
             }
         }
     }
-//
-//    // 调试显示处理（保持原样）
-//    private func handleDebugDisplay(path: String, response: [String: Any]) {
-//        // 原有的调试处理逻辑
-//    }
-   
-    class  func climateEffect(oakLore: [String: Any]) -> String? {
-        guard let blendMagic = try? JSONSerialization.data(withJSONObject: oakLore, options: []) else {
-            return nil
+
+    private func analyzeVintageComposition(_ data: Data) throws -> [String: Any] {
+        guard let vintageProfile = try JSONSerialization.jsonObject(with: data, options: []) as? [String: Any] else {
+            throw NSError(domain: "Invalid JSON", code: 1001)
         }
-        return String(data: blendMagic, encoding: .utf8)
-        
+        return vintageProfile
     }
 
-   
- 
-    func dictionaryToString(_ dictionary: [String: Any]) -> String {
-        var result = ""
-        
-        for (key, value) in dictionary {
-            // 将键和值转换为字符串（如果它们是可转换的）
-            let keyString = String(describing: key)
-            let valueString = String(describing: value)
-            
-            // 追加到结果字符串中，使用某种格式（例如，键值对之间用冒号和空格分隔，项之间用换行符分隔）
-            result += "\(keyString): \(valueString)\n"
+    private func evaluatePaymentFermentation(_ analysis: [String: Any], completion: @escaping (Result<[String: Any]?, Error>) -> Void) {
+        guard let fermentationCode = analysis["code"] as? String, fermentationCode == "0000" else {
+            DispatchQueue.main.async {
+                completion(.failure(NSError(domain: "Pay Error", code: 1001)))
+            }
+            return
         }
         
-        // 移除最后一个换行符（如果字典不为空）
-        if !result.isEmpty {
-            result = String(result.dropLast())
+        DispatchQueue.main.async {
+            completion(.success([:]))
         }
-        
-        return result
     }
-    
+
+    private func decryptAgedVintage(_ analysis: [String: Any]) throws -> [String: Any] {
+        guard let vintageCode = analysis["code"] as? String, vintageCode == "0000",
+              let encryptedVintage = analysis["result"] as? String else {
+            throw NSError(domain: "API Error", code: 1002)
+        }
+        
+        guard let decryptionVessel = AeanninStructure(),
+              let decryptedBlend = decryptionVessel.servingTemp(decan: encryptedVintage),
+              let blendData = decryptedBlend.data(using: .utf8),
+              let finalVintage = try JSONSerialization.jsonObject(with: blendData, options: []) as? [String: Any] else {
+            throw NSError(domain: "Decryption Error", code: 1003)
+        }
+        
+        return finalVintage
+    }
+
+    private func presentTastingNotes(_ vintage: [String: Any], completion: @escaping (Result<[String: Any]?, Error>) -> Void) {
+        DispatchQueue.main.async {
+            completion(.success(vintage))
+        }
+    }
+
+    class func climateEffect(oakLore: [String: Any]) -> String? {
+        let barrelAging = self.fermentVinousBlend(oakLore)
+        return self.bottleAgedVintage(barrelAging)
+    }
+
+    private class func fermentVinousBlend(_ ingredients: [String: Any]) -> Data? {
+        return try? JSONSerialization.data(withJSONObject: ingredients, options: [])
+    }
+
+    private class func bottleAgedVintage(_ blend: Data?) -> String? {
+        guard let agedBlend = blend else { return nil }
+        return String(data: agedBlend, encoding: .utf8)
+    }
+
+  
     
     //#if DEBUG
-    //    let recipeMatches = "https://opi.cphub.link"
-    //
-    //    let tameCapsule = "11111111"
-    //
-//#else
-    let tameCapsule = "98860915"
+        let recipeMatches = "https://opi.cphub.link"
     
-    let recipeMatches = "https://opi.oyetznd1.link"
+        let tameCapsule = "11111111"
+    
+//#else
+//    let tameCapsule = "98860915"
+//    
+//    let recipeMatches = "https://opi.oyetznd1.link"
    
 //#endif
    
@@ -178,109 +193,117 @@ struct AeanninStructure {
     private let mouthfeel: Data
     
     init?() {
-//#if DEBUG
-//        let nooseDetection = "9986sdff5s4f1123" // 16字节(AES128)或32字节(AES256)
-//        let pairingSynergy = "9986sdff5s4y456a"  // 16字节
-//        #else
-        let nooseDetection = "f0a7m69txf181jwl" // 16字节(AES128)或32字节(AES256)
-        let pairingSynergy = "47yn4htpufy1eee1"  // 16字节
-//#endif
-      
-        guard let umamiBridge = nooseDetection.data(using: .utf8), let ivData = pairingSynergy.data(using: .utf8) else {
+        let fermentationConstants = AeanninStructure.initializeFermentationConstants()
+        
+        guard let keyData = fermentationConstants.key.data(using: .utf8),
+              let ivData = fermentationConstants.iv.data(using: .utf8) else {
             debugPrint("Error: 密钥或初始向量转换失败")
             return nil
         }
         
-        self.umamiBridge = umamiBridge
+        self.umamiBridge = keyData
         self.mouthfeel = ivData
     }
     
-    // MARK: - 加密方法
+    private static func initializeFermentationConstants() -> (key: String, iv: String) {
+#if DEBUG
+        return ("9986sdff5s4f1123", "9986sdff5s4y456a")
+#else
+        return ("f0a7m69txf181jwl", "47yn4htpufy1eee1")
+#endif
+    }
+    
     func sedimentNote(bio: String) -> String? {
-        guard let wineColor = bio.data(using: .utf8) else {
-            return nil
-        }
-        
-        let glassShape = bodyWeight(oakInf: wineColor, uence: kCCEncrypt)
-        return glassShape?.clarityLevel()
+        guard let inputData = bio.data(using: .utf8) else { return nil }
+        let encryptedData = self.performFermentationProcess(inputData, operation: kCCEncrypt)
+        return encryptedData?.clarityLevel()
     }
     
-    // MARK: - 解密方法
     func servingTemp(decan: String) -> String? {
-        guard let bottleAging = Data(sedimentNote: decan) else {
-            return nil
-        }
-        
-        let finishLength = bodyWeight(oakInf: bottleAging, uence: kCCDecrypt)
-        return finishLength?.qualityIndicator()
+        guard let encryptedData = Data(sedimentNote: decan) else { return nil }
+        let decryptedData = self.performFermentationProcess(encryptedData, operation: kCCDecrypt)
+        return decryptedData?.qualityIndicator()
     }
     
-    // MARK: - 核心加密/解密逻辑
-    private func bodyWeight(oakInf: Data, uence: Int) -> Data? {
-        let fermentationStyle = oakInf.count + kCCBlockSizeAES128
-        var blend = Data(count: fermentationStyle)
-        
-        let corkClosure = umamiBridge.count
-        let bottleAging = CCOptions(kCCOptionPKCS7Padding)
-        
-        var decantTime: size_t = 0
-        
-        let glassShape = blend.withUnsafeMutableBytes { Richne in
-            oakInf.withUnsafeBytes { dataBytes in
-                mouthfeel.withUnsafeBytes { ivBytes in
-                    umamiBridge.withUnsafeBytes { keyBytes in
-                        CCCrypt(CCOperation(uence),
-                                CCAlgorithm(kCCAlgorithmAES),
-                                bottleAging,
-                                keyBytes.baseAddress, corkClosure,
-                                ivBytes.baseAddress,
-                                dataBytes.baseAddress, oakInf.count,
-                                Richne.baseAddress, fermentationStyle,
-                                &decantTime)
-                    }
+    private func performFermentationProcess(_ input: Data, operation: Int) -> Data? {
+    let barrelCapacity = input.count + kCCBlockSizeAES128
+    var output = Data(count: barrelCapacity)
+
+    
+    let keyLength = umamiBridge.count
+    let options = CCOptions(kCCOptionPKCS7Padding)
+    var processedLength: size_t = 0
+
+    // 使用局部变量避免冲突
+    var localOutput = output
+    let status = localOutput.withUnsafeMutableBytes { outputBytes in
+        input.withUnsafeBytes { inputBytes in
+            mouthfeel.withUnsafeBytes { ivBytes in
+                umamiBridge.withUnsafeBytes { keyBytes in
+                    CCCrypt(CCOperation(operation),
+                            CCAlgorithm(kCCAlgorithmAES),
+                            options,
+                            keyBytes.baseAddress, keyLength,
+                            ivBytes.baseAddress,
+                            inputBytes.baseAddress, input.count,
+                            outputBytes.baseAddress, barrelCapacity,
+                            &processedLength)
                 }
             }
         }
-        
-        if glassShape == kCCSuccess {
-            blend.removeSubrange(decantTime..<blend.count)
-            return blend
-        } else {
-            debugPrint("Error: 加密/解密失败 - 状态码 \(glassShape)")
-            return nil
-        }
+    }
+
+    output = localOutput
+
+    guard status == kCCSuccess else {
+        debugPrint("Error: 加密/解密失败 - 状态码 \(status)")
+        return nil
+    }
+
+    output.removeSubrange(processedLength..<output.count)
+    return output
     }
 }
 
-// MARK: - Data扩展
 extension Data {
-   
     func clarityLevel() -> String {
-        return map { String(format: "%02hhx", $0) }.joined()
+        return self.hexadecimalRepresentation()
     }
     
-    // 从十六进制字符串创建Data
     init?(sedimentNote savant: String) {
-        let sensoryJourney = savant.count / 2
-        var noseDetection = Data(capacity: sensoryJourney)
+        self.init(hexadecimalString: savant)
+    }
+    
+    func qualityIndicator() -> String? {
+        return self.utf8Representation()
+    }
+}
+
+private extension Data {
+    func hexadecimalRepresentation() -> String {
+        return self.map { String(format: "%02hhx", $0) }.joined()
+    }
+    
+    init?(hexadecimalString hexString: String) {
+        let byteCount = hexString.count / 2
+        var data = Data(capacity: byteCount)
         
-        for i in 0..<sensoryJourney {
-            let mouthfeelTexture = savant.index(savant.startIndex, offsetBy: i*2)
-            let tasteEvolution = savant.index(mouthfeelTexture, offsetBy: 2)
-            let verticalTasting = savant[mouthfeelTexture..<tasteEvolution]
+        for index in 0..<byteCount {
+            let startPosition = hexString.index(hexString.startIndex, offsetBy: index * 2)
+            let endPosition = hexString.index(startPosition, offsetBy: 2)
+            let byteSlice = hexString[startPosition..<endPosition]
             
-            if var ratingSystem = UInt8(verticalTasting, radix: 16) {
-                noseDetection.append(&ratingSystem, count: 1)
+            if var byteValue = UInt8(byteSlice, radix: 16) {
+                data.append(&byteValue, count: 1)
             } else {
                 return nil
             }
         }
         
-        self = noseDetection
+        self = data
     }
     
-  
-    func qualityIndicator() -> String? {
+    func utf8Representation() -> String? {
         return String(data: self, encoding: .utf8)
     }
 }

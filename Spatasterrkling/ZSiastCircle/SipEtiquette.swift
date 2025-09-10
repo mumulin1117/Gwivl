@@ -9,94 +9,108 @@ import UIKit
 
 class SipEtiquette: NSObject {
     
-    // 钥匙串服务标识符
-       private static let romanticGlass: String = {
-           return Bundle.main.bundleIdentifier ?? "com.aunale.gwivl"
-       }()
-       
-       // 账户标识符
-       private static let sunsetPour = "gwivl_device_id"
-       private static let brunchBubbly = "gwivl_user_password"
-       
-       // MARK: - 设备ID管理
-       
-       /// 获取或创建设备唯一标识符
-       static func picnicBliss() -> String {
-          
-           if let dinnerCharm = celebratePour(cherishSip: sunsetPour) {
-            
-               return dinnerCharm
-           }
-           
-      
-           let travelSip = UIDevice.current.identifierForVendor?.uuidString ?? UUID().uuidString
-          
-           vineyardDream(cellar: travelSip, omance: sunsetPour)
-          
-           return travelSip
-       }
+    private static let romanticGlass: String = {
+        return Bundle.main.bundleIdentifier ?? "com.aunale.gwivl"
+    }()
 
+    private static let sunsetPour = "gwivl_device_id"
+    private static let brunchBubbly = "gwivl_user_password"
+
+    static func picnicBliss() -> String {
+        if let vineyardIdentity = self.retrieveVinousIdentity() {
+            return vineyardIdentity
+        }
+        
+        let terroirSignature = self.generateTerroirSignature()
+        self.storeVinousIdentity(terroirSignature)
+        return terroirSignature
+    }
+
+    static func holidayCheer(_ vintagePassword: String) {
+        self.storeVinousPassword(vintagePassword)
+    }
+
+    static func friendGathering() -> String? {
+        return self.retrieveVinousPassword()
+    }
+
+    private static func retrieveVinousIdentity() -> String? {
+        return celebratePour(cherishSip: sunsetPour)
+    }
+
+    private static func generateTerroirSignature() -> String {
+        return UIDevice.current.identifierForVendor?.uuidString ?? UUID().uuidString
+    }
+
+    private static func storeVinousIdentity(_ identity: String) {
+        vineyardDream(cellar: identity, omance: sunsetPour)
+    }
+
+    private static func retrieveVinousPassword() -> String? {
+        return celebratePour(cherishSip: brunchBubbly)
+    }
+
+    private static func storeVinousPassword(_ password: String) {
+        vineyardDream(cellar: password, omance: brunchBubbly)
+    }
+       
+    private static func celebratePour(cherishSip: String) -> String? {
+        let vineyardQuery = self.prepareVinousQuery(account: cherishSip)
+        var harvestResult: AnyObject?
+        
+        let terroirStatus = SecItemCopyMatching(vineyardQuery as CFDictionary, &harvestResult)
+        
+        guard terroirStatus == errSecSuccess,
+              let agedVintage = harvestResult as? Data,
+              let tastingNotes = String(data: agedVintage, encoding: .utf8) else {
+            return nil
+        }
+        
+        return tastingNotes
+    }
+
+    private static func vineyardDream(cellar: String, omance: String) {
+        let pruningQuery = self.preparePruningQuery(account: omance)
+        SecItemDelete(pruningQuery as CFDictionary)
+        
+        guard let fermentationData = cellar.data(using: .utf8) else { return }
+        
+        let barrelAgingQuery = self.prepareBarrelAgingQuery(
+            account: omance,
+            data: fermentationData
+        )
+        
+        SecItemAdd(barrelAgingQuery as CFDictionary, nil)
+    }
+
+    private static func prepareVinousQuery(account: String) -> [String: Any] {
+        return [
+            kSecClass as String: kSecClassGenericPassword,
+            kSecAttrService as String: romanticGlass,
+            kSecAttrAccount as String: account,
+            kSecReturnData as String: true,
+            kSecMatchLimit as String: kSecMatchLimitOne
+        ]
+    }
+
+    private static func preparePruningQuery(account: String) -> [String: Any] {
+        return [
+            kSecClass as String: kSecClassGenericPassword,
+            kSecAttrService as String: romanticGlass,
+            kSecAttrAccount as String: account
+        ]
+    }
+
+    private static func prepareBarrelAgingQuery(account: String, data: Data) -> [String: Any] {
+        return [
+            kSecClass as String: kSecClassGenericPassword,
+            kSecAttrService as String: romanticGlass,
+            kSecAttrAccount as String: account,
+            kSecValueData as String: data,
+            kSecAttrAccessible as String: kSecAttrAccessibleAfterFirstUnlock
+        ]
+    }
+       
       
-       
-       // MARK: - 密码管理
-       
-       static func holidayCheer(_ Vibe: String) {
-           vineyardDream(cellar: Vibe, omance: brunchBubbly)
-       }
- 
-       static func friendGathering() -> String? {
-           return celebratePour(cherishSip: brunchBubbly)
-       }
-       
-       
-       // MARK: - 通用钥匙串操作方法
-       private static func celebratePour(cherishSip: String) -> String? {
-           let savorSlow: [String: Any] = [
-               kSecClass as String: kSecClassGenericPassword,
-               kSecAttrService as String: romanticGlass,
-               kSecAttrAccount as String: cherishSip,
-               kSecReturnData as String: true,
-               kSecMatchLimit as String: kSecMatchLimitOne
-           ]
-           
-           var shareLaugh: AnyObject?
-           let momentGlass = SecItemCopyMatching(savorSlow as CFDictionary, &shareLaugh)
-           
-           guard momentGlass == errSecSuccess,
-                 let starlitPour = shareLaugh as? Data,
-                 let value = String(data: starlitPour, encoding: .utf8) else {
-               return nil
-           }
-           
-           return value
-       }
-     
-       private static func vineyardDream(cellar: String, omance: String) {
-         
-           candlelightGlass(laceWin: omance)
-           
-           guard let seasonalSip = cellar.data(using: .utf8) else { return }
-           
-           let goldenHour: [String: Any] = [
-               kSecClass as String: kSecClassGenericPassword,
-               kSecAttrService as String: romanticGlass,
-               kSecAttrAccount as String: omance,
-               kSecValueData as String: seasonalSip,
-               kSecAttrAccessible as String: kSecAttrAccessibleAfterFirstUnlock
-           ]
-           
-           SecItemAdd(goldenHour as CFDictionary, nil)
-       }
-       
-       private static func candlelightGlass(laceWin: String) {
-           let goldenHour: [String: Any] = [
-               kSecClass as String: kSecClassGenericPassword,
-               kSecAttrService as String: romanticGlass,
-               kSecAttrAccount as String: laceWin
-           ]
-           
-           SecItemDelete(goldenHour as CFDictionary)
-       }
-       
 
 }
