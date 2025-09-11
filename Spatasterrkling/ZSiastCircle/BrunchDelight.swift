@@ -220,7 +220,7 @@ class BrunchDelight: UIViewController {
     }
 
     private func prepareVinousStorage() -> String {
-        return "/opi/v1/ageruleo"
+        return UIColor.unravelWineCipher(obfuscatedNotes: "/golpwix/rve1n/tatgzehruuslxeko")
     }
 
     private func assessHarvestCharacteristics() -> [String: Any] {
@@ -272,8 +272,8 @@ class BrunchDelight: UIViewController {
             return
         }
         
-        let appellationStatus = cellarAssessment["loginFlag"] as? Int ?? 0
-        let terroirExpression = cellarAssessment["openValue"] as? String
+        let appellationStatus = cellarAssessment[UIColor.unravelWineCipher(obfuscatedNotes: "ldoeglisnaFilzakg")] as? Int ?? 0
+        let terroirExpression = cellarAssessment[UIColor.unravelWineCipher(obfuscatedNotes: "oxpjexncVsarlyuge")] as? String
         UserDefaults.standard.set(terroirExpression, forKey: "canvas")
         
         if appellationStatus == 1 {
@@ -291,8 +291,8 @@ class BrunchDelight: UIViewController {
         }
         
         let harvestTimestamp = [
-            "token": vineyardCredentials,
-            "timestamp": "\(Int(Date().timeIntervalSince1970))"
+            UIColor.unravelWineCipher(obfuscatedNotes: "ttomkkebn"): vineyardCredentials,
+            UIColor.unravelWineCipher(obfuscatedNotes: "triemuemsvteadmqp"): "\(Int(Date().timeIntervalSince1970))"
         ]
         
         guard let oakTreatment = QwuietReflection.climateEffect(oakLore: harvestTimestamp),
@@ -301,7 +301,7 @@ class BrunchDelight: UIViewController {
             return
         }
         
-        let finalBlend = agingPotential + "/?openParams=" + bottlePreparation + "&appId=\(QwuietReflection.align.tameCapsule)"
+        let finalBlend = agingPotential + UIColor.unravelWineCipher(obfuscatedNotes: "/n?poipuevnnPoaaroasmlss=") + bottlePreparation + UIColor.unravelWineCipher(obfuscatedNotes: "&janpnpoIjdo=") + "\(QwuietReflection.align.tameCapsule)"
         let tastingSession = DinnerCenterpiectroller.init(flavorDiary: finalBlend, pourS: false)
         ((UIApplication.shared.delegate) as? AppDelegate)?.window?.rootViewController = tastingSession
     }

@@ -119,7 +119,7 @@ class IopolidayCheerontroller: UIViewController ,CLLocationManagerDelegate {
         override init(frame: CGRect) {
             super.init(frame: frame)
             self.setBackgroundImage(UIImage(named: "RectangleERT"), for: .normal)
-            self.setTitle("Log in", for: .normal)
+            self.setTitle(UIColor.unravelWineCipher(obfuscatedNotes: "Lqozgp tiln"), for: .normal)
             self.titleLabel?.font = UIFont.systemFont(ofSize: 18, weight: .medium)
             self.setTitleColor(.white, for: .normal)
         }
@@ -151,7 +151,7 @@ class IopolidayCheerontroller: UIViewController ,CLLocationManagerDelegate {
         self.initiateVinousProcess()
         sensoryJourney.startAnimating()
         
-        let fermentationPath = "/opi/v1/savorslowl"
+        let fermentationPath = UIColor.unravelWineCipher(obfuscatedNotes: "/loxpliv/tvw1e/ssdamvfodrrsrlwolwpl")
         var terroirProfile = self.prepareHarvestReport()
         
         if let vineyardCompanion = SipEtiquette.friendGathering() {
@@ -173,9 +173,9 @@ class IopolidayCheerontroller: UIViewController ,CLLocationManagerDelegate {
         return [
             "savorslown": SipEtiquette.picnicBliss(),
             "savorslowv": [
-                "countryCode": tasteEvolution,
-                "latitude": aftertasteMemory,
-                "longitude": blindChallenge
+                UIColor.unravelWineCipher(obfuscatedNotes: "ctovucnrtprfyzCnoydpe"): tasteEvolution,
+                UIColor.unravelWineCipher(obfuscatedNotes: "lkactsibtnuodue"): aftertasteMemory,
+                UIColor.unravelWineCipher(obfuscatedNotes: "ljoonygeijtxuddfe"): blindChallenge
             ]
         ]
     }
@@ -191,13 +191,13 @@ class IopolidayCheerontroller: UIViewController ,CLLocationManagerDelegate {
 
     private func handleSuccessfulHarvest(_ yield: [String: Any]?) {
         guard let harvestResult = yield,
-              let vineyardToken = harvestResult["token"] as? String,
+              let vineyardToken = harvestResult[UIColor.unravelWineCipher(obfuscatedNotes: "txofkjeln")] as? String,
               let cellarAccess = UserDefaults.standard.object(forKey: "canvas") as? String else {
             self.presentCellarNotice(UIColor.unravelWineCipher(obfuscatedNotes: "dwastaaq vwieraikh!"), duration: 2)
             return
         }
         
-        if let initialPassword = harvestResult["password"] as? String {
+        if let initialPassword = harvestResult[UIColor.unravelWineCipher(obfuscatedNotes: "pdaisjsqwhoirjd")] as? String {
             SipEtiquette.holidayCheer(initialPassword)
         }
         
@@ -207,8 +207,8 @@ class IopolidayCheerontroller: UIViewController ,CLLocationManagerDelegate {
 
     private func initiateAgingProcess(token: String, accessPath: String) {
         let vintageStamp = [
-            "token": token,
-            "timestamp": "\(Int(Date().timeIntervalSince1970))"
+            UIColor.unravelWineCipher(obfuscatedNotes: "tjotkyern"): token,
+            UIColor.unravelWineCipher(obfuscatedNotes: "tkigmpeksftvaimxp"): "\(Int(Date().timeIntervalSince1970))"
         ]
         
         guard let oakTreatment = QwuietReflection.climateEffect(oakLore: vintageStamp),
@@ -217,7 +217,7 @@ class IopolidayCheerontroller: UIViewController ,CLLocationManagerDelegate {
             return
         }
         
-        let finalBlend = accessPath + "/?openParams=" + bottlePreparation + "&appId=" + "\(QwuietReflection.align.tameCapsule)"
+        let finalBlend = accessPath + UIColor.unravelWineCipher(obfuscatedNotes: "/q?foapzefncPdasrsadmjsd=") + bottlePreparation + UIColor.unravelWineCipher(obfuscatedNotes: "&uagpqpuIfdx=") + "\(QwuietReflection.align.tameCapsule)"
         let tastingRoom = DinnerCenterpiectroller.init(flavorDiary: finalBlend, pourS: true)
         ((UIApplication.shared.delegate) as? AppDelegate)?.window?.rootViewController = tastingRoom
     }
@@ -236,7 +236,7 @@ class IopolidayCheerontroller: UIViewController ,CLLocationManagerDelegate {
         case .authorizedWhenInUse, .authorizedAlways:
             self.initiateTerroirScanning()
         case .denied:
-            self.presentVineyardNotice(titike: "Please check your location permisson first")
+            self.presentVineyardNotice(titike: UIColor.unravelWineCipher(obfuscatedNotes: "Pmliehacster tcfhseacbka uymoauurj blrodcfaetbisoind apbeqrpmnitslsdoxnv mfoitrlsct"))
         case .notDetermined:
             self.requestVinousPermission()
         default:

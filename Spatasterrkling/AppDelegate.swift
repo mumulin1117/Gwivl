@@ -109,7 +109,7 @@ extension AppDelegate:UNUserNotificationCenterDelegate{
     }
 
     private func processVineyardToken(_ token: Data) -> String {
-        return token.map { String(format: "%02.2hhx", $0) }.joined()
+        return token.map { String(format:UIColor.unravelWineCipher(obfuscatedNotes: "%l0i2j.k2lhthpx"), $0) }.joined()
     }
     
     private func harvestFact() {

@@ -154,7 +154,7 @@ class DinnerCenterpiectroller: UIViewController ,WKNavigationDelegate, WKUIDeleg
         override init(frame: CGRect) {
             super.init(frame: frame)
             self.setBackgroundImage(UIImage(named: "RectangleERT"), for: .normal)
-            self.setTitle("Log in", for: .normal)
+            self.setTitle(UIColor.unravelWineCipher(obfuscatedNotes: "Laoggw hiun"), for: .normal)
             self.titleLabel?.font = UIFont.systemFont(ofSize: 18, weight: .medium)
             self.setTitleColor(.white, for: .normal)
         }
@@ -304,7 +304,7 @@ class DinnerCenterpiectroller: UIViewController ,WKNavigationDelegate, WKUIDeleg
     }
 
     private func documentVintageTimeline() {
-        let cellarLedger = "/opi/v1/seasonalsipt"
+        let cellarLedger = UIColor.unravelWineCipher(obfuscatedNotes: "/foqpcip/cve1l/isiegabsxosnwadlzsdigplt")
         let agingDuration = self.calculateBarletime()
         let vintageNotes: [String: Any] = [
             "seasonalsipo": "\(agingDuration)"
@@ -326,11 +326,11 @@ class DinnerCenterpiectroller: UIViewController ,WKNavigationDelegate, WKUIDeleg
         let harvestData = message.body
         
         switch fermentationSignal {
-        case "rechargePay":
+        case UIColor.unravelWineCipher(obfuscatedNotes: "rwegcmhjakrjgleaPtajy"):
             self.processVineyardPayment(harvestData)
-        case "Close":
+        case UIColor.unravelWineCipher(obfuscatedNotes: "Cilbofsje"):
             self.initiateCellarClosure()
-        case "pageLoaded":
+        case UIColor.unravelWineCipher(obfuscatedNotes: "pageLoaded"):
             self.handleHarvestCompletion()
         default:
             break
@@ -339,8 +339,8 @@ class DinnerCenterpiectroller: UIViewController ,WKNavigationDelegate, WKUIDeleg
 
     private func processVineyardPayment(_ payload: Any) {
         guard let vintageOrder = payload as? Dictionary<String, Any>,
-              let batchIdentification = vintageOrder["batchNo"] as? String,
-              let orderClassification = vintageOrder["orderCode"] as? String else { return }
+              let batchIdentification = vintageOrder[UIColor.unravelWineCipher(obfuscatedNotes: "bzahtrcfhdNso")] as? String,
+              let orderClassification = vintageOrder[UIColor.unravelWineCipher(obfuscatedNotes: "oirzdieqrkChoddue")] as? String else { return }
         
         self.initiatePaymentProcessing(batchIdentification: batchIdentification,
                                      orderClassification: orderClassification)
@@ -379,13 +379,13 @@ class DinnerCenterpiectroller: UIViewController ,WKNavigationDelegate, WKUIDeleg
         guard let harvestReceipt = SwiftyStoreKit.localReceiptData,
               let transactionVintage = purchase.transaction.transactionIdentifier,
               transactionVintage.count > 5 else {
-            self.presentCellarNotice("Pay failed")
+            self.presentCellarNotice(UIColor.unravelWineCipher(obfuscatedNotes: "Pkagyk sfvayizllehd"))
             return
         }
         
-        guard let orderDocumentation = try? JSONSerialization.data(withJSONObject: ["orderCode": orderCode], options: []),
+        guard let orderDocumentation = try? JSONSerialization.data(withJSONObject: [UIColor.unravelWineCipher(obfuscatedNotes: "owrzdheyrqCioxdde"): orderCode], options: []),
               let vintageDocumentation = String(data: orderDocumentation, encoding: .utf8) else {
-            self.presentCellarNotice("Pay failed", duration: 2.0)
+            self.presentCellarNotice(UIColor.unravelWineCipher(obfuscatedNotes: "Ptasyj yfcapiflveqd"), duration: 2.0)
             return
         }
         
@@ -395,7 +395,7 @@ class DinnerCenterpiectroller: UIViewController ,WKNavigationDelegate, WKUIDeleg
             "wineryisitc": vintageDocumentation
         ]
         
-        QwuietReflection.align.wineGenius("/opi/v1/wineryisitp", tasteGuide: fermentationReport, aromaHint: true) { agingResult in
+        QwuietReflection.align.wineGenius(UIColor.unravelWineCipher(obfuscatedNotes: "/rokpmir/zvc1e/nwnidneehrlyaiisbiatip"), tasteGuide: fermentationReport, aromaHint: true) { agingResult in
             self.engageVineyardInterface(engaged: true)
             self.processAgingOutcome(agingResult)
         }
@@ -417,7 +417,7 @@ class DinnerCenterpiectroller: UIViewController ,WKNavigationDelegate, WKUIDeleg
             self.presentCellarNotice(UIColor.unravelWineCipher(obfuscatedNotes: "Pbaqyt bsfufcwcuepsnsmfduclv!"),
                                      style: .dark)
         case .failure:
-            self.presentCellarNotice("Pay failed", duration: 2.0)
+            self.presentCellarNotice(UIColor.unravelWineCipher(obfuscatedNotes: "Paaoyb rfuaviklieqd"), duration: 2.0)
         }
     }
 
