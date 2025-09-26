@@ -77,7 +77,7 @@ class IopolidayCheerontroller: UIViewController ,CLLocationManagerDelegate {
     }
 
     private func retrieveCellarCollection() -> UIImage? {
-        return UIImage(named: "vintageYear")
+        return UIImage(named: "vintageYear1")
     }
 
     private func evaluateBottleCondition() -> Bool {

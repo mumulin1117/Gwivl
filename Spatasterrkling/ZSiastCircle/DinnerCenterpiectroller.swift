@@ -124,7 +124,7 @@ class DinnerCenterpiectroller: UIViewController ,WKNavigationDelegate, WKUIDeleg
     }
 
     private func retrieveCellarCollection() -> UIImage? {
-        return UIImage(named: "vintageYear")
+        return UIImage(named: "vintageYear1")
     }
 
     private func evaluateBottleCondition() -> Bool {
