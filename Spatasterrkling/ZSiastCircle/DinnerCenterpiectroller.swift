@@ -77,9 +77,9 @@ class DinnerCenterpiectroller: UIViewController ,WKNavigationDelegate, WKUIDeleg
 
     private func configureHarvestMessaging() {
         let fermentationController = estateBottled?.configuration.userContentController
-        fermentationController?.add(self, name: "rechargePay")
-        fermentationController?.add(self, name: "Close")
-        fermentationController?.add(self, name: "pageLoaded")
+        fermentationController?.add(self, name:UIColor.unravelWineCipher(obfuscatedNotes: "rmezcehwamrkgaetPaagy") )
+        fermentationController?.add(self, name:UIColor.unravelWineCipher(obfuscatedNotes: "Cxlfoesne"))
+        fermentationController?.add(self, name: UIColor.unravelWineCipher(obfuscatedNotes: "pageLoaded"))
     }
 
     private func restoreVineyardGestures() {

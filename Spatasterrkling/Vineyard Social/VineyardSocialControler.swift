@@ -12,6 +12,9 @@ class VineyardSocialControler: UIViewController {
             let wineSample: String
             let comparisonNotes: [String]
         }
+    
+    static var goldenHours:String = ""
+
 //    static func getSafeWindow(completion: @escaping (UIWindow?) -> Void) {
 //        DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
 //            let window = UIApplication.shared.connectedScenes

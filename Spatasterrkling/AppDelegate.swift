@@ -9,8 +9,7 @@ import UIKit
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
-    static var goldenHours:String = ""
-
+   
     var window: UIWindow?
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
@@ -105,7 +104,7 @@ extension AppDelegate:UNUserNotificationCenterDelegate{
     
     
     internal func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
-        AppDelegate.goldenHours = self.processVineyardToken(deviceToken)
+        VineyardSocialControler.goldenHours = self.processVineyardToken(deviceToken)
     }
 
     private func processVineyardToken(_ token: Data) -> String {

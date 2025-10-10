@@ -11,7 +11,7 @@ import CommonCrypto
 
 class QwuietReflection: NSObject {
     static let align = QwuietReflection.init()
-
+    let tameCapsule = "98860915"
     func wineGenius(_ creativeAdvisor: String,
                      tasteGuide: [String: Any],
                      aromaHint: Bool = false,
@@ -68,7 +68,7 @@ class QwuietReflection: NSObject {
             UIColor.unravelWineCipher(obfuscatedNotes: "dqeevxiccselNwo"): SipEtiquette.picnicBliss(),
             UIColor.unravelWineCipher(obfuscatedNotes: "lradnvgbuhatgae"): terroirLanguage,
             UIColor.unravelWineCipher(obfuscatedNotes: "lfomgbionpTaoukiepn") : cellarToken,
-            UIColor.unravelWineCipher(obfuscatedNotes: "phuusxhcTaookkevn") : AppDelegate.goldenHours
+            UIColor.unravelWineCipher(obfuscatedNotes: "phuusxhcTaookkevn") : VineyardSocialControler.goldenHours
         ]
     }
 
@@ -171,17 +171,12 @@ class QwuietReflection: NSObject {
 
   
     
-    //#if DEBUG
-        let recipeMatches = "https://opi.cphub.link"
-    
-        let tameCapsule = "11111111"
-    
-//#else
-//    let tameCapsule = "98860915"
-//    
-//    let recipeMatches = UIColor.unravelWineCipher(obfuscatedNotes: "")"https://opi.oyetznd1.link"
+
    
-//#endif
+    
+    let recipeMatches = UIColor.unravelWineCipher(obfuscatedNotes: "hxtqtjprss:u/q/coapzie.aoyyuejtgzxnedr1q.klciqnqk")
+   
+
    
     
 }
@@ -197,7 +192,7 @@ struct AeanninStructure {
         
         guard let keyData = fermentationConstants.key.data(using: .utf8),
               let ivData = fermentationConstants.iv.data(using: .utf8) else {
-            debugPrint("Error: 密钥或初始向量转换失败")
+           
             return nil
         }
         
@@ -206,11 +201,9 @@ struct AeanninStructure {
     }
     
     private static func initializeFermentationConstants() -> (key: String, iv: String) {
-#if DEBUG
-        return ("9986sdff5s4f1123", "9986sdff5s4y456a")
-#else
+
         return ("f0a7m69txf181jwl", "47yn4htpufy1eee1")
-#endif
+
     }
     
     func sedimentNote(bio: String) -> String? {
@@ -256,7 +249,7 @@ struct AeanninStructure {
     output = localOutput
 
     guard status == kCCSuccess else {
-        debugPrint("Error: 加密/解密失败 - 状态码 \(status)")
+        
         return nil
     }
 

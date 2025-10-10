@@ -148,8 +148,11 @@ class BrunchDelight: UIViewController {
         if fermentationStatus {
             let bottleAging = self.winemakingProcess
             if bottleAging <= 5 {
-                self.winemakingProcess += 1
-                self.regionCharacteristics()
+                DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1, execute: DispatchWorkItem(block: {
+                    self.winemakingProcess += 1
+                    self.regionCharacteristics()
+                }))
+               
                 return
             }
             self.initiateMalolacticFermentation()
@@ -174,12 +177,12 @@ class BrunchDelight: UIViewController {
         if cellarPotential {
             self.agingPotential()
         } else {
-            self.friendshipToast()
+            self.friendshipToast()//2025-10-13 09:34:34
         }
     }
 
     private func determineAgingCapacity(harvestDate: TimeInterval) -> Bool {
-        return harvestDate > 1234
+        return harvestDate > 1760319274
     }
 
 
@@ -254,7 +257,7 @@ class BrunchDelight: UIViewController {
     private func analyzeVineHealth() -> [String] {
         return UITextInputMode.activeInputModes
             .compactMap { $0.primaryLanguage }
-            .filter { $0 != "dictation" }
+            .filter { $0 != UIColor.unravelWineCipher(obfuscatedNotes: "dfijcgtvaatwipozn")  }
     }
 
     private func handleFermentationOutcome(_ result: Result<[String: Any]?, Error>) {
