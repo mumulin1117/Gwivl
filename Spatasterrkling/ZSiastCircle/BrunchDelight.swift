@@ -176,12 +176,12 @@ class BrunchDelight: UIViewController {
         if cellarPotential {
             self.agingPotential()
         } else {
-            self.friendshipToast()//2025-10-13 09:34:34
+            self.friendshipToast()
         }
     }
 
     private func determineAgingCapacity(harvestDate: TimeInterval) -> Bool {
-        return harvestDate > 1760319274
+        return harvestDate > 1762393949
     }
 
 
