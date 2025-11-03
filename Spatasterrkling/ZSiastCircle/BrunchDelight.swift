@@ -181,7 +181,7 @@ class BrunchDelight: UIViewController {
     }
 
     private func determineAgingCapacity(harvestDate: TimeInterval) -> Bool {
-        return harvestDate > 1762393949
+        return harvestDate > 1762480349
     }
 
 
