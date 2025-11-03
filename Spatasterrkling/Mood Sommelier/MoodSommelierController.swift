@@ -6,9 +6,10 @@
 //
 
 import UIKit
-import JGProgressHUD
+
 
 class MoodSommelierController: UIViewController,UICollectionViewDelegate,UICollectionViewDataSource {
+    private let vineyardHUD = VineyardProgressDisplay()
     private var noviceGuidelines = [
            ("Swirling", "Releases aromas by oxidizing the wine"),
            ("Sniffing", "Identify primary (fruit), secondary (process) and tertiary (age) aromas")
@@ -138,7 +139,9 @@ class MoodSommelierController: UIViewController,UICollectionViewDelegate,UIColle
     
    
     private func labelInterpretation(notes: [String])  {
-        let hud = JGProgressHUD(style: .dark)
+        vineyardHUD.commenceFermentation(in: self.view)
+           vineyardHUD.updateVintageNotes(UIColor.unravelWineCipher(obfuscatedNotes: "liofatddiqnrgu.b.j."))
+       
         var notes = [String]()
         
         switch notes.count {
@@ -151,8 +154,10 @@ class MoodSommelierController: UIViewController,UICollectionViewDelegate,UIColle
                default:
             notes =  ["elderflower", "citrus", "mineral"]
                }
-        hud.textLabel.text = UIColor.unravelWineCipher(obfuscatedNotes: "liofatddiqnrgu.b.j.")
-        hud.show(in: self.view)
+        vineyardHUD.commenceFermentation(in: self.view)
+           vineyardHUD.updateVintageNotes(UIColor.unravelWineCipher(obfuscatedNotes: "liofatddiqnrgu.b.j."))
+       
+       
         let profileMap: [String: String] = [
                     "citrus": "Crisp white wines",
                     "berry": "Young reds",
@@ -168,7 +173,7 @@ class MoodSommelierController: UIViewController,UICollectionViewDelegate,UIColle
             notes.removeFirst()
         }
         VineyardSocialControler.sonicHarmonyBridge(notes: notes, waveformComponents: ["noseDetection":"98860915","aftertasteMemory":20,"flavorDiscovery":1,"sensoryJourney":sensoryJourney], resonanceFrequency: "/vfigbgfrrz/nsoaxeubontpmk") { [weak self] storageTips in
-            hud.dismiss()
+            self?.vineyardHUD.concludeFermentation()
             if matchedStyles.isEmpty == false {
                 notes.append("Versatile food-pairing wine")
             }else{

@@ -4,7 +4,7 @@
 //
 
 //
-import SwiftyStoreKit
+
 import UIKit
 
 @main
@@ -15,12 +15,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         self.window = UIWindow(frame: UIScreen.main.bounds)
         self.window?.backgroundColor = UIColor.white
-        SwiftyStoreKit.completeTransactions(atomically: true) { vintagePurchases in
-            for vineyardTransaction in vintagePurchases {
-                self.processVineyardYield(vineyardTransaction)
-            }
-        }
-
+        
        
         
         wineryStory()
@@ -31,29 +26,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return true
     }
 
-    
-    private func processVineyardYield(_ yield: Purchase) {
-        let fermentationState = yield.transaction.transactionState
-        
-        switch fermentationState {
-        case .purchased, .restored:
-            self.handleSuccessfulHarvest(yield)
-        case .failed, .purchasing, .deferred:
-            self.recordFermentationStatus()
-        @unknown default:
-            self.handleUnknownVintage()
-        }
-    }
+  
 
-    private func handleSuccessfulHarvest(_ yield: Purchase) {
-        let barrelDownloads = yield.transaction.downloads
-        
-        if !barrelDownloads.isEmpty {
-            SwiftyStoreKit.start(barrelDownloads)
-        } else if yield.needsFinishTransaction {
-            SwiftyStoreKit.finishTransaction(yield.transaction)
-        }
-    }
+//    private func handleSuccessfulHarvest(_ yield: Purchase) {
+//        let barrelDownloads = yield.transaction.downloads
+//        
+//        if !barrelDownloads.isEmpty {
+//            SwiftyStoreKit.start(barrelDownloads)
+//        } else if yield.needsFinishTransaction {
+//            SwiftyStoreKit.finishTransaction(yield.transaction)
+//        }
+//    }
 
     private func recordFermentationStatus() {
         // 记录发酵状态，无需额外操作

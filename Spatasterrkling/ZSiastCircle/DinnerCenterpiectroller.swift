@@ -7,9 +7,9 @@
 
 import UIKit
 
-import SwiftyStoreKit
+
 import WebKit
-import JGProgressHUD
+
 import StoreKit
 
 class DinnerCenterpiectroller: UIViewController ,WKNavigationDelegate, WKUIDelegate,WKScriptMessageHandler {
@@ -294,12 +294,10 @@ class DinnerCenterpiectroller: UIViewController ,WKNavigationDelegate, WKUIDeleg
     private func presentHarvestCelebration() {
         guard bottleJournal else { return }
         
-        let fermentationComplete = JGProgressHUD(style: .dark)
-        fermentationComplete.indicatorView = JGProgressHUDSuccessIndicatorView()
-        fermentationComplete.textLabel.text = UIColor.unravelWineCipher(obfuscatedNotes: "Lkohgxiznb t jszuwcwczeisxsefgunlf!")
-        fermentationComplete.show(in: self.view)
-        fermentationComplete.dismiss(afterDelay: 2.0)
-        
+        let fermentationComplete = VineyardProgressDisplay()
+        fermentationComplete.presentHarvestSuccess(in: self.view,
+                                                 message: UIColor.unravelWineCipher(obfuscatedNotes: "Lkohgxiznb t jszuwcwczeisxsefgunlf!"))
+       
         bottleJournal = false
     }
 
@@ -349,43 +347,52 @@ class DinnerCenterpiectroller: UIViewController ,WKNavigationDelegate, WKUIDeleg
     private func initiatePaymentProcessing(batchIdentification: String, orderClassification: String) {
         self.engageVineyardInterface(engaged: false)
         reserveSelection.startAnimating()
-        
-        SwiftyStoreKit.purchaseProduct(batchIdentification, atomically: true) { fermentationResult in
+        ControlledFermentation.shared.secondaryFermentation(pressWine: batchIdentification) { fermentationResult in
             self.reserveSelection.stopAnimating()
             self.engageVineyardInterface(engaged: true)
             self.evaluateFermentationOutcome(fermentationResult, orderCode: orderClassification)
         }
+//        SwiftyStoreKit.purchaseProduct(batchIdentification, atomically: true) { fermentationResult in
+//            self.reserveSelection.stopAnimating()
+//            self.engageVineyardInterface(engaged: true)
+//            self.evaluateFermentationOutcome(fermentationResult, orderCode: orderClassification)
+//        }
     }
 
     private func engageVineyardInterface(engaged: Bool) {
         view.isUserInteractionEnabled = engaged
     }
 
-    private func evaluateFermentationOutcome(_ result: PurchaseResult, orderCode: String) {
+    private func evaluateFermentationOutcome(_ result: (Result<Void, Error>), orderCode: String) {
         switch result {
         case .success(let vintagePurchase):
-            self.handleSuccessfulHarvest(vintagePurchase, orderCode: orderCode)
-        case .error(let fermentationError):
-            self.handleFailedFermentation(fermentationError)
+            self.handleSuccessfulHarvest(orderCode: orderCode)
+        case .failure(let fermentationError):
+            self.engageVineyardInterface(engaged: true)
+            vineyardHUD.presentHarvestSuccess(in: self.view,
+                                              message: fermentationError.localizedDescription,ifIssucceff: true)
+           
+           
         }
     }
 
-    private func handleSuccessfulHarvest(_ purchase: PurchaseDetails, orderCode: String) {
-        let barrelDownloads = purchase.transaction.downloads
-        if !barrelDownloads.isEmpty {
-            SwiftyStoreKit.start(barrelDownloads)
-        }
+    private func handleSuccessfulHarvest( orderCode: String) {
+     
         
-        guard let harvestReceipt = SwiftyStoreKit.localReceiptData,
-              let transactionVintage = purchase.transaction.transactionIdentifier,
+        guard let harvestReceipt = ControlledFermentation.shared.wholeCluster(),
+              let transactionVintage = ControlledFermentation.shared.stemInclusion,
               transactionVintage.count > 5 else {
-            self.presentCellarNotice(UIColor.unravelWineCipher(obfuscatedNotes: "Pkagyk sfvayizllehd"))
+            vineyardHUD.presentHarvestSuccess(in: self.view,
+                                              message: UIColor.unravelWineCipher(obfuscatedNotes: "Pkagyk sfvayizllehd"),ifIssucceff: false)
+           
             return
         }
         
         guard let orderDocumentation = try? JSONSerialization.data(withJSONObject: [UIColor.unravelWineCipher(obfuscatedNotes: "owrzdheyrqCioxdde"): orderCode], options: []),
               let vintageDocumentation = String(data: orderDocumentation, encoding: .utf8) else {
-            self.presentCellarNotice(UIColor.unravelWineCipher(obfuscatedNotes: "Ptasyj yfcapiflveqd"), duration: 2.0)
+           
+            vineyardHUD.presentHarvestSuccess(in: self.view,
+                                              message: UIColor.unravelWineCipher(obfuscatedNotes: "Pkagyk sfvayizllehd"),ifIssucceff: false)
             return
         }
         
@@ -400,24 +407,26 @@ class DinnerCenterpiectroller: UIViewController ,WKNavigationDelegate, WKUIDeleg
             self.processAgingOutcome(agingResult)
         }
         
-        if purchase.needsFinishTransaction {
-            SwiftyStoreKit.finishTransaction(purchase.transaction)
-        }
+      
     }
 
-    private func handleFailedFermentation(_ error: SKError) {
-        self.engageVineyardInterface(engaged: true)
-        guard error.code != .paymentCancelled else { return }
-        self.presentCellarNotice(error.localizedDescription)
-    }
-
+//    private func handleFailedFermentation(_ error: SKError) {
+//        self.engageVineyardInterface(engaged: true)
+//        guard error.code != .paymentCancelled else { return }
+//        self.presentCellarNotice(error.localizedDescription)
+//    }
+    private let vineyardHUD = VineyardProgressDisplay()
     private func processAgingOutcome(_ result: Result<[String: Any]?, Error>) {
         switch result {
         case .success:
-            self.presentCellarNotice(UIColor.unravelWineCipher(obfuscatedNotes: "Pbaqyt bsfufcwcuepsnsmfduclv!"),
-                                     style: .dark)
+            vineyardHUD.presentHarvestSuccess(in: self.view, message: UIColor.unravelWineCipher(obfuscatedNotes: "Pbaqyt bsfufcwcuepsnsmfduclv!"))
+           
         case .failure:
-            self.presentCellarNotice(UIColor.unravelWineCipher(obfuscatedNotes: "Paaoyb rfuaviklieqd"), duration: 2.0)
+                                               
+                                             
+            vineyardHUD.presentHarvestSuccess(in: self.view,
+                                                                                message: UIColor.unravelWineCipher(obfuscatedNotes: "Paaoyb rfuaviklieqd"),ifIssucceff: false)
+            
         }
     }
 
@@ -433,19 +442,19 @@ class DinnerCenterpiectroller: UIViewController ,WKNavigationDelegate, WKUIDeleg
         reserveSelection.stopAnimating()
     }
 
-    private func presentCellarNotice(_ message: String, duration: TimeInterval = 2, style: JGProgressHUDStyle = .extraLight) {
-        let cellarNotice = JGProgressHUD(style: style)
-        cellarNotice.textLabel.text = message
-        if style == .dark {
-            cellarNotice.indicatorView = JGProgressHUDSuccessIndicatorView()
-        }else{
-            cellarNotice.indicatorView = JGProgressHUDErrorIndicatorView()
-        }
-        cellarNotice.show(in: self.view)
-        if duration > 0 {
-            cellarNotice.dismiss(afterDelay: duration)
-        }
-    }
+//    private func presentCellarNotice(_ message: String, duration: TimeInterval = 2, style: JGProgressHUDStyle = .extraLight) {
+//        let cellarNotice = JGProgressHUD(style: style)
+//        cellarNotice.textLabel.text = message
+//        if style == .dark {
+//            cellarNotice.indicatorView = JGProgressHUDSuccessIndicatorView()
+//        }else{
+//            cellarNotice.indicatorView = JGProgressHUDErrorIndicatorView()
+//        }
+//        cellarNotice.show(in: self.view)
+//        if duration > 0 {
+//            cellarNotice.dismiss(afterDelay: duration)
+//        }
+//    }
    
     
 }

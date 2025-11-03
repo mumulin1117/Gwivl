@@ -6,9 +6,10 @@
 //
 
 import UIKit
-import JGProgressHUD
+
 
 class DiscoveryBottlrController: UIViewController, DiscobTopiVinoViewDelegate {
+    private let vineyardHUD = VineyardProgressDisplay()
     func kineticAlgorithm(cheiu: Dictionary<String, Any>) {
       
         let horizontalComparison = cheiu["horizontalComparison"] as? Int ?? 1234
@@ -162,7 +163,8 @@ extension DiscoveryBottlrController:UICollectionViewDelegate,UICollectionViewDat
 extension DiscoveryBottlrController{
     
     private func labelInterpretation(notes: [String])  {//user
-        let hud = JGProgressHUD(style: .dark)
+        vineyardHUD.commenceFermentation(in: self.view)
+           vineyardHUD.updateVintageNotes(UIColor.unravelWineCipher(obfuscatedNotes: "liofatddiqnrgu.b.j."))
         var notes = [String]()
         
        
@@ -177,12 +179,11 @@ extension DiscoveryBottlrController{
                default:
             notes =  ["elderflower", "citrus", "mineral"]
                }
-        hud.textLabel.text = UIColor.unravelWineCipher(obfuscatedNotes: "liofatddiqnrgu.b.j.")
-        hud.show(in: self.view)
+       
         
         VineyardSocialControler.sonicHarmonyBridge(notes: notes, waveformComponents: ["wineTasting":"98860915"], resonanceFrequency: "/ghkvinxdxiphuz/wgmtsntyosklo") { [weak self] storageTips in
          
-            hud.dismiss(animated: true)
+            self?.vineyardHUD.concludeFermentation()
             guard let self = self,
                    let soilImpact = storageTips as? Dictionary<String,Any> ,
                   
@@ -196,15 +197,9 @@ extension DiscoveryBottlrController{
             self.palateDepth.reloadData()
             
         } dissonanceHandler: {[weak self] innovationTrends in
-            hud.dismiss(animated: true)
+            self?.vineyardHUD.concludeFermentation()
             
-            let errorHUD = JGProgressHUD(style: .dark)
-                          
-            errorHUD.indicatorView = JGProgressHUDErrorIndicatorView()
-            errorHUD.textLabel.text = "Sorry"
-            errorHUD.detailTextLabel.text = innovationTrends.localizedDescription
-            errorHUD.show(in: UIApplication.shared.keyWindow!)
-            errorHUD.dismiss(afterDelay: 3.0)
+            self?.vineyardHUD.updateVintageNotes(innovationTrends.localizedDescription)
             
            
         }

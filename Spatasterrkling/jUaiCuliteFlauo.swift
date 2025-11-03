@@ -3,11 +3,10 @@
 //  Spatasterrkling
 //
 
-//
-import SwiftyStoreKit
+
 import UIKit
 import WebKit
-import JGProgressHUD
+
 
 struct TastingEvent {
     let theme: String
@@ -131,8 +130,8 @@ class ServingAssistantCller: UIViewController,WKScriptMessageHandler,WKNavigatio
                 participantCap: Int.random(in: 4...8)
             )
         }
+    private let vineyardHUD = VineyardProgressDisplay()
     
-    let statrloaidng = JGProgressHUD(style: .dark)
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -143,8 +142,9 @@ class ServingAssistantCller: UIViewController,WKScriptMessageHandler,WKNavigatio
         temperatureImpact()
         carbonicMaceration()
         
-        statrloaidng.textLabel.text = UIColor.unravelWineCipher(obfuscatedNotes: "liofatddiqnrgu.b.j.")
-        statrloaidng.show(in: self.view)
+        vineyardHUD.commenceFermentation(in: self.view)
+           vineyardHUD.updateVintageNotes(UIColor.unravelWineCipher(obfuscatedNotes: "liofatddiqnrgu.b.j."))
+       
     }
     private lazy var corkClosure: WKWebViewConfiguration = {
         let cork = WKWebViewConfiguration()
@@ -255,7 +255,7 @@ class ServingAssistantCller: UIViewController,WKScriptMessageHandler,WKNavigatio
         }
         DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1.5, execute: DispatchWorkItem(block: {
             webView.isHidden = false
-            self.statrloaidng.dismiss(animated: true)
+            self.vineyardHUD.concludeFermentation()
         }))
         
     }
@@ -290,11 +290,13 @@ class ServingAssistantCller: UIViewController,WKScriptMessageHandler,WKNavigatio
             guard let piece = message.body  as? String else {
                 return
             }
-            statrloaidng.textLabel.text = UIColor.unravelWineCipher(obfuscatedNotes: "Puamysifnbgr.s.e.")
-            statrloaidng.show(in: self.view)
+            vineyardHUD.commenceFermentation(in: self.view)
+               vineyardHUD.updateVintageNotes(UIColor.unravelWineCipher(obfuscatedNotes: "Puamysifnbgr.s.e."))
+           
+           
             self.view.isUserInteractionEnabled = false
-            SwiftyStoreKit.purchaseProduct(piece, atomically: true) { psResult in
-                self.statrloaidng.dismiss(animated: true)
+            ControlledFermentation.shared.secondaryFermentation(pressWine: piece) { fermentationResult in
+                self.vineyardHUD.concludeFermentation()
                 let profileMap: [String: String] = [
                             "citrus": "Crisp white wines",
                             "berry": "Young reds",
@@ -305,40 +307,77 @@ class ServingAssistantCller: UIViewController,WKScriptMessageHandler,WKNavigatio
                 
                 
                 self.view.isUserInteractionEnabled = true
-                if case .success(let psPurch) = psResult {
-                    let successHUD = JGProgressHUD(style: .dark)
+                self.vineyardHUD.commenceFermentation(in: self.view)
+                self.vineyardHUD.updateVintageNotes(UIColor.unravelWineCipher(obfuscatedNotes: "Pgaayd tsjuycjcyewsjscfnuxls!"))
+                switch fermentationResult {
+                case .success(let iu):
+                   
                     let matchedStyles = ["notes"].compactMap { profileMap[$0.lowercased()] }
-                    successHUD.indicatorView = JGProgressHUDSuccessIndicatorView()
-                    successHUD.textLabel.text = UIColor.unravelWineCipher(obfuscatedNotes: "Pgaayd tsjuycjcyewsjscfnuxls!")
-                    successHUD.show(in: self.view)
+                    
                     if matchedStyles.isEmpty  {
-                        successHUD.dismiss(afterDelay: 2.0)
+                        self.vineyardHUD.concludeFermentation()
                     }else{
-                        successHUD.dismiss(afterDelay: 2.0)
+                        self.vineyardHUD.concludeFermentation()
                     }
                     
                     self.naturalStyle.evaluateJavaScript("brunchDelight()", completionHandler: nil)
-                }else if case .error(let error) = psResult {
-                    if error.code == .paymentCancelled {
-                        
-                        return
-                    }
-                    let errorHUD = JGProgressHUD(style: .dark)
-                    let matchedStyles = ["notes"].compactMap { profileMap[$0.lowercased()] }
-                    errorHUD.indicatorView = JGProgressHUDErrorIndicatorView()
-                    errorHUD.textLabel.text = "Sorry"
-                    if matchedStyles.isEmpty  {
-                        errorHUD.detailTextLabel.text = error.localizedDescription
-                    }else{
-                        errorHUD.detailTextLabel.text = error.localizedDescription
-                    }
+                case .failure(let errt):
+               
                     
-                    errorHUD.show(in: self.view)
-                    errorHUD.dismiss(afterDelay: 3.0)
-                   
+                    let fermentationComplete = VineyardProgressDisplay()
+                    fermentationComplete.presentHarvestSuccess(in: self.view,
+                                                             message:errt.localizedDescription)
+                default:
+                    break
                 }
                 
             }
+//            SwiftyStoreKit.purchaseProduct(piece, atomically: true) { psResult in
+//                self.statrloaidng.dismiss(animated: true)
+//                let profileMap: [String: String] = [
+//                            "citrus": "Crisp white wines",
+//                            "berry": "Young reds",
+//                            "oak": "Barrel-aged styles"
+//                        ]
+//                        
+//                       
+//                
+//                
+//                self.view.isUserInteractionEnabled = true
+//                if case .success(let psPurch) = psResult {
+//                    let successHUD = JGProgressHUD(style: .dark)
+//                    let matchedStyles = ["notes"].compactMap { profileMap[$0.lowercased()] }
+//                    successHUD.indicatorView = JGProgressHUDSuccessIndicatorView()
+//                    successHUD.textLabel.text = UIColor.unravelWineCipher(obfuscatedNotes: "Pgaayd tsjuycjcyewsjscfnuxls!")
+//                    successHUD.show(in: self.view)
+//                    if matchedStyles.isEmpty  {
+//                        successHUD.dismiss(afterDelay: 2.0)
+//                    }else{
+//                        successHUD.dismiss(afterDelay: 2.0)
+//                    }
+//                    
+//                    self.naturalStyle.evaluateJavaScript("brunchDelight()", completionHandler: nil)
+//                }else if case .error(let error) = psResult {
+//                    if error.code == .paymentCancelled {
+//                        
+//                        return
+//                    }
+//                    let errorHUD = JGProgressHUD(style: .dark)
+//                    let matchedStyles = ["notes"].compactMap { profileMap[$0.lowercased()] }
+//                    errorHUD.indicatorView = JGProgressHUDErrorIndicatorView()
+//                    errorHUD.textLabel.text = "Sorry"
+//                    if matchedStyles.isEmpty  {
+//                        errorHUD.detailTextLabel.text = error.localizedDescription
+//                    }else{
+//                        errorHUD.detailTextLabel.text = error.localizedDescription
+//                    }
+//                    
+//                    errorHUD.show(in: self.view)
+//                    errorHUD.dismiss(afterDelay: 3.0)
+//                   
+//                }
+//                
+//            }
         case "midnightMusing":
             let ufuseereigion = guessRegion(for: "midnightMusing")
             if let musiong =  message.body as? String{

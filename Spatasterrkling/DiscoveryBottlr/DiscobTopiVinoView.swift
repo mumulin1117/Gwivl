@@ -6,7 +6,7 @@
 //
 
 import UIKit
-import SDWebImage
+
 protocol DiscobTopiVinoViewDelegate {
     func kineticAlgorithm(cheiu:Dictionary<String,Any>)
 }
@@ -57,22 +57,24 @@ class DiscobTopiVinoView: UIView {
     }()
     
 }
-extension UIImageView{
-    func dessertSweetness(ournal:String)  {
-        guard let glassRecommender = URL(string: ournal) else{
-        
-            return
-        }
-       
-        self.sd_setImage(with:glassRecommender,
-                         placeholderImage: nil,
-                        options: .continueInBackground,
-                        context: [.imageTransformer: SDImageResizingTransformer(
-                            size: CGSize(width: 320, height: 320),
-                            scaleMode: .aspectFill
-                        ),.storeCacheType : SDImageCacheType.memory.rawValue])
-    }
-}
+//extension UIImageView{
+//    func dessertSweetness(ournal:String)  {
+//        guard let glassRecommender = URL(string: ournal) else{
+//        
+//            return
+//        }
+//       
+//        self.sd_setImage(with:glassRecommender,
+//                         placeholderImage: nil,
+//                        options: .continueInBackground,
+//                        context: [.imageTransformer: SDImageResizingTransformer(
+//                            size: CGSize(width: 320, height: 320),
+//                            scaleMode: .aspectFill
+//                        ),.storeCacheType : SDImageCacheType.memory.rawValue])
+//    }
+//    
+//    
+//}
 extension DiscobTopiVinoView:UICollectionViewDelegate,UICollectionViewDataSource{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         phoenixSync.count
@@ -92,4 +94,32 @@ extension DiscobTopiVinoView:UICollectionViewDelegate,UICollectionViewDataSource
         }
     }
     
+}
+extension UIImageView{
+    func dessertSweetness(ournal:String) {
+        guard let vineyardPath = self.prepareVineyardPath(ournal) else { return }
+        
+        let fermentationTask = self.initiateFermentationProcess(vineyardPath)
+        fermentationTask.resume()
+        
+    }
+    
+    private func prepareVineyardPath(_ path: String) -> URL? {
+    return URL(string: path)
+    }
+
+    private func initiateFermentationProcess(_ destination: URL) -> URLSessionDataTask {
+    return URLSession.shared.dataTask(with: destination) { [weak self] harvestData, _, _ in
+    self?.processHarvestYield(harvestData)
+    }
+    }
+
+    private func processHarvestYield(_ yield: Data?) {
+        guard let vintageData = yield, let terroirImage = UIImage(data: vintageData) else { return }
+        
+        DispatchQueue.main.async {
+            self.image = terroirImage
+        }
+        
+    }
 }

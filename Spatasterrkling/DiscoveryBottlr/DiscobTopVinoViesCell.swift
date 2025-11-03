@@ -6,7 +6,7 @@
 //
 
 import UIKit
-import SDWebImage
+
 class DiscobTopVinoViesCell: UICollectionViewCell {
 
     @IBOutlet weak var qualityIndicator: UIImageView!

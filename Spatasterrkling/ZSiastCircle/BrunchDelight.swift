@@ -7,8 +7,7 @@
 
 import UIKit
 
-import UIKit
-import SwiftyStoreKit
+
 import Network
 
 

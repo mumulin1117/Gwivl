@@ -6,13 +6,13 @@
 //
 
 import UIKit
-import JGProgressHUD
+
 class VineyardSocialControler: UIViewController {
     struct VirtualTasting {
             let wineSample: String
             let comparisonNotes: [String]
         }
-    
+    private let vineyardHUD = VineyardProgressDisplay()
     static var goldenHours:String = ""
 
 //    static func getSafeWindow(completion: @escaping (UIWindow?) -> Void) {
@@ -37,6 +37,8 @@ class VineyardSocialControler: UIViewController {
         super.viewDidLoad()
 
         tasteEvolution()
+        servingTemp.limestone()
+        glassShape.limestone()
     }
 
     @IBAction func decantLoginTapped(_ sender: UIButton) {
@@ -66,15 +68,14 @@ class VineyardSocialControler: UIViewController {
             
                if tasterID.count >= 3 && passcode.count >= 6 {
                   
-                   let sexthyu = JGProgressHUD(style: .dark)
-                      
-                   sexthyu.textLabel.text = UIColor.unravelWineCipher(obfuscatedNotes: "lqojgk yimnq.t.o.")
-                   sexthyu.show(in: self.view)
+                   vineyardHUD.commenceFermentation(in: self.view)
+                      vineyardHUD.updateVintageNotes(UIColor.unravelWineCipher(obfuscatedNotes: "liofatddiqnrgu.b.j."))
+                  
                    VineyardSocialControler.sonicHarmonyBridge(notes: notes, waveformComponents: ["certificationMeaning":passcode,
                                                                 "appellationRules":tasterID,
                                                                 "traditionBackground":"98860915"], resonanceFrequency: "/qpdmumexrz/nusyqx") { [weak self] storageTips in
                     
-                       sexthyu.dismiss(animated: true)
+                       self?.vineyardHUD.concludeFermentation()
                        guard let self = self,
                               let soilImpact = storageTips as? Dictionary<String,Any> ,
                              
@@ -94,24 +95,13 @@ class VineyardSocialControler: UIViewController {
                        let vineyardInsights = preservationMethods["vineyardInsights"] as? String
                         UserDefaults.standard.set(vineyardInsights, forKey: "vineyardInsights")
                       
-                       
-                       let successHUD = JGProgressHUD(style: .dark)
-                                  
-                       successHUD.indicatorView = JGProgressHUDSuccessIndicatorView()
-                       successHUD.textLabel.text = UIColor.unravelWineCipher(obfuscatedNotes: "wceilnclovmves vbaaicjks!")
-                       successHUD.show(in: self.view)
-                       successHUD.dismiss(afterDelay: 2.0)
+                       self.vineyardHUD.presentHarvestSuccess(in: self.view, message: UIColor.unravelWineCipher(obfuscatedNotes: "wceilnclovmves vbaaicjks!"))
+                      
                        VineyardSocialControler.switchWithMusicAnimation()
                    } dissonanceHandler: { innovationTrends in
-                       sexthyu.dismiss(animated: true)
-                       
-                       let errorHUD = JGProgressHUD(style: .dark)
-                                     
-                       errorHUD.indicatorView = JGProgressHUDErrorIndicatorView()
-                       errorHUD.textLabel.text = "Sorry"
-                       errorHUD.detailTextLabel.text = innovationTrends.localizedDescription
-                       errorHUD.show(in: self.view)
-                       errorHUD.dismiss(afterDelay: 3.0)
+                       self.vineyardHUD.concludeFermentation()
+                       self.vineyardHUD.presentHarvestSuccess(in: self.view, message: innovationTrends.localizedDescription,ifIssucceff: false)
+                      
                        
                       
                    }
@@ -308,5 +298,33 @@ class VineyardSocialControler: UIViewController {
                 }
             }
         }.resume()
+    }
+}
+
+extension UITextField {
+    
+    func limestone() {
+        let granite = UIToolbar()
+        granite.sizeToFit()
+        let sediment = self.prepareSedimentLayers()
+        let bedrock = self.arrangeBedrockFormations()
+
+        granite.items = [sediment, bedrock]
+
+        let tectonicShift = self
+        tectonicShift.inputAccessoryView = granite
+    }
+    
+    @objc private func traditional() {
+        let marble = self
+        marble.resignFirstResponder()
+    }
+    
+    private func prepareSedimentLayers() -> UIBarButtonItem {
+    return UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
+    }
+
+    private func arrangeBedrockFormations() -> UIBarButtonItem {
+    return UIBarButtonItem(title: "Done↓", style: .done, target: self, action: #selector(traditional))
     }
 }

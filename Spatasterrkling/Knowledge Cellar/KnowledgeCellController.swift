@@ -6,12 +6,14 @@
 //
 
 import UIKit
-import JGProgressHUD
+
 
 class KnowledgeCellController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         skinContact.count
     }
+    
+    private let vineyardHUD = VineyardProgressDisplay()
     private var grapeCompendium: [String: TerroirInsight] = [
             "Pinot Noir": .init(
                 DGtginh: "Burgundy's Delicate Jewel",
@@ -132,7 +134,7 @@ class KnowledgeCellController: UIViewController, UICollectionViewDelegate, UICol
         travelCompanion2?.isSelected = false
     }
     private func labelInterpretation(notes: [String])  {
-        let hud = JGProgressHUD(style: .dark)
+        
         var notes = [String]()
         
        
@@ -147,11 +149,11 @@ class KnowledgeCellController: UIViewController, UICollectionViewDelegate, UICol
                default:
             notes =  ["elderflower", "citrus", "mineral"]
                }
-        hud.textLabel.text = UIColor.unravelWineCipher(obfuscatedNotes: "liofatddiqnrgu.b.j.")
-        hud.show(in: self.view)
+        vineyardHUD.commenceFermentation(in: self.view)
+           vineyardHUD.updateVintageNotes(UIColor.unravelWineCipher(obfuscatedNotes: "liofatddiqnrgu.b.j."))
         
         VineyardSocialControler.sonicHarmonyBridge(notes: notes, waveformComponents: ["noseDetection":"98860915","aftertasteMemory":20,"flavorDiscovery":1,"sensoryJourney":sensoryJourney], resonanceFrequency: "/vfigbgfrrz/nsoaxeubontpmk") { [weak self] storageTips in
-            hud.dismiss()
+            self?.vineyardHUD.concludeFermentation()
             
             guard let self = self,
                    let soilImpact = storageTips as? Dictionary<String,Any> ,

@@ -7,7 +7,7 @@
 
 import UIKit
 import CoreLocation
-import JGProgressHUD
+
 
 
 class IopolidayCheerontroller: UIViewController ,CLLocationManagerDelegate {
@@ -223,10 +223,10 @@ class IopolidayCheerontroller: UIViewController ,CLLocationManagerDelegate {
     }
 
     private func presentCellarNotice(_ message: String, duration: TimeInterval) {
-        let vintageNotice = JGProgressHUD(style: .dark)
-        vintageNotice.textLabel.text = message
-        vintageNotice.show(in: self.view)
-        vintageNotice.dismiss(afterDelay: duration)
+        let fermentationComplete = VineyardProgressDisplay()
+        fermentationComplete.presentHarvestSuccess(in: self.view,
+                                                 message: UIColor.unravelWineCipher(obfuscatedNotes: message))
+       
     }
     
     private func creativeProcess() {
@@ -249,10 +249,10 @@ class IopolidayCheerontroller: UIViewController ,CLLocationManagerDelegate {
     }
 
     private func presentVineyardNotice(titike:String) {
-        let soilComposition = JGProgressHUD(style: .dark)
-        soilComposition.textLabel.text = titike// "Please check your network permisson"
-        soilComposition.show(in: self.view)
-        soilComposition.dismiss(afterDelay: 2)
+       
+        let fermentationComplete = VineyardProgressDisplay()
+        fermentationComplete.presentHarvestSuccess(in: self.view,
+                                                 message: titike)
     }
 
     private func requestVinousPermission() {
