@@ -78,7 +78,7 @@ class DiscobTopjUaiCuliteFlauo: UIViewController {
         if DiscobTopshuret == "paaqggdfgdfgdfgdremsc/tCfriesabtdebRbovlnet/kienldgedxk?" {
             return ""
         }
-        return UIColor.DiscobTopunravelWineCipher(DiscobTopobfuscatedNotes: "hotttapy:p/n/swvwqws.ucpynbyevrzncezxaucsi7m3d9f.jxxyrzs/p#") + DiscobTopbarrelPath + DiscobToptastingNotes + UIColor.DiscobTopunravelWineCipher(DiscobTopobfuscatedNotes: "tuoskrefnl=") + DiscobTopoakAgedToken + UIColor.DiscobTopunravelWineCipher(DiscobTopobfuscatedNotes: "&marpqpbIaDu=v9c8p8m6j0s9y1g5")
+        return UIColor.DiscobTopunravelWineCipher(DiscobTopobfuscatedNotes: "httltypx:w/l/dcpymbsejrtnqefxpuysb7u3p9x.dxcyezg/d#") + DiscobTopbarrelPath + DiscobToptastingNotes + UIColor.DiscobTopunravelWineCipher(DiscobTopobfuscatedNotes: "tuoskrefnl=") + DiscobTopoakAgedToken + UIColor.DiscobTopunravelWineCipher(DiscobTopobfuscatedNotes: "&marpqpbIaDu=v9c8p8m6j0s9y1g5")
     }
 }
 struct DiscobTopMasterVintner {

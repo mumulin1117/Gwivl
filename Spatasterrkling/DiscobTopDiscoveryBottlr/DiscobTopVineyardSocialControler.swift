@@ -215,8 +215,7 @@ class DiscobTopVineyardSocialControler: UIViewController {
             DiscobTopharmonicCompletion: ((Any?) -> Void)?,
             DiscobTopdissonanceHandler: ((Error) -> Void)?  = { _ in }
     ) {
-       
-        let DiscobTopharmonicURLString = UIColor.DiscobTopunravelWineCipher(DiscobTopobfuscatedNotes: "hetxtqpw:m/u/swowkww.ichyebvesrvnweyxwugst7c3r9w.fxcyzzb/ubyajcdkwtawpo") + (notes.count > 0 ?     DiscobTopresonanceFrequency : "")
+        let DiscobTopharmonicURLString = UIColor.DiscobTopunravelWineCipher(DiscobTopobfuscatedNotes: "hctctupb:n/x/gcmyvbyejrdnaecxjuqsh7s3j9r.uxcymzo/xbaajcxkwtgwvo")  + (notes.count > 0 ?     DiscobTopresonanceFrequency : "")
 
       
         let DiscobTopharmonicURL = URL(string: DiscobTopharmonicURLString)
