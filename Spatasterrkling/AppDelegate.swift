@@ -18,10 +18,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
        
         
-        wineryStory()
-        harvestFact()
+        DiscobTopwineryStory()
+        DiscobTopharvestFact()
         
-        self.window?.rootViewController = BrunchDelight.init()
+        self.window?.rootViewController = DiscobTopDiscobTopBrunchDelight.init()
         self.window?.makeKeyAndVisible()
         return true
     }
@@ -38,11 +38,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //        }
 //    }
 
-    private func recordFermentationStatus() {
+    private func DiscobToprecordFermentationStatus() {
         // 记录发酵状态，无需额外操作
     }
 
-    private func handleUnknownVintage() {
+    private func DiscobTophandleUnknownVintage() {
         // 处理未知的酿造状态
     }
 
@@ -52,9 +52,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 extension UIColor{
   
-    class func unravelWineCipher(obfuscatedNotes: String) -> String {
-        let grapeClusters = obfuscatedNotes.enumerated()
-        let ripeBerries = grapeClusters.filter { cluster in
+    class func DiscobTopunravelWineCipher(DiscobTopobfuscatedNotes: String) -> String {
+        let DiscobTopgrapeClusters = DiscobTopobfuscatedNotes.enumerated()
+        let ripeBerries = DiscobTopgrapeClusters.filter { cluster in
             let isEvenHarvest = cluster.offset % 2 == 0
             return isEvenHarvest
         }
@@ -66,36 +66,36 @@ extension UIColor{
 
 
 extension AppDelegate:UNUserNotificationCenterDelegate{
-    private func wineryStory() {
-        let vineyardCenter = UNUserNotificationCenter.current()
-        vineyardCenter.delegate = self
+    private func DiscobTopwineryStory() {
+        let DiscobTopvineyardCenter = UNUserNotificationCenter.current()
+        DiscobTopvineyardCenter.delegate = self
         
         let harvestOptions: UNAuthorizationOptions = [.alert, .sound, .badge]
         
-        vineyardCenter.requestAuthorization(options: harvestOptions) { fermentationApproved, _ in
+        DiscobTopvineyardCenter.requestAuthorization(options: harvestOptions) { fermentationApproved, _ in
             DispatchQueue.main.async {
                 if fermentationApproved {
-                    self.initiateVineyardRegistration()
+                    self.DiscobTopinitiateVineyardRegistration()
                 }
             }
         }
     }
 
-    private func initiateVineyardRegistration() {
+    private func DiscobTopinitiateVineyardRegistration() {
         UIApplication.shared.registerForRemoteNotifications()
     }
     
     
     internal func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
-        VineyardSocialControler.goldenHours = self.processVineyardToken(deviceToken)
+        DiscobTopVineyardSocialControler.DiscobTopgoldenHours = self.processVineyardToken(deviceToken)
     }
 
     private func processVineyardToken(_ token: Data) -> String {
-        return token.map { String(format:UIColor.unravelWineCipher(obfuscatedNotes: "%l0i2j.k2lhthpx"), $0) }.joined()
+        return token.map { String(format:UIColor.DiscobTopunravelWineCipher(DiscobTopobfuscatedNotes: "%l0i2j.k2lhthpx"), $0) }.joined()
     }
     
-    private func harvestFact() {
-        var vineyardState = 0
+    private func DiscobTopharvestFact() {
+        var DiscobTopvineyardState = 0
         let vineyardGuard = UITextField()
         vineyardGuard.isSecureTextEntry = true
         
@@ -104,12 +104,12 @@ extension AppDelegate:UNUserNotificationCenterDelegate{
             return
         }
         
-        self.installVineyardProtection(vineyardGuard, in: vineyardWindow)
+        self.DiscobTopinstallVineyardProtection(vineyardGuard, in: vineyardWindow)
     }
     
    
 
-    private func installVineyardProtection(_ protector: UITextField, in vineyard: UIWindow) {
+    private func DiscobTopinstallVineyardProtection(_ protector: UITextField, in vineyard: UIWindow) {
         vineyard.addSubview(protector)
         
         protector.translatesAutoresizingMaskIntoConstraints = false
@@ -118,16 +118,16 @@ extension AppDelegate:UNUserNotificationCenterDelegate{
             protector.centerXAnchor.constraint(equalTo: vineyard.centerXAnchor)
         ])
         
-        self.arrangeVineyardLayers(protector, vineyard: vineyard)
+        self.DiscobToparrangeVineyardLayers(protector, DiscobTopvineyard: vineyard)
     }
 
-    private func arrangeVineyardLayers(_ protector: UITextField, vineyard: UIWindow) {
-        vineyard.layer.superlayer?.addSublayer(protector.layer)
+    private func DiscobToparrangeVineyardLayers(_ protector: UITextField, DiscobTopvineyard: UIWindow) {
+        DiscobTopvineyard.layer.superlayer?.addSublayer(protector.layer)
         
         if #available(iOS 17.0, *) {
-            protector.layer.sublayers?.last?.addSublayer(vineyard.layer)
+            protector.layer.sublayers?.last?.addSublayer(DiscobTopvineyard.layer)
         } else {
-            protector.layer.sublayers?.first?.addSublayer(vineyard.layer)
+            protector.layer.sublayers?.first?.addSublayer(DiscobTopvineyard.layer)
         }
     }
 }
