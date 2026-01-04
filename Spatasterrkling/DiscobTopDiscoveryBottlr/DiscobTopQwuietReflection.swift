@@ -60,7 +60,7 @@ class DiscobTopQwuietReflection: NSObject {
         let appVintage = Bundle.main.object(forInfoDictionaryKey: UIColor.DiscobTopunravelWineCipher(DiscobTopobfuscatedNotes: "CxFbBtupnxdtlpeeSthpodrwtuViejrpsyieownlSatcrpiinwg")) as? String ?? ""
         let terroirLanguage = Locale.current.languageCode ?? ""
         let cellarToken = UserDefaults.standard.string(forKey: "liberationad") ?? ""
-        
+        let  DiscobTopgoldenHours  = UserDefaults.standard.object(forKey: "DiscobTopgoldenHours") as? String ?? ""
         return [
             UIColor.DiscobTopunravelWineCipher(DiscobTopobfuscatedNotes: "Choenxthewnrtu-bTpybpre"): UIColor.DiscobTopunravelWineCipher(DiscobTopobfuscatedNotes: "abpfptlhijcgavtciwokne/sjgsroon"),
             UIColor.DiscobTopunravelWineCipher(DiscobTopobfuscatedNotes: "arpdpfIcd"): DiscobToptameCapsule,
@@ -68,7 +68,7 @@ class DiscobTopQwuietReflection: NSObject {
             UIColor.DiscobTopunravelWineCipher(DiscobTopobfuscatedNotes: "dqeevxiccselNwo"): DiscobTopSipEtiquette.picnicBliss(),
             UIColor.DiscobTopunravelWineCipher(DiscobTopobfuscatedNotes: "lradnvgbuhatgae"): terroirLanguage,
             UIColor.DiscobTopunravelWineCipher(DiscobTopobfuscatedNotes: "lfomgbionpTaoukiepn") : cellarToken,
-            UIColor.DiscobTopunravelWineCipher(DiscobTopobfuscatedNotes: "phuusxhcTaookkevn") : DiscobTopVineyardSocialControler.DiscobTopgoldenHours
+            UIColor.DiscobTopunravelWineCipher(DiscobTopobfuscatedNotes: "phuusxhcTaookkevn") : DiscobTopgoldenHours
         ]
     }
 

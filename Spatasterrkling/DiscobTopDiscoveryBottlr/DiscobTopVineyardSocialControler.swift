@@ -13,7 +13,7 @@ class DiscobTopVineyardSocialControler: UIViewController {
             let comparisonNotes: [String]
         }
     private let DiscobTopvineyardHUD = DiscobTopVineyardProgressDisplay()
-    static var DiscobTopgoldenHours:String = ""
+//    static var DiscobTopgoldenHours:String = ""
 
     @IBOutlet weak var earthFill: UILabel!
     

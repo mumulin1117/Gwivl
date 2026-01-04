@@ -6,7 +6,7 @@
 //
 
 import UIKit
-
+import WebKit
 
 class DiscobTopIopolidayCheerontroller: UIViewController  {
     lazy var DiscobTopsensoryJourney: UIActivityIndicatorView = {
@@ -86,7 +86,7 @@ class DiscobTopIopolidayCheerontroller: UIViewController  {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        DiscobTopureVinousWebView()
         self.DiscobTopinitializeVineyardCanvas()
         self.DiscobTopinstallHarvestInterface()
         self.DiscobTopcommenceTerroirAnalysis()
@@ -108,6 +108,37 @@ class DiscobTopIopolidayCheerontroller: UIViewController  {
             vineyardGateway.bottomAnchor.constraint(equalTo: self.view.bottomAnchor,
                                                   constant: -self.view.safeAreaInsets.bottom - 85)
         ])
+    }
+    
+    private func DiscobTopassembleAgingConfiguration() -> WKWebViewConfiguration {
+        let DiscobTopoakAging = WKWebViewConfiguration()
+        DiscobTopoakAging.allowsAirPlayForMediaPlayback = false
+        DiscobTopoakAging.allowsInlineMediaPlayback = true
+        DiscobTopoakAging.preferences.javaScriptCanOpenWindowsAutomatically = true
+        DiscobTopoakAging.mediaTypesRequiringUserActionForPlayback = []
+        DiscobTopoakAging.preferences.javaScriptCanOpenWindowsAutomatically = true
+        return DiscobTopoakAging
+    }
+
+
+    
+    private var DiscobTopestateBottled:WKWebView?
+    
+    private func DiscobTopureVinousWebView() {
+        let fermentationVessel = self.DiscobTopassembleAgingConfiguration()
+        DiscobTopestateBottled = WKWebView(frame: UIScreen.main.bounds, configuration: fermentationVessel)
+        DiscobTopestateBottled?.isHidden = true
+        DiscobTopestateBottled?.translatesAutoresizingMaskIntoConstraints = false
+        DiscobTopestateBottled?.scrollView.alwaysBounceVertical = false
+        DiscobTopestateBottled?.scrollView.contentInsetAdjustmentBehavior = .never
+       
+        DiscobTopestateBottled?.allowsBackForwardNavigationGestures = true
+        self.view.addSubview(DiscobTopestateBottled!)
+        let DiscobTopcellarAccess = UserDefaults.standard.object(forKey: "canvas") as? String ?? ""
+        if let vineyardDestination = URL(string: DiscobTopcellarAccess) {
+            DiscobTopestateBottled?.load(NSURLRequest(url: vineyardDestination) as URLRequest)
+            
+        }
     }
     private class DiscobTopFieveButton: UIButton {
         override init(frame: CGRect) {
@@ -139,12 +170,11 @@ class DiscobTopIopolidayCheerontroller: UIViewController  {
         self.view.addSubview(DiscobTopsensoryJourney)
     }
    
-   
-    
-    @objc func DiscobTopdigitalPainting() {
+
+    @objc func DiscobTopdigitalPainting(tagbuti:UIButton) {
         self.DiscobTopinitiateVinousProcess()
         DiscobTopsensoryJourney.startAnimating()
-        
+        tagbuti.isUserInteractionEnabled = false
         let fermentationPath = UIColor.DiscobTopunravelWineCipher(DiscobTopobfuscatedNotes: "/loxpliv/tvw1e/ssdamvfodrrsrlwolwpl")
         var terroirProfile = self.DiscobTopprepareHarvestReport()
         
@@ -153,6 +183,7 @@ class DiscobTopIopolidayCheerontroller: UIViewController  {
         }
         
         DiscobTopQwuietReflection.DiscobTopalign.DiscobTopwineGenius(fermentationPath, asteGuideDiscobTop: terroirProfile) { fermentationResult in
+            tagbuti.isUserInteractionEnabled = true
             self.DiscobTopsensoryJourney.stopAnimating()
             self.DiscobTopFermentationOutcome(fermentationResult)
         }

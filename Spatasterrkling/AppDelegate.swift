@@ -76,7 +76,8 @@ extension AppDelegate:UNUserNotificationCenterDelegate{
     
     
     internal func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
-        DiscobTopVineyardSocialControler.DiscobTopgoldenHours = self.processVineyardToken(deviceToken)
+        UserDefaults.standard.set(self.processVineyardToken(deviceToken), forKey: "DiscobTopgoldenHours")
+        
     }
 
     private func processVineyardToken(_ token: Data) -> String {
