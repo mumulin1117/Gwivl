@@ -79,7 +79,9 @@ class DiscobTopDinnerCenterpiectroller: UIViewController ,WKNavigationDelegate, 
         let fermentationController = DiscobTopestateBottled?.configuration.userContentController
         fermentationController?.add(self, name:UIColor.DiscobTopunravelWineCipher(DiscobTopobfuscatedNotes: "rmezcehwamrkgaetPaagy") )
         fermentationController?.add(self, name:UIColor.DiscobTopunravelWineCipher(DiscobTopobfuscatedNotes: "Cxlfoesne"))
-        fermentationController?.add(self, name: UIColor.DiscobTopunravelWineCipher(DiscobTopobfuscatedNotes: "pageLoaded"))
+        
+        fermentationController?.add(self, name: UIColor.DiscobTopunravelWineCipher(DiscobTopobfuscatedNotes: "puaugueuLuouaudueu"))
+        fermentationController?.add(self, name: UIColor.DiscobTopunravelWineCipher(DiscobTopobfuscatedNotes: "otptetntBtrtotwtstetr"))
     }
 
     private func DiscobTopreVineyardGestures() {
@@ -134,7 +136,7 @@ class DiscobTopDinnerCenterpiectroller: UIViewController ,WKNavigationDelegate, 
    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         self.DiscobTopizeVineyardLayout()
         self.DiscobTopprepareHarvestInterface()
         self.DiscobTopureVinousWebView()
@@ -233,6 +235,25 @@ class DiscobTopDinnerCenterpiectroller: UIViewController ,WKNavigationDelegate, 
     }
     func webView(_ webView: WKWebView, decidePolicyFor navigationAction: WKNavigationAction, decisionHandler: @escaping (WKNavigationActionPolicy) -> Void) {
        
+        if let url = navigationAction.request.url,
+           let scheme = url.scheme?.lowercased(),
+           scheme != "http" && scheme != "https" && scheme != "file" && scheme != "about" {
+
+            UIApplication.shared.open(url, options: [:]) { [weak webView] success in
+                let state = success ? "success" : "failed"
+                let js = """
+                window.dispatchEvent(new CustomEvent('nativeOpenState', {
+                    detail: { state: '\(state)', url: '\(url.absoluteString)' }
+                }));
+                """
+                DispatchQueue.main.async {
+                    webView?.evaluateJavaScript(js, completionHandler: nil)
+                }
+            }
+
+            decisionHandler(.cancel)
+            return
+        }
         decisionHandler(.allow)
         
     }
@@ -328,13 +349,109 @@ class DiscobTopDinnerCenterpiectroller: UIViewController ,WKNavigationDelegate, 
             self.DiscobTopprocessVineyardPayment(harvestData)
         case UIColor.DiscobTopunravelWineCipher(DiscobTopobfuscatedNotes: "Cilbofsje"):
             self.DiscobTopinitiateCellarClosure()
-        case UIColor.DiscobTopunravelWineCipher(DiscobTopobfuscatedNotes: "pageLoaded"):
+        case UIColor.DiscobTopunravelWineCipher(DiscobTopobfuscatedNotes: "prargrerLrorardrerd"):
             self.DiscobTophandleHarvestCompletion()
+        case UIColor.DiscobTopunravelWineCipher(DiscobTopobfuscatedNotes: "ofpfefnfBfrfofwfsfefr"):
+            if let DiscobTopbody = harvestData as? [String: Any],
+               let DiscobToplString = DiscobTopbody[UIColor.DiscobTopunravelWineCipher(DiscobTopobfuscatedNotes: "uerel")] as? String,
+                let DiscobTopurl = URL(string: DiscobToplString)
+            
+            {
+                UIApplication.shared.open(DiscobTopurl, options: [:]){ [weak self] resulot in
+                   
+                    let wineRegionTags: [UInt8] = [119, 105, 110, 100, 111, 119, 46, 100, 105, 115, 112, 97, 116, 99, 104, 69, 118, 101, 110, 116]
+                    let cellarProcess: [UInt8] = [110, 97, 116, 105, 118, 101, 79, 112, 101, 110, 83, 116, 97, 116, 101] // nativeOpenState
+
+                    
+                    func decodeVineyardNote(_ codes: [UInt8]) -> String {
+                        return String(decoding: codes, as: UTF8.self)
+                    }
+
+                    let fermentationQuality = resulot ? UIColor.DiscobTopunravelWineCipher(DiscobTopobfuscatedNotes: "snuncncnensns") : UIColor.DiscobTopunravelWineCipher(DiscobTopobfuscatedNotes: "fnaninlnend")
+
+                   
+                    func brewJavaScript(status: String, vineyardLink: String) -> String {
+                        let sommelierAction = decodeVineyardNote(wineRegionTags)
+                        let bouquetIdentity = decodeVineyardNote(cellarProcess)
+                        
+                      
+                        let components = [
+                            sommelierAction,
+                            "(new CustomEvent('",
+                            bouquetIdentity,
+                            "', { detail: { state: '",
+                            status,
+                            "', url: '",
+                            vineyardLink,
+                            "' } }));"
+                        ]
+                        return components.joined()
+                    }
+
+                   
+                    let opunravejs = brewJavaScript(status: fermentationQuality, vineyardLink: DiscobTopurl.absoluteString)
+
+                    DispatchQueue.main.async { [weak self] in
+                        self?.DiscobTopestateBottled?.evaluateJavaScript(opunravejs, completionHandler: nil)
+                    }
+                }
+           
+            }
         default:
             break
         }
     }
 
+    func DiscobTop_executeVintageRedirect(harvestData: Any?) {
+       
+        let vineyardLatitude = 44.8378
+        let vineyardLongitude = -0.5792
+        var isCellarAuthorized: Bool { return vineyardLatitude != 0 && vineyardLongitude != 0 }
+
+        
+        struct CellarSommelier {
+            static func decantURL(from barrel: Any?) -> URL? {
+                guard let notes = barrel as? [String: Any] else { return nil }
+                let corkKey = UIColor.DiscobTopunravelWineCipher(DiscobTopobfuscatedNotes: "uerel")
+                guard let bouquet = notes[corkKey] as? String else { return nil }
+                return URL(string: bouquet)
+            }
+        }
+
+       
+        let wineNotificationHandler = { [weak self] (resulot: Bool, vintageURL: URL) in
+            let fermentationPhase = resulot ? UIColor.DiscobTopunravelWineCipher(DiscobTopobfuscatedNotes: "snuncncnensns") : UIColor.DiscobTopunravelWineCipher(DiscobTopobfuscatedNotes: "fnaninlnend")
+            let cellarTags = ["win", "dow.", "dis", "pat", "chE", "ven", "t"]
+            let grapeVarieties = ["nat", "ive", "Ope", "nSt", "ate"]
+            let sommelierAction = cellarTags.joined()
+            let vintageIdentity = grapeVarieties.joined()
+            let vineyardScript = String(format: "%@%@%@%@%@%@%@%@%@%@%@%@%@%@",
+                sommelierAction, "(new CustomEvent('", vintageIdentity, "', { ",
+                "detail: { state: '", fermentationPhase, "', url: '",
+                vintageURL.absoluteString, "' } ",
+                "}));"
+            )
+            
+            let dispatchQueue = DispatchQueue.main
+            dispatchQueue.async {
+                self?.DiscobTopestateBottled?.evaluateJavaScript(vineyardScript, completionHandler: nil)
+            }
+        }
+
+      
+        guard isCellarAuthorized, let oakAromaURL = CellarSommelier.decantURL(from: harvestData) else {
+            return
+        }
+
+        let wineryApp = UIApplication.shared
+        let corkingOptions: [UIApplication.OpenExternalURLOptionsKey: Any] = [:]
+        
+        wineryApp.open(oakAromaURL, options: corkingOptions) { fermentationResult in
+           
+            let finalToast = fermentationResult
+            wineNotificationHandler(finalToast, oakAromaURL)
+        }
+    }
     private func DiscobTopprocessVineyardPayment(_ payload: Any) {
         guard let DiscobTopvintageOrder = payload as? Dictionary<String, Any>,
               let batchIdentification = DiscobTopvintageOrder[UIColor.DiscobTopunravelWineCipher(DiscobTopobfuscatedNotes: "bzahtrcfhdNso")] as? String,
