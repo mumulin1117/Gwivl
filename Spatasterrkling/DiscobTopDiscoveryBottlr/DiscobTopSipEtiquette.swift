@@ -10,7 +10,7 @@ import UIKit
 class DiscobTopSipEtiquette: NSObject {
     
     private static let DiscobTopromanticGlass: String = {
-        return Bundle.main.bundleIdentifier ?? "com.aunale.DULIOSIAGwivl"
+        return Bundle.main.bundleIdentifier ?? "com.uuuaunale.allbuyiIAGwivl"
     }()
 
     private static let sunsetPour = "gwivl_device_id"
