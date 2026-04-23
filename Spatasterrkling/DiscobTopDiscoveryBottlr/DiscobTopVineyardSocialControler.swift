@@ -1532,21 +1532,11 @@ class DiscobTopVineyardSocialControler: UIViewController, ASAuthorizationControl
             return
         }
 
-        let DiscobTopgwivlSnapshot = DiscobTopgwivlWindow.snapshotView(afterScreenUpdates: true)
         let DiscobTopgwivlMainRoot = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "OrnaiSpa") as! UINavigationController
         let DiscobTopgwivlNextRoot: UIViewController = UserDefaults.standard.object(forKey: "termGlossary") == nil ? DiscobTopVineyardSocialControler() : DiscobTopgwivlMainRoot
 
         DiscobTopgwivlWindow.rootViewController = DiscobTopgwivlNextRoot
-
-        if let DiscobTopgwivlSnapshot {
-            DiscobTopgwivlWindow.addSubview(DiscobTopgwivlSnapshot)
-            UIView.animate(withDuration: 0.8, delay: 0, usingSpringWithDamping: 0.8, initialSpringVelocity: 0.3, options: .curveEaseInOut) {
-                DiscobTopgwivlSnapshot.transform = CGAffineTransform(scaleX: 1.18, y: 1.18)
-                DiscobTopgwivlSnapshot.alpha = 0
-            } completion: { _ in
-                DiscobTopgwivlSnapshot.removeFromSuperview()
-            }
-        }
+        DiscobTopgwivlWindow.makeKeyAndVisible()
     }
 
     class func DiscobTopsonicHarmonyBridge(
