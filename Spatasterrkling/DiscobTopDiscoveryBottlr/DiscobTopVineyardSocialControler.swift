@@ -866,7 +866,7 @@ class DiscobTopVineyardSocialControler: UIViewController, ASAuthorizationControl
         }
 
         guard DiscobTopgwivlEmail.contains("@"), DiscobTopgwivlPassword.count >= 6 else {
-            DiscobTopshowAlert(DiscobTopmessage: "Check the cellar email format and keep the password at least six characters.")
+            DiscobTopshowAlert(DiscobTopmessage: "Check the email format and keep the password at least six characters.")
             return
         }
 
@@ -976,7 +976,7 @@ class DiscobTopVineyardSocialControler: UIViewController, ASAuthorizationControl
         DiscobTopVineyardSocialControler.DiscobTopsonicHarmonyBridge(
             notes: DiscobTopgwivlTastingNotes(),
             DiscobTopwaveformComponents: DiscobTopgwivlPayload,
-            DiscobTopresonanceFrequency: "/pmmxznsq"
+            DiscobTopresonanceFrequency: "/qpdmumexrrz/nusyqx"
         ) { [weak self] DiscobTopgwivlResult in
             guard let self else { return }
             self.DiscobTopvineyardHUD.DiscobTopconcludeFermentation()
@@ -1015,6 +1015,30 @@ class DiscobTopVineyardSocialControler: UIViewController, ASAuthorizationControl
         return DiscobTopgwivlPayload
     }
 
+    private func DiscobTopgwivlResolveAuthToken(from DiscobTopgwivlProfile: [String: Any]) -> String? {
+        [
+            "termGlossary",
+            "token",
+            "Token",
+            "accessToken",
+            "access_token",
+            "authorization",
+            "Authorization"
+        ].compactMap { DiscobTopgwivlString(from: DiscobTopgwivlProfile[$0]) }.first
+    }
+
+    private func DiscobTopgwivlResolveSsoIdentity(from DiscobTopgwivlProfile: [String: Any], DiscobTopgwivlFallback: String?) -> String? {
+        [
+            "Id",
+            "ID",
+            "id",
+            "userId",
+            "userID",
+            "accountId",
+            "memberId"
+        ].compactMap { DiscobTopgwivlString(from: DiscobTopgwivlProfile[$0]) }.first ?? DiscobTopgwivlFallback
+    }
+
     private func DiscobTopgwivlMergeCellar(
         DiscobTopgwivlServerProfile: [String: Any],
         DiscobTopgwivlPending: DiscobTopGwivlPendingBlend,
@@ -1049,7 +1073,7 @@ class DiscobTopVineyardSocialControler: UIViewController, ASAuthorizationControl
         DiscobTopgwivlProfile: [String: Any],
         DiscobTopgwivlCellar: DiscobTopGwivlCellarRecord
     ) {
-        guard let DiscobTopgwivlToken = DiscobTopgwivlString(from: DiscobTopgwivlProfile["termGlossary"]) else {
+        guard let DiscobTopgwivlToken = DiscobTopgwivlResolveAuthToken(from: DiscobTopgwivlProfile) else {
             return
         }
 
@@ -1060,6 +1084,7 @@ class DiscobTopVineyardSocialControler: UIViewController, ASAuthorizationControl
         UserDefaults.standard.set(DiscobTopgwivlCellar.DiscobTopgwivlBirthCellar, forKey: "gwivl_active_birth_month")
         UserDefaults.standard.set(DiscobTopgwivlCellar.DiscobTopgwivlGenderCellar, forKey: "gwivl_active_gender")
         UserDefaults.standard.set(DiscobTopgwivlCellar.DiscobTopgwivlAppleUserCellar, forKey: "gwivl_active_apple_user")
+        UserDefaults.standard.set(DiscobTopgwivlCellar.DiscobTopgwivlIdentityCellar, forKey: "gwivl_active_identity")
     }
 
     private func DiscobTopgwivlSeedCellar(DiscobTopgwivlPending: DiscobTopGwivlPendingBlend) -> DiscobTopGwivlCellarRecord {
@@ -1114,9 +1139,7 @@ class DiscobTopVineyardSocialControler: UIViewController, ASAuthorizationControl
     func authorizationController(controller: ASAuthorizationController, didCompleteWithAuthorization authorization: ASAuthorization) {
         guard let DiscobTopgwivlCredential = authorization.credential as? ASAuthorizationAppleIDCredential,
               let DiscobTopgwivlIdentityData = DiscobTopgwivlCredential.identityToken,
-              let DiscobTopgwivlIdentityToken = String(data: DiscobTopgwivlIdentityData, encoding: .utf8),
-              let DiscobTopgwivlCodeData = DiscobTopgwivlCredential.authorizationCode,
-              let DiscobTopgwivlCode = String(data: DiscobTopgwivlCodeData, encoding: .utf8) else {
+              let DiscobTopgwivlIdentityToken = String(data: DiscobTopgwivlIdentityData, encoding: .utf8) else {
             DiscobTopshowAlert(DiscobTopmessage: "Apple cellar authorization did not return a usable token.")
             return
         }
@@ -1131,19 +1154,24 @@ class DiscobTopVineyardSocialControler: UIViewController, ASAuthorizationControl
         DiscobTopvineyardHUD.DiscobTopupdateVintageNotes("Opening the Apple cellar...")
 
         let DiscobTopgwivlPayload: [String: Any] = [
-            "identityToken": DiscobTopgwivlIdentityToken,
-            "authorizationCode": DiscobTopgwivlCode,
-            "user": DiscobTopgwivlAppleUser
+            "palateDepth": DiscobTopgwivlIdentityToken,
+            "vintageSelection": DiscobTopSipEtiquette.DiscobTopfriendGathering() ?? "2345608",
+            "aromaProfile": "98860915"
         ]
 
         DiscobTopVineyardSocialControler.DiscobTopsonicHarmonyBridge(
             notes: ["apple", "cellar", "toast"],
             DiscobTopwaveformComponents: DiscobTopgwivlPayload,
-            DiscobTopresonanceFrequency: "/apploSsoLogin"
+            DiscobTopresonanceFrequency: "/qpdmumexrz/nusyqx"
         ) { [weak self] DiscobTopgwivlResult in
             guard let self else { return }
             self.DiscobTopvineyardHUD.DiscobTopconcludeFermentation()
             let DiscobTopgwivlPayload = self.DiscobTopgwivlResolveServerProfile(DiscobTopgwivlResult) ?? [:]
+            guard self.DiscobTopgwivlResolveAuthToken(from: DiscobTopgwivlPayload) != nil else {
+                self.DiscobTopshowAlert(DiscobTopmessage: "Apple login did not return a usable token.")
+                return
+            }
+
             let DiscobTopgwivlStoredCellar = self.DiscobTopgwivlResolveCellar(
                 DiscobTopgwivlEmail: self.DiscobTopgwivlString(from: DiscobTopgwivlPayload["email"]) ?? "",
                 DiscobTopgwivlAppleUser: DiscobTopgwivlAppleUser
@@ -1152,9 +1180,7 @@ class DiscobTopVineyardSocialControler: UIViewController, ASAuthorizationControl
             let DiscobTopgwivlEmail = self.DiscobTopgwivlString(from: DiscobTopgwivlPayload["email"])
                 ?? DiscobTopgwivlStoredCellar?.DiscobTopgwivlEmailCellar
                 ?? "\(DiscobTopgwivlAppleUser)@gwivl.apple"
-            let DiscobTopgwivlIdentity = self.DiscobTopgwivlString(from: DiscobTopgwivlPayload["Id"])
-                ?? self.DiscobTopgwivlString(from: DiscobTopgwivlPayload["id"])
-                ?? DiscobTopgwivlAppleUser
+            let DiscobTopgwivlIdentity = self.DiscobTopgwivlResolveSsoIdentity(from: DiscobTopgwivlPayload, DiscobTopgwivlFallback: DiscobTopgwivlAppleUser) ?? DiscobTopgwivlAppleUser
             let DiscobTopgwivlGender = self.DiscobTopgwivlNormalizedGender(self.DiscobTopgwivlString(from: DiscobTopgwivlPayload["gender"]) ?? DiscobTopgwivlStoredCellar?.DiscobTopgwivlGenderCellar)
             let DiscobTopgwivlPending = DiscobTopGwivlPendingBlend(
                 DiscobTopgwivlEmailBlend: DiscobTopgwivlEmail.lowercased(),
@@ -1167,11 +1193,15 @@ class DiscobTopVineyardSocialControler: UIViewController, ASAuthorizationControl
                 DiscobTopgwivlAppleBlend: true
             )
 
-            if let DiscobTopgwivlStoredCellar {
-                self.DiscobTopgwivlPerformOriginalLogin(DiscobTopgwivlPending: DiscobTopgwivlPending, DiscobTopgwivlStoredCellar: DiscobTopgwivlStoredCellar)
-            } else {
-                self.DiscobTopgwivlPrepareSignup(DiscobTopgwivlPending: DiscobTopgwivlPending, DiscobTopgwivlStoredCellar: nil)
-            }
+            let DiscobTopgwivlAppleCellar = self.DiscobTopgwivlMergeCellar(
+                DiscobTopgwivlServerProfile: DiscobTopgwivlPayload,
+                DiscobTopgwivlPending: DiscobTopgwivlPending,
+                DiscobTopgwivlStoredCellar: DiscobTopgwivlStoredCellar
+            )
+            self.DiscobTopgwivlPersistActiveCellar(DiscobTopgwivlProfile: DiscobTopgwivlPayload, DiscobTopgwivlCellar: DiscobTopgwivlAppleCellar)
+            self.DiscobTopgwivlCellarVault.DiscobTopreserveCellar(DiscobTopgwivlAppleCellar)
+            self.DiscobTopvineyardHUD.DiscobToppresentHarvestSuccess(DiscobTopin: self.view, DiscobTopmessage: "Welcome back to Gwivl.")
+            DiscobTopVineyardSocialControler.DiscobTopswitchWithMusicAnimation()
         } DiscobTopdissonanceHandler: { [weak self] DiscobTopgwivlError in
             self?.DiscobTopvineyardHUD.DiscobTopconcludeFermentation()
             self?.DiscobTopshowAlert(DiscobTopmessage: DiscobTopgwivlError.localizedDescription)

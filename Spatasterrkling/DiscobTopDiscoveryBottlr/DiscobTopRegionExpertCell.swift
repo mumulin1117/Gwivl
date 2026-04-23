@@ -31,7 +31,7 @@ class DiscobTopRegionExpertCell: UITableViewCell {
     }
     
     func DiscobTopblindChallenge(DiscobTopiuuu:Dictionary<String,Any>)  {
-        DiscobTopflawDetection.text = DiscobTopiuuu["ratingSystem"] as? String
+        DiscobTopflawDetection.text = DiscobTopiuuu["palmLeaf"] as? String
        
         
         if let DiscobTopcork = (DiscobTopiuuu["biodynamicWine"] as? Array<String>)?.first {
