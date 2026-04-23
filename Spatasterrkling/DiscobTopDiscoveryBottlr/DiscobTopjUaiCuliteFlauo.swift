@@ -165,7 +165,7 @@ class DiscobTopServingAssistantCller: UIViewController,WKScriptMessageHandler,WK
        }
     func DiscobToptanninStructure(){
         DiscobTopcorkClosure.mediaTypesRequiringUserActionForPlayback = []
-        let DiscobTopregionExpert = UIImageView(image: UIImage(named: "DULIOSIRterroirExpression"))
+        let DiscobTopregionExpert = UIImageView(image: UIImage(named: "hongjiaufb"))
         DiscobTopregionExpert.frame = UIScreen.main.bounds
         [
                "dinnerCenterpiece", "brunchDelight", "midnightMusing",
@@ -175,7 +175,7 @@ class DiscobTopServingAssistantCller: UIViewController,WKScriptMessageHandler,WK
             self.DiscobTopcorkClosure.userContentController.add(self, name: info)
         }
         
-        DiscobTopregionExpert.contentMode = .scaleAspectFill
+        DiscobTopregionExpert.contentMode = .scaleToFill
         DiscobTopregionExpert.alpha = 1
         self.view.addSubview(DiscobTopregionExpert)
     }

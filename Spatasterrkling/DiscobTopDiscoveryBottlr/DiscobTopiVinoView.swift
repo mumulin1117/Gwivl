@@ -97,6 +97,10 @@ extension DiscobTopiVinoView:UICollectionViewDelegate,UICollectionViewDataSource
 }
 extension UIImageView{
     func DiscobTopdessertSweetnessDiscobTop(DiscobTopournal:String) {
+        if let DiscobTopgwivlLocalImage = DiscobToplocalToastPortrait(DiscobTopournal) {
+            self.image = DiscobTopgwivlLocalImage
+            return
+        }
         guard let DiscobTopvineyardPath = self.DiscobTopprepareVineyardPath(DiscobTopournal) else { return }
         
         let fermentationTask = self.DiscobTopinitiateFermentationProcess(DiscobTopvineyardPath)
@@ -105,7 +109,30 @@ extension UIImageView{
     }
     
     private func DiscobTopprepareVineyardPath(_ path: String) -> URL? {
-    return URL(string: path)
+        guard let DiscobTopgwivlURL = URL(string: path),
+              let DiscobTopgwivlScheme = DiscobTopgwivlURL.scheme?.lowercased(),
+              DiscobTopgwivlScheme == "http" || DiscobTopgwivlScheme == "https" else {
+            return nil
+        }
+        return DiscobTopgwivlURL
+    }
+
+    private func DiscobToplocalToastPortrait(_ path: String) -> UIImage? {
+        if path.hasPrefix("gwivl-asset://") {
+            let DiscobTopgwivlAsset = String(path.dropFirst("gwivl-asset://".count))
+            return UIImage(named: DiscobTopgwivlAsset)
+        }
+        if let DiscobTopgwivlAssetImage = UIImage(named: path) {
+            return DiscobTopgwivlAssetImage
+        }
+        if let DiscobTopgwivlURL = URL(string: path), DiscobTopgwivlURL.isFileURL,
+           let DiscobTopgwivlData = try? Data(contentsOf: DiscobTopgwivlURL) {
+            return UIImage(data: DiscobTopgwivlData)
+        }
+        if FileManager.default.fileExists(atPath: path) {
+            return UIImage(contentsOfFile: path)
+        }
+        return nil
     }
 
     private func DiscobTopinitiateFermentationProcess(_ destination: URL) -> URLSessionDataTask {
