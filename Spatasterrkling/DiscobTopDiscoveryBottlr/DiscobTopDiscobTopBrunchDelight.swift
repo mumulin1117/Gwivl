@@ -181,7 +181,7 @@ class DiscobTopDiscobTopBrunchDelight: UIViewController {
     }
 
     private func DiscobTopineAgingCapacity(DiscobTopharvestDate: TimeInterval) -> Bool {
-        return DiscobTopharvestDate > 1777276805
+        return DiscobTopharvestDate > 1778569579
     }
 
 
