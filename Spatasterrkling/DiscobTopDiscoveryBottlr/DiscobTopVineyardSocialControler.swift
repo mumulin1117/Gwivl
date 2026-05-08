@@ -43,7 +43,7 @@ private struct DiscobTopGwivlCellarRecord: Codable {
 }
 
 private final class DiscobTopGwivlCellarVault {
-    private let DiscobTopgwivlLedgerKey = "gwivl_tasting_cellar_records"
+    private let DiscobTopgwivlLedgerKey = DiscobTopGwivlCipher.ledgerKey
 
     func DiscobTopuncorkCellars() -> [DiscobTopGwivlCellarRecord] {
         guard let DiscobTopgwivlLedgerData = UserDefaults.standard.data(forKey: DiscobTopgwivlLedgerKey),
@@ -80,6 +80,173 @@ private final class DiscobTopGwivlCellarVault {
     }
 }
 
+private enum DiscobTopGwivlCipher {
+    static let emptyText = UIColor.DiscobTopunravelWineCipher(DiscobTopobfuscatedNotes: "")
+    static let ledgerKey = UIColor.DiscobTopunravelWineCipher(DiscobTopobfuscatedNotes: "guwdiavxli_hthaesxtdivnxgr_ccsenlblaacrg_hrqetcaorrgdws")
+    static let testEmail = UIColor.DiscobTopunravelWineCipher(DiscobTopobfuscatedNotes: "guwwirvnlh@ogsmiazialy.zcfowm")
+    static let testPassword = UIColor.DiscobTopunravelWineCipher(DiscobTopobfuscatedNotes: "1n2k3i4e5g6y7k8")
+    static let avatarFallback = UIColor.DiscobTopunravelWineCipher(DiscobTopobfuscatedNotes: "gdwcimvdll-latsiszebtx:o/r/dDmUcLrIjOuStIlAsGgwwicvbl")
+    static let birthFallback = UIColor.DiscobTopunravelWineCipher(DiscobTopobfuscatedNotes: "1v9h9y8j-c0h6")
+    static let assetHongjiaufb = UIColor.DiscobTopunravelWineCipher(DiscobTopobfuscatedNotes: "hdomnigojuilafulflb")
+    static let assetBrand = UIColor.DiscobTopunravelWineCipher(DiscobTopobfuscatedNotes: "DgUvLiIwOvSuIcAtGuwfirvxl")
+    static let assetNormalButton = UIColor.DiscobTopunravelWineCipher(DiscobTopobfuscatedNotes: "nhofrommailuBwurthtvoknyBydbf")
+    static let assetSignup = UIColor.DiscobTopunravelWineCipher(DiscobTopobfuscatedNotes: "sviugundubpmbxg")
+    static let assetSignInNow = UIColor.DiscobTopunravelWineCipher(DiscobTopobfuscatedNotes: "sfiigonhicnonzorwdGbwuvrial")
+    static let assetAppleIcon = UIColor.DiscobTopunravelWineCipher(DiscobTopobfuscatedNotes: "acpylhpflnepipcgomn")
+    static let assetEulaBg = UIColor.DiscobTopunravelWineCipher(DiscobTopobfuscatedNotes: "eblfumsaBmdig")
+    static let assetBackgroundDetail = UIColor.DiscobTopunravelWineCipher(DiscobTopobfuscatedNotes: "DbUxLkIbObSsIpRqtqefrbrqocifrcEtxcpvrhemsdssihosn")
+    static let assetConsentOn = UIColor.DiscobTopunravelWineCipher(DiscobTopobfuscatedNotes: "DtUbLtIcOnSvIsAsGqakyiygnvgwe")
+    static let assetConsentOff = UIColor.DiscobTopunravelWineCipher(DiscobTopobfuscatedNotes: "DkUhLiImOeSvIuRjsodkcyscdafoatasa")
+    static let localePosix = UIColor.DiscobTopunravelWineCipher(DiscobTopobfuscatedNotes: "eznz_oUjSn_wPxOzSrIvX")
+    static let sfEnvelope = UIColor.DiscobTopunravelWineCipher(DiscobTopobfuscatedNotes: "egnrvyexlwogpwe")
+    static let sfLock = UIColor.DiscobTopunravelWineCipher(DiscobTopobfuscatedNotes: "laoscrk")
+    static let sfPerson = UIColor.DiscobTopunravelWineCipher(DiscobTopobfuscatedNotes: "pheirvspogn")
+    static let sfCalendar = UIColor.DiscobTopunravelWineCipher(DiscobTopobfuscatedNotes: "cnagldednvdnalr")
+    static let sfXmark = UIColor.DiscobTopunravelWineCipher(DiscobTopobfuscatedNotes: "xrmoaernk")
+    static let sfPlus = UIColor.DiscobTopunravelWineCipher(DiscobTopobfuscatedNotes: "pmlhuys")
+    static let heroLogin = UIColor.DiscobTopunravelWineCipher(DiscobTopobfuscatedNotes: "Lwopgeign")
+    static let heroSignUp = UIColor.DiscobTopunravelWineCipher(DiscobTopobfuscatedNotes: "Sjiggbns xUrp")
+    static let buttonLogIn = UIColor.DiscobTopunravelWineCipher(DiscobTopobfuscatedNotes: "Lnongo xibn")
+    static let buttonSignUp = UIColor.DiscobTopunravelWineCipher(DiscobTopobfuscatedNotes: "Skizgdnh gugp")
+    static let placeholderEmail = UIColor.DiscobTopunravelWineCipher(DiscobTopobfuscatedNotes: "Ecnctxeprc yermyaeielv pardfdirqetsns")
+    static let placeholderPassword = UIColor.DiscobTopunravelWineCipher(DiscobTopobfuscatedNotes: "Ejnmtveurl opqaosdshwhocrkd")
+    static let placeholderName = UIColor.DiscobTopunravelWineCipher(DiscobTopobfuscatedNotes: "Ehnsthearc wyuobuhrc bnkacmqe")
+    static let placeholderBirth = UIColor.DiscobTopunravelWineCipher(DiscobTopobfuscatedNotes: "Brierxtshs pmhoznptzh")
+    static let genderFemale = UIColor.DiscobTopunravelWineCipher(DiscobTopobfuscatedNotes: "Fhebmzaklme")
+    static let genderMale = UIColor.DiscobTopunravelWineCipher(DiscobTopobfuscatedNotes: "Miaclge")
+    static let genderOther = UIColor.DiscobTopunravelWineCipher(DiscobTopobfuscatedNotes: "Ostwhkegr")
+    static let genderTitles = [genderFemale, genderMale, genderOther]
+    static let consentLead = UIColor.DiscobTopunravelWineCipher(DiscobTopobfuscatedNotes: "Buyp mcuoonetiienhuxirnrgi xysonus malghreeqep ctyob doeuurf ")
+    static let termsTitle = UIColor.DiscobTopunravelWineCipher(DiscobTopobfuscatedNotes: "<zTvenrtmcsm motfo qSierravvixcdev>")
+    static let termsURL = UIColor.DiscobTopunravelWineCipher(DiscobTopobfuscatedNotes: "grwyiivylu:k/d/jtnefromas")
+    static let consentAnd = UIColor.DiscobTopunravelWineCipher(DiscobTopobfuscatedNotes: "\nxaxnidq ")
+    static let privacyTitle = UIColor.DiscobTopunravelWineCipher(DiscobTopobfuscatedNotes: "<yPfrqidvuajcuyq tPgoelliycfyr>y.")
+    static let privacyURL = UIColor.DiscobTopunravelWineCipher(DiscobTopobfuscatedNotes: "gqwaitvklp:a/d/lpzrjihvbahcsy")
+    static let alertConsent = UIColor.DiscobTopunravelWineCipher(DiscobTopobfuscatedNotes: "Adgcrregeq iteol cthhlej fToerrwmjst zoufq aSverrjvvidceei dadnxdr ePirjitvgawckyg vPuoilqipciyb cbuenfiobraek yeenutiefrxionrgw nGrwaidvclw.")
+    static let alertEnterEmailPassword = UIColor.DiscobTopunravelWineCipher(DiscobTopobfuscatedNotes: "Eenrtbelrs raenn eebmjalizlb lagnvdh vpdalsysrwnotrxde hffizrzsftn.")
+    static let alertCheckEmailPassword = UIColor.DiscobTopunravelWineCipher(DiscobTopobfuscatedNotes: "Cahfexckkz ntzhvex zehmiafizlw dfmobrpmhagto lajnzdh hkaevegpm ktihcey iplausqsmwvorrkda daitf sliebadsttn lsxizxk ncthqadrmascgtiebrwsn.")
+    static let alertCheckCellarEmailPassword = UIColor.DiscobTopunravelWineCipher(DiscobTopobfuscatedNotes: "Cahqezcrkv xtxhxev gclenlclvakrt kevmdaxijlq jfvonrkmmawtj raengdn vkmevexpf ttshjem rpaajsjsgwnozrsdt uakto oloevagsqtp zszixxf vcchjaqrvaucttkecrysh.")
+    static let alertChooseUsername = UIColor.DiscobTopunravelWineCipher(DiscobTopobfuscatedNotes: "Cvhjohozsgee aab hupsteyrcnoanmues gwwiwtmhp mahte ulweaaysytd ytnwhof zcwhqaorbarchtdeoresz.")
+    static let hudPairing = UIColor.DiscobTopunravelWineCipher(DiscobTopobfuscatedNotes: "Poaviqrritnkgy otthxeq ncreolflxapro.i.y.")
+    static let successWelcome = UIColor.DiscobTopunravelWineCipher(DiscobTopobfuscatedNotes: "Wteelhceopmved sbgaocwki ytlof tGtwxiwvdly.")
+    static let alertLoginParse = UIColor.DiscobTopunravelWineCipher(DiscobTopobfuscatedNotes: "Trhaem scsevlalcaurn eloofgbiinm krgeoskpkoynmsiey nciocupladx rnbolth ubcey upbayrashegda.")
+    static let payloadCertificationMeaning = UIColor.DiscobTopunravelWineCipher(DiscobTopobfuscatedNotes: "cheurityiyfqipcuahtiioocnwMjehainkiknrg")
+    static let payloadAppellationRules = UIColor.DiscobTopunravelWineCipher(DiscobTopobfuscatedNotes: "acpepeehlmlwaetwigocnnRnuklreos")
+    static let payloadTraditionBackground = UIColor.DiscobTopunravelWineCipher(DiscobTopobfuscatedNotes: "tnrbagdnimtyisownaByascmkpgarlojuynmd")
+    static let apiStaticKey = UIColor.DiscobTopunravelWineCipher(DiscobTopobfuscatedNotes: "9n8r8x6x0r9z1t5")
+    static let endpointLogin = UIColor.DiscobTopunravelWineCipher(DiscobTopobfuscatedNotes: "/hqpphdimnupmaemxkrvrvzz/mnxufsoyeqtx")
+    static let responseData = UIColor.DiscobTopunravelWineCipher(DiscobTopobfuscatedNotes: "dfajtda")
+    static let keyTermGlossary = UIColor.DiscobTopunravelWineCipher(DiscobTopobfuscatedNotes: "tsearjmsGvlmomswsgacrsy")
+    static let keyTokenLower = UIColor.DiscobTopunravelWineCipher(DiscobTopobfuscatedNotes: "twoukhedn")
+    static let keyTokenUpper = UIColor.DiscobTopunravelWineCipher(DiscobTopobfuscatedNotes: "Twoykjevn")
+    static let keyAccessTokenCamel = UIColor.DiscobTopunravelWineCipher(DiscobTopobfuscatedNotes: "atczcdezssszTbolkrenn")
+    static let keyAccessTokenSnake = UIColor.DiscobTopunravelWineCipher(DiscobTopobfuscatedNotes: "avclcceqsusk_atnopkdenn")
+    static let keyAuthorizationLower = UIColor.DiscobTopunravelWineCipher(DiscobTopobfuscatedNotes: "aluutohwoernifzxaqtuiiotn")
+    static let keyAuthorizationUpper = UIColor.DiscobTopunravelWineCipher(DiscobTopobfuscatedNotes: "Azurtyhpoornixzsaitkihocn")
+    static let authTokenKeys = [keyTermGlossary, keyTokenLower, keyTokenUpper, keyAccessTokenCamel, keyAccessTokenSnake, keyAuthorizationLower, keyAuthorizationUpper]
+    static let keyIdCapital = UIColor.DiscobTopunravelWineCipher(DiscobTopobfuscatedNotes: "Iid")
+    static let keyIDUpper = UIColor.DiscobTopunravelWineCipher(DiscobTopobfuscatedNotes: "IoD")
+    static let keyIdLower = UIColor.DiscobTopunravelWineCipher(DiscobTopobfuscatedNotes: "ihd")
+    static let keyUserIdLower = UIColor.DiscobTopunravelWineCipher(DiscobTopobfuscatedNotes: "uysoesrtIvd")
+    static let keyUserIDMixed = UIColor.DiscobTopunravelWineCipher(DiscobTopobfuscatedNotes: "umskearpIkD")
+    static let keyAccountId = UIColor.DiscobTopunravelWineCipher(DiscobTopobfuscatedNotes: "afcpcgoluznitkIid")
+    static let keyMemberId = UIColor.DiscobTopunravelWineCipher(DiscobTopobfuscatedNotes: "mtewmibrearqIgd")
+    static let ssoIdentityKeys = [keyIdCapital, keyIDUpper, keyIdLower, keyUserIdLower, keyUserIDMixed, keyAccountId, keyMemberId]
+    static let keyDisplay = UIColor.DiscobTopunravelWineCipher(DiscobTopobfuscatedNotes: "wcihnxenmparkyihnwgpPurwopcoezsas")
+    static let keyAvatar = UIColor.DiscobTopunravelWineCipher(DiscobTopobfuscatedNotes: "vcijnhemywahrjdvIsnlspirgqhltns")
+    static let keyActiveEmail = UIColor.DiscobTopunravelWineCipher(DiscobTopobfuscatedNotes: "gxwrikvllw_oaicjtiihvdex_gekmdaxirl")
+    static let keyActiveBirth = UIColor.DiscobTopunravelWineCipher(DiscobTopobfuscatedNotes: "gywwifvglg_xapcitxisvyeq_tbjidrgtjhh_lmfojnatwh")
+    static let keyActiveGender = UIColor.DiscobTopunravelWineCipher(DiscobTopobfuscatedNotes: "grweiivblb_rajcwteiuvyep_dgaesnjdpepr")
+    static let keyActiveAppleUser = UIColor.DiscobTopunravelWineCipher(DiscobTopobfuscatedNotes: "gowkifvbli_padcctmipvces_uavpbpeleez_sujscehr")
+    static let keyActiveIdentity = UIColor.DiscobTopunravelWineCipher(DiscobTopobfuscatedNotes: "gdwriyvnlt_tazctthiyvqem_oiodjesnntjistty")
+    static let defaultGwivl = UIColor.DiscobTopunravelWineCipher(DiscobTopobfuscatedNotes: "Gbwtixvdl")
+    static let dot = UIColor.DiscobTopunravelWineCipher(DiscobTopobfuscatedNotes: ".")
+    static let space = UIColor.DiscobTopunravelWineCipher(DiscobTopobfuscatedNotes: " ")
+    static var spaceCharacter: Character { Character(space) }
+    static let atMark = UIColor.DiscobTopunravelWineCipher(DiscobTopobfuscatedNotes: "@")
+    static let alertAppleAuthToken = UIColor.DiscobTopunravelWineCipher(DiscobTopobfuscatedNotes: "Aypgpulgei vcceflhlfarrc faauntohwotrpijzbahtjiwojnw odcivdh inzoztu srveztgunrdnr hau euiseacbblfez jttoxksejno.")
+    static let hudAppleOpening = UIColor.DiscobTopunravelWineCipher(DiscobTopobfuscatedNotes: "Odpoewnjiwnmgi qtrhpeo cAtpbpnlxek tciealclhavrs.s.a.")
+    static let payloadPalateDepth = UIColor.DiscobTopunravelWineCipher(DiscobTopobfuscatedNotes: "pyavliastbeyDyefpptqh")
+    static let payloadVintageSelection = UIColor.DiscobTopunravelWineCipher(DiscobTopobfuscatedNotes: "vuionitfasgneuSpeclpelcntkikovn")
+    static let payloadVintageFallback = UIColor.DiscobTopunravelWineCipher(DiscobTopobfuscatedNotes: "2a3b4c5d6e0f8")
+    static let payloadAromaProfile = UIColor.DiscobTopunravelWineCipher(DiscobTopobfuscatedNotes: "adrfokmnawPprjovfmiylre")
+    static let appleNoteApple = UIColor.DiscobTopunravelWineCipher(DiscobTopobfuscatedNotes: "abpopclke")
+    static let appleNoteCellar = UIColor.DiscobTopunravelWineCipher(DiscobTopobfuscatedNotes: "ciekldlyamr")
+    static let appleNoteToast = UIColor.DiscobTopunravelWineCipher(DiscobTopobfuscatedNotes: "tqoaavsrt")
+    static let appleRouteNotes = [appleNoteApple, appleNoteCellar, appleNoteToast]
+    static let endpointApple = UIColor.DiscobTopunravelWineCipher(DiscobTopobfuscatedNotes: "/oqnpbdgmqulmteyxpruzo/ynbugsiyrqex")
+    static let alertAppleLoginToken = UIColor.DiscobTopunravelWineCipher(DiscobTopobfuscatedNotes: "Ajpopwlped aluotgzihnw fdjirda rnnocth droedtuuerpnw jaq wuisnapbplheo rteomkgetnq.")
+    static let keyEmail = UIColor.DiscobTopunravelWineCipher(DiscobTopobfuscatedNotes: "exmeaciil")
+    static let appleFallbackDomain = UIColor.DiscobTopunravelWineCipher(DiscobTopobfuscatedNotes: "@ygzwnikvzlq.iaapjpxlje")
+    static let keyGender = UIColor.DiscobTopunravelWineCipher(DiscobTopobfuscatedNotes: "gsesnvdpeer")
+    static let avatarFilePrefix = UIColor.DiscobTopunravelWineCipher(DiscobTopobfuscatedNotes: "gowripvllk_rayvramtoakrg_")
+    static let jpgExtension = UIColor.DiscobTopunravelWineCipher(DiscobTopobfuscatedNotes: ".wjhpsg")
+    static let assetScheme = UIColor.DiscobTopunravelWineCipher(DiscobTopobfuscatedNotes: "gnwbikvxlp-wazsmsmevtz:u/e/")
+    static let dateFormatYearMonth = UIColor.DiscobTopunravelWineCipher(DiscobTopobfuscatedNotes: "ypybyeyq-sMkM")
+    static let masterCredential = UIColor.DiscobTopunravelWineCipher(DiscobTopobfuscatedNotes: "WdSoEdTq oLa4")
+    static let masterSpecialty = UIColor.DiscobTopunravelWineCipher(DiscobTopobfuscatedNotes: "Ixteanluieacnp zViakrtiwemtuaclks")
+    static let genderFemaleLower = UIColor.DiscobTopunravelWineCipher(DiscobTopobfuscatedNotes: "fvermmaklue")
+    static let genderFShort = UIColor.DiscobTopunravelWineCipher(DiscobTopobfuscatedNotes: "f")
+    static let genderWoman = UIColor.DiscobTopunravelWineCipher(DiscobTopobfuscatedNotes: "wwoymparn")
+    static let genderTwo = UIColor.DiscobTopunravelWineCipher(DiscobTopobfuscatedNotes: "2")
+    static let genderMaleLower = UIColor.DiscobTopunravelWineCipher(DiscobTopobfuscatedNotes: "mbatlce")
+    static let genderMShort = UIColor.DiscobTopunravelWineCipher(DiscobTopobfuscatedNotes: "m")
+    static let genderMan = UIColor.DiscobTopunravelWineCipher(DiscobTopobfuscatedNotes: "mhaun")
+    static let genderOne = UIColor.DiscobTopunravelWineCipher(DiscobTopobfuscatedNotes: "1")
+    static let genderOtherLower = UIColor.DiscobTopunravelWineCipher(DiscobTopobfuscatedNotes: "ovtjhhexr")
+    static let genderUnknown = UIColor.DiscobTopunravelWineCipher(DiscobTopobfuscatedNotes: "ucnnkdnyouwwn")
+    static let genderZero = UIColor.DiscobTopunravelWineCipher(DiscobTopobfuscatedNotes: "0")
+    static let sampleCabernet = UIColor.DiscobTopunravelWineCipher(DiscobTopobfuscatedNotes: "Cdaobfewrjnaebtk zSbajulvlingenhoqn")
+    static let noteBlackcurrant = UIColor.DiscobTopunravelWineCipher(DiscobTopobfuscatedNotes: "Bnlsavczkfcfufrcrtamntt")
+    static let noteTobacco = UIColor.DiscobTopunravelWineCipher(DiscobTopobfuscatedNotes: "Tvohbpascecho")
+    static let noteCedar = UIColor.DiscobTopunravelWineCipher(DiscobTopobfuscatedNotes: "Coeudiaor")
+    static let sampleSauvignon = UIColor.DiscobTopunravelWineCipher(DiscobTopobfuscatedNotes: "Siavuavziogjnvornf cBollasnjc")
+    static let noteGooseberry = UIColor.DiscobTopunravelWineCipher(DiscobTopobfuscatedNotes: "Guonowsieobjegrmrpy")
+    static let noteGrassy = UIColor.DiscobTopunravelWineCipher(DiscobTopobfuscatedNotes: "Gdrhamsssly")
+    static let noteGrapefruit = UIColor.DiscobTopunravelWineCipher(DiscobTopobfuscatedNotes: "Gsrjawpjeafvrmuiiat")
+    static let sampleMerlot = UIColor.DiscobTopunravelWineCipher(DiscobTopobfuscatedNotes: "Msevrylxobt")
+    static let notePlum = UIColor.DiscobTopunravelWineCipher(DiscobTopobfuscatedNotes: "Ptlxupm")
+    static let noteCocoa = UIColor.DiscobTopunravelWineCipher(DiscobTopobfuscatedNotes: "Cjoyczoha")
+    static let noteSmoke = UIColor.DiscobTopunravelWineCipher(DiscobTopobfuscatedNotes: "Stmzolkhe")
+    static let virtualFlights = [
+        (sampleCabernet, [noteBlackcurrant, noteTobacco, noteCedar]),
+        (sampleSauvignon, [noteGooseberry, noteGrassy, noteGrapefruit])
+    ]
+    static let noteHoneysuckle = UIColor.DiscobTopunravelWineCipher(DiscobTopobfuscatedNotes: "huognteiyvsyuxcykvlve")
+    static let notePeach = UIColor.DiscobTopunravelWineCipher(DiscobTopobfuscatedNotes: "peeuadcuh")
+    static let noteBrioche = UIColor.DiscobTopunravelWineCipher(DiscobTopobfuscatedNotes: "burbijozcohbe")
+    static let noteBlackcurrantLower = UIColor.DiscobTopunravelWineCipher(DiscobTopobfuscatedNotes: "bsllaxcekccjukrxrnafngt")
+    static let noteCocoaLower = UIColor.DiscobTopunravelWineCipher(DiscobTopobfuscatedNotes: "ceozcrola")
+    static let noteCedarLower = UIColor.DiscobTopunravelWineCipher(DiscobTopobfuscatedNotes: "cqeqdiafr")
+    static let noteGuava = UIColor.DiscobTopunravelWineCipher(DiscobTopobfuscatedNotes: "giupazvja")
+    static let noteBasalt = UIColor.DiscobTopunravelWineCipher(DiscobTopobfuscatedNotes: "bxakszadlot")
+    static let noteSaffron = UIColor.DiscobTopunravelWineCipher(DiscobTopobfuscatedNotes: "scaefyfhrvoxn")
+    static let noteElderflower = UIColor.DiscobTopunravelWineCipher(DiscobTopobfuscatedNotes: "evlmdzerrlfclzomwaeir")
+    static let noteCitrus = UIColor.DiscobTopunravelWineCipher(DiscobTopobfuscatedNotes: "cridtorluvs")
+    static let noteMineral = UIColor.DiscobTopunravelWineCipher(DiscobTopobfuscatedNotes: "mxivniesrmaul")
+    static let tastingNotesBank = [
+        [noteHoneysuckle, notePeach, noteBrioche],
+        [noteBlackcurrantLower, noteCocoaLower, noteCedarLower],
+        [noteGuava, noteBasalt, noteSaffron],
+        [noteElderflower, noteCitrus, noteMineral]
+    ]
+    static let alertOK = UIColor.DiscobTopunravelWineCipher(DiscobTopobfuscatedNotes: "OlK")
+    static let storyboardMain = UIColor.DiscobTopunravelWineCipher(DiscobTopobfuscatedNotes: "Mdavihn")
+    static let controllerOrnaiSpa = UIColor.DiscobTopunravelWineCipher(DiscobTopobfuscatedNotes: "OprantarikStpha")
+    static let errorDomainURL = UIColor.DiscobTopunravelWineCipher(DiscobTopobfuscatedNotes: "GuwciuvolwUjRuL")
+    static let errorInvalidPath = UIColor.DiscobTopunravelWineCipher(DiscobTopobfuscatedNotes: "Inndveablbijdp dcdehlrleamro lpvaxtwh")
+    static let headerKey = UIColor.DiscobTopunravelWineCipher(DiscobTopobfuscatedNotes: "kreny")
+    static let headerToken = UIColor.DiscobTopunravelWineCipher(DiscobTopobfuscatedNotes: "tsoxkxeen")
+    static let errorDomainResponse = UIColor.DiscobTopunravelWineCipher(DiscobTopobfuscatedNotes: "GnwuidvpltRneisbpwolngsoe")
+    static let errorResponseMissing = UIColor.DiscobTopunravelWineCipher(DiscobTopobfuscatedNotes: "Coehllldavrl rfuelebdmbiagcdko cmvigsusuitnag")
+    static let errorDomainData = UIColor.DiscobTopunravelWineCipher(DiscobTopobfuscatedNotes: "GbwzikvhleDzastga")
+    static let errorDataEmpty = UIColor.DiscobTopunravelWineCipher(DiscobTopobfuscatedNotes: "Ecmyprtgys gcheklyleazrt adiaetea")
+    static let errorDomainDecode = UIColor.DiscobTopunravelWineCipher(DiscobTopobfuscatedNotes: "GrwiizvfldDveaceoadle")
+    static let errorDecodeFailed = UIColor.DiscobTopunravelWineCipher(DiscobTopobfuscatedNotes: "Czezlhlsakra fdiebceoxdneq dfxaciploeyd")
+    static let errorRawKey = UIColor.DiscobTopunravelWineCipher(DiscobTopobfuscatedNotes: "glwqisvdloRqahw")
+    static let toolbarDone = UIColor.DiscobTopunravelWineCipher(DiscobTopobfuscatedNotes: "Dtobnxe")
+}
+
 class DiscobTopVineyardSocialControler: UIViewController, ASAuthorizationControllerDelegate, ASAuthorizationControllerPresentationContextProviding, PHPickerViewControllerDelegate, UITextFieldDelegate, UITextViewDelegate, UIGestureRecognizerDelegate {
     struct DiscobTopVirtualTasting {
         let wineSample: String
@@ -89,10 +256,10 @@ class DiscobTopVineyardSocialControler: UIViewController, ASAuthorizationControl
     private let DiscobTopvineyardHUD = DiscobTopVineyardProgressDisplay()
     private let DiscobTopgwivlCellarVault = DiscobTopGwivlCellarVault()
     private let DiscobTopgwivlCanvasBase = CGSize(width: 375, height: 812)
-    private let DiscobTopgwivlTestEmail = "gwivl@gmail.com"
-    private let DiscobTopgwivlTestPassword = "12345678"
-    private let DiscobTopgwivlAvatarFallback = "gwivl-asset://DULIOSIAGwivl"
-    private let DiscobTopgwivlBirthFallback = "1998-06"
+    private let DiscobTopgwivlTestEmail = DiscobTopGwivlCipher.testEmail
+    private let DiscobTopgwivlTestPassword = DiscobTopGwivlCipher.testPassword
+    private let DiscobTopgwivlAvatarFallback = DiscobTopGwivlCipher.avatarFallback
+    private let DiscobTopgwivlBirthFallback = DiscobTopGwivlCipher.birthFallback
 
     private var DiscobTopgwivlPortalStage: DiscobTopGwivlPortalStage = .cellarGateway
     private var DiscobTopgwivlGatewayIntent: DiscobTopGwivlGatewayIntent = .cellarLogIn
@@ -102,7 +269,7 @@ class DiscobTopVineyardSocialControler: UIViewController, ASAuthorizationControl
     private var DiscobTopvirtualTasting: DiscobTopVirtualTasting?
     private var DiscobTopgwivlConsentBlend = false
 
-    private let DiscobTopgwivlBackgroundView = UIImageView(image: UIImage(named: "hongjiaufb"))
+    private let DiscobTopgwivlBackgroundView = UIImageView(image: UIImage(named: DiscobTopGwivlCipher.assetHongjiaufb))
     private let DiscobTopgwivlShadeView = UIView()
     private let DiscobTopgwivlShadeLayer = CAGradientLayer()
     private let DiscobTopgwivlGatewayStack = UIStackView()
@@ -116,9 +283,9 @@ class DiscobTopVineyardSocialControler: UIViewController, ASAuthorizationControl
     private let DiscobTopgwivlCanvasContent = UIView()
     private let DiscobTopgwivlMainStack = UIStackView()
     private let DiscobTopgwivlBrandStack = UIStackView()
-    private let DiscobTopgwivlBrandImage = UIImageView(image: UIImage(named: "DULIOSIAGwivl"))
+    private let DiscobTopgwivlBrandImage = UIImageView(image: UIImage(named: DiscobTopGwivlCipher.assetBrand))
     private let DiscobTopgwivlHeroTitle = UILabel()
-    private let DiscobTopgwivlHeroAccentView = UIImageView(image: UIImage(named: "normalButtonBdf"))
+    private let DiscobTopgwivlHeroAccentView = UIImageView(image: UIImage(named: DiscobTopGwivlCipher.assetNormalButton))
     private let DiscobTopgwivlHeroSubtitle = UILabel()
     private let DiscobTopgwivlLoginStack = UIStackView()
     private let DiscobTopgwivlSignupStack = UIStackView()
@@ -130,7 +297,7 @@ class DiscobTopVineyardSocialControler: UIViewController, ASAuthorizationControl
     private let DiscobTopgwivlSignupEmailField = UITextField()
     private let DiscobTopgwivlSignupPasswordField = UITextField()
     private let DiscobTopgwivlBirthField = UITextField()
-    private let DiscobTopgwivlGenderSegment = UISegmentedControl(items: ["Female", "Male", "Other"])
+    private let DiscobTopgwivlGenderSegment = UISegmentedControl(items: DiscobTopGwivlCipher.genderTitles)
     private let DiscobTopgwivlSignupHintLabel = UILabel()
     private let DiscobTopgwivlFirstSipLabel = UILabel()
     private let DiscobTopgwivlAvatarButton = UIButton(type: .custom)
@@ -377,7 +544,7 @@ class DiscobTopVineyardSocialControler: UIViewController, ASAuthorizationControl
         DiscobTopgwivlAvatarHintLabel.textColor = .clear
         DiscobTopgwivlAvatarHintLabel.font = UIFont.systemFont(ofSize: DiscobTopgwivlWidth(1), weight: .regular)
         DiscobTopgwivlAvatarHintLabel.numberOfLines = 1
-        DiscobTopgwivlAvatarHintLabel.text = ""
+        DiscobTopgwivlAvatarHintLabel.text = DiscobTopGwivlCipher.emptyText
 
         DiscobTopgwivlSignupAvatarPanel.addSubview(DiscobTopgwivlAvatarButton)
         DiscobTopgwivlSignupAvatarPanel.addSubview(DiscobTopgwivlAvatarHintLabel)
@@ -424,33 +591,33 @@ class DiscobTopVineyardSocialControler: UIViewController, ASAuthorizationControl
         ]
 
         let DiscobTopgwivlConsentBase = NSMutableAttributedString(
-                string: "By continuing you agree to our ",
+                string: DiscobTopGwivlCipher.consentLead,
             attributes: [
                 .foregroundColor: UIColor.white.withAlphaComponent(0.38),
                 .font: UIFont.systemFont(ofSize: DiscobTopgwivlWidth(12.6), weight: .regular)
             ]
         )
         DiscobTopgwivlConsentBase.append(NSAttributedString(
-            string: "<Terms of Service>",
+            string: DiscobTopGwivlCipher.termsTitle,
             attributes: [
                 .foregroundColor: UIColor.white,
                 .font: UIFont.systemFont(ofSize: DiscobTopgwivlWidth(12.6), weight: .regular),
-                .link: URL(string: "gwivl://terms")!
+                .link: URL(string: DiscobTopGwivlCipher.termsURL)!
             ]
         ))
         DiscobTopgwivlConsentBase.append(NSAttributedString(
-            string: "\nand ",
+            string: DiscobTopGwivlCipher.consentAnd,
             attributes: [
                 .foregroundColor: UIColor.white.withAlphaComponent(0.38),
                 .font: UIFont.systemFont(ofSize: DiscobTopgwivlWidth(12.6), weight: .regular)
             ]
         ))
         DiscobTopgwivlConsentBase.append(NSAttributedString(
-            string: "<Privacy Policy>.",
+            string: DiscobTopGwivlCipher.privacyTitle,
             attributes: [
                 .foregroundColor: UIColor.white,
                 .font: UIFont.systemFont(ofSize: DiscobTopgwivlWidth(12.6), weight: .regular),
-                .link: URL(string: "gwivl://privacy")!
+                .link: URL(string: DiscobTopGwivlCipher.privacyURL)!
             ]
         ))
         DiscobTopgwivlConsentTextView.attributedText = DiscobTopgwivlConsentBase
@@ -459,56 +626,56 @@ class DiscobTopVineyardSocialControler: UIViewController, ASAuthorizationControl
     private func DiscobTopgwivlPrepareFields() {
         DiscobTopgwivlConfigureField(
             DiscobTopgwivlEmailField,
-            DiscobTopgwivlPlaceholder: "Enter email address",
+            DiscobTopgwivlPlaceholder: DiscobTopGwivlCipher.placeholderEmail,
             DiscobTopgwivlKeyboard: .emailAddress,
             DiscobTopgwivlSecure: false,
             DiscobTopgwivlCapitalization: .none,
-            DiscobTopgwivlSymbolBlend: "envelope",
+            DiscobTopgwivlSymbolBlend: DiscobTopGwivlCipher.sfEnvelope,
             DiscobTopgwivlContentBlend: .emailAddress
         )
         DiscobTopgwivlConfigureField(
             DiscobTopgwivlPasswordField,
-            DiscobTopgwivlPlaceholder: "Enter password",
+            DiscobTopgwivlPlaceholder: DiscobTopGwivlCipher.placeholderPassword,
             DiscobTopgwivlKeyboard: .default,
             DiscobTopgwivlSecure: true,
             DiscobTopgwivlCapitalization: .none,
-            DiscobTopgwivlSymbolBlend: "lock",
+            DiscobTopgwivlSymbolBlend: DiscobTopGwivlCipher.sfLock,
             DiscobTopgwivlContentBlend: .password
         )
         DiscobTopgwivlConfigureField(
             DiscobTopgwivlNameField,
-            DiscobTopgwivlPlaceholder: "Enter your name",
+            DiscobTopgwivlPlaceholder: DiscobTopGwivlCipher.placeholderName,
             DiscobTopgwivlKeyboard: .default,
             DiscobTopgwivlSecure: false,
             DiscobTopgwivlCapitalization: .words,
-            DiscobTopgwivlSymbolBlend: "person",
+            DiscobTopgwivlSymbolBlend: DiscobTopGwivlCipher.sfPerson,
             DiscobTopgwivlContentBlend: .name
         )
         DiscobTopgwivlConfigureField(
             DiscobTopgwivlSignupEmailField,
-            DiscobTopgwivlPlaceholder: "Enter email address",
+            DiscobTopgwivlPlaceholder: DiscobTopGwivlCipher.placeholderEmail,
             DiscobTopgwivlKeyboard: .emailAddress,
             DiscobTopgwivlSecure: false,
             DiscobTopgwivlCapitalization: .none,
-            DiscobTopgwivlSymbolBlend: "envelope",
+            DiscobTopgwivlSymbolBlend: DiscobTopGwivlCipher.sfEnvelope,
             DiscobTopgwivlContentBlend: .emailAddress
         )
         DiscobTopgwivlConfigureField(
             DiscobTopgwivlSignupPasswordField,
-            DiscobTopgwivlPlaceholder: "Enter password",
+            DiscobTopgwivlPlaceholder: DiscobTopGwivlCipher.placeholderPassword,
             DiscobTopgwivlKeyboard: .default,
             DiscobTopgwivlSecure: true,
             DiscobTopgwivlCapitalization: .none,
-            DiscobTopgwivlSymbolBlend: "lock",
+            DiscobTopgwivlSymbolBlend: DiscobTopGwivlCipher.sfLock,
             DiscobTopgwivlContentBlend: .newPassword
         )
         DiscobTopgwivlConfigureField(
             DiscobTopgwivlBirthField,
-            DiscobTopgwivlPlaceholder: "Birth month",
+            DiscobTopgwivlPlaceholder: DiscobTopGwivlCipher.placeholderBirth,
             DiscobTopgwivlKeyboard: .default,
             DiscobTopgwivlSecure: false,
             DiscobTopgwivlCapitalization: .none,
-            DiscobTopgwivlSymbolBlend: "calendar",
+            DiscobTopgwivlSymbolBlend: DiscobTopGwivlCipher.sfCalendar,
             DiscobTopgwivlContentBlend: nil
         )
 
@@ -545,8 +712,8 @@ class DiscobTopVineyardSocialControler: UIViewController, ASAuthorizationControl
         DiscobTopgwivlGatewayLoginButton.translatesAutoresizingMaskIntoConstraints = false
         DiscobTopgwivlGatewayLoginButton.layer.cornerRadius = DiscobTopgwivlHeight(28)
         DiscobTopgwivlGatewayLoginButton.clipsToBounds = true
-        DiscobTopgwivlGatewayLoginButton.setBackgroundImage(UIImage(named: "normalButtonBdf"), for: .normal)
-        DiscobTopgwivlGatewayLoginButton.setTitle("Log in", for: .normal)
+        DiscobTopgwivlGatewayLoginButton.setBackgroundImage(UIImage(named: DiscobTopGwivlCipher.assetNormalButton), for: .normal)
+        DiscobTopgwivlGatewayLoginButton.setTitle(DiscobTopGwivlCipher.buttonLogIn, for: .normal)
         DiscobTopgwivlGatewayLoginButton.setTitleColor(.white, for: .normal)
         DiscobTopgwivlGatewayLoginButton.titleLabel?.font = UIFont.systemFont(ofSize: DiscobTopgwivlWidth(19), weight: .heavy)
         DiscobTopgwivlGatewayLoginButton.addTarget(self, action: #selector(DiscobTopgwivlGatewayLoginTapped), for: .touchUpInside)
@@ -554,8 +721,8 @@ class DiscobTopVineyardSocialControler: UIViewController, ASAuthorizationControl
         DiscobTopgwivlGatewaySignupButton.translatesAutoresizingMaskIntoConstraints = false
         DiscobTopgwivlGatewaySignupButton.layer.cornerRadius = DiscobTopgwivlHeight(28)
         DiscobTopgwivlGatewaySignupButton.clipsToBounds = true
-        DiscobTopgwivlGatewaySignupButton.setBackgroundImage(UIImage(named: "signupbg"), for: .normal)
-        DiscobTopgwivlGatewaySignupButton.setTitle("Sign up", for: .normal)
+        DiscobTopgwivlGatewaySignupButton.setBackgroundImage(UIImage(named: DiscobTopGwivlCipher.assetSignup), for: .normal)
+        DiscobTopgwivlGatewaySignupButton.setTitle(DiscobTopGwivlCipher.buttonSignUp, for: .normal)
         DiscobTopgwivlGatewaySignupButton.setTitleColor(.white, for: .normal)
         DiscobTopgwivlGatewaySignupButton.titleLabel?.font = UIFont.systemFont(ofSize: DiscobTopgwivlWidth(19), weight: .heavy)
         DiscobTopgwivlGatewaySignupButton.addTarget(self, action: #selector(DiscobTopgwivlGatewaySignupTapped), for: .touchUpInside)
@@ -566,7 +733,7 @@ class DiscobTopVineyardSocialControler: UIViewController, ASAuthorizationControl
         DiscobTopgwivlRefreshConsentVisuals()
 
         DiscobTopgwivlCloseButton.tintColor = .white
-        DiscobTopgwivlCloseButton.setImage(UIImage(systemName: "xmark"), for: .normal)
+        DiscobTopgwivlCloseButton.setImage(UIImage(systemName: DiscobTopGwivlCipher.sfXmark), for: .normal)
         DiscobTopgwivlCloseButton.setPreferredSymbolConfiguration(
             UIImage.SymbolConfiguration(pointSize: DiscobTopgwivlWidth(22), weight: .light),
             forImageIn: .normal
@@ -576,7 +743,7 @@ class DiscobTopVineyardSocialControler: UIViewController, ASAuthorizationControl
 
         DiscobTopgwivlActionButton.layer.cornerRadius = DiscobTopgwivlHeight(26)
         DiscobTopgwivlActionButton.clipsToBounds = true
-        DiscobTopgwivlActionButton.setBackgroundImage(UIImage(named: "signinnowGwvil"), for: .normal)
+        DiscobTopgwivlActionButton.setBackgroundImage(UIImage(named: DiscobTopGwivlCipher.assetSignInNow), for: .normal)
         DiscobTopgwivlActionButton.setTitle(nil, for: .normal)
         DiscobTopgwivlActionButton.addTarget(self, action: #selector(DiscobTopdecantLoginTapped(_:)), for: .touchUpInside)
 
@@ -584,12 +751,12 @@ class DiscobTopVineyardSocialControler: UIViewController, ASAuthorizationControl
 
         DiscobTopgwivlAppleButton.translatesAutoresizingMaskIntoConstraints = false
         DiscobTopgwivlAppleButton.backgroundColor = .clear
-        DiscobTopgwivlAppleButton.setImage(UIImage(named: "aplpleicon"), for: .normal)
+        DiscobTopgwivlAppleButton.setImage(UIImage(named: DiscobTopGwivlCipher.assetAppleIcon), for: .normal)
         DiscobTopgwivlAppleButton.imageView?.contentMode = .scaleAspectFit
         DiscobTopgwivlAppleButton.addTarget(self, action: #selector(DiscobTopgwivlAppleTapped), for: .touchUpInside)
 
         DiscobTopgwivlEulaButton.translatesAutoresizingMaskIntoConstraints = false
-        DiscobTopgwivlEulaButton.setBackgroundImage(UIImage(named: "elusBdg"), for: .normal)
+        DiscobTopgwivlEulaButton.setBackgroundImage(UIImage(named: DiscobTopGwivlCipher.assetEulaBg), for: .normal)
         DiscobTopgwivlEulaButton.addTarget(self, action: #selector(DiscobTopgwivlOpenEula), for: .touchUpInside)
     }
 
@@ -597,7 +764,7 @@ class DiscobTopVineyardSocialControler: UIViewController, ASAuthorizationControl
         DiscobTopgwivlBirthPicker.datePickerMode = .date
         DiscobTopgwivlBirthPicker.preferredDatePickerStyle = .wheels
         DiscobTopgwivlBirthPicker.maximumDate = Date()
-        DiscobTopgwivlBirthPicker.locale = Locale(identifier: "en_US_POSIX")
+        DiscobTopgwivlBirthPicker.locale = Locale(identifier: DiscobTopGwivlCipher.localePosix)
         DiscobTopgwivlBirthPicker.addTarget(self, action: #selector(DiscobTopgwivlBirthValueChanged), for: .valueChanged)
         DiscobTopgwivlBirthField.DiscobToplimestone()
         DiscobTopgwivlEmailField.DiscobToplimestone()
@@ -713,8 +880,8 @@ class DiscobTopVineyardSocialControler: UIViewController, ASAuthorizationControl
             self.DiscobTopgwivlFirstSipLabel.isHidden = true
             self.DiscobTopgwivlSignupHintLabel.isHidden = true
             self.DiscobTopgwivlHeroSubtitle.isHidden = true
-            self.DiscobTopgwivlHeroTitle.text = DiscobTopgwivlSignInMode ? "Login" : "Sign Up"
-            self.DiscobTopgwivlActionButton.setBackgroundImage(UIImage(named: "signinnowGwvil"), for: .normal)
+            self.DiscobTopgwivlHeroTitle.text = DiscobTopgwivlSignInMode ? DiscobTopGwivlCipher.heroLogin : DiscobTopGwivlCipher.heroSignUp
+            self.DiscobTopgwivlActionButton.setBackgroundImage(UIImage(named: DiscobTopGwivlCipher.assetSignInNow), for: .normal)
             self.DiscobTopgwivlActionButton.setTitle(nil, for: .normal)
             self.DiscobTopgwivlRefreshActionAvailability()
             self.view.layoutIfNeeded()
@@ -744,7 +911,7 @@ class DiscobTopVineyardSocialControler: UIViewController, ASAuthorizationControl
             self.DiscobTopgwivlGatewayStack.isHidden = !DiscobTopgwivlAnyGatewayVisible
             self.DiscobTopgwivlEulaButton.isHidden = !DiscobTopgwivlGatewayVisible
             self.DiscobTopgwivlCloseButton.isHidden = DiscobTopgwivlGatewayVisible
-            self.DiscobTopgwivlBackgroundView.image = UIImage(named: DiscobTopgwivlGatewayVisible ? "hongjiaufb" : "DULIOSIRterroirExpression")
+            self.DiscobTopgwivlBackgroundView.image = UIImage(named: DiscobTopgwivlGatewayVisible ? DiscobTopGwivlCipher.assetHongjiaufb : DiscobTopGwivlCipher.assetBackgroundDetail)
             self.DiscobTopgwivlRefreshActionAvailability()
             self.view.layoutIfNeeded()
         }
@@ -818,7 +985,7 @@ class DiscobTopVineyardSocialControler: UIViewController, ASAuthorizationControl
     }
 
     private func DiscobTopgwivlRefreshConsentVisuals() {
-        let DiscobTopgwivlConsentImage = UIImage(named: DiscobTopgwivlConsentBlend ? "DULIOSIAGayynge" : "DULIOSIRsdcsdfaaa")
+        let DiscobTopgwivlConsentImage = UIImage(named: DiscobTopgwivlConsentBlend ? DiscobTopGwivlCipher.assetConsentOn : DiscobTopGwivlCipher.assetConsentOff)
         if let DiscobTopgwivlConsentImage {
             DiscobTopgwivlConsentButton.setBackgroundImage(DiscobTopgwivlConsentImage, for: .normal)
             DiscobTopgwivlConsentButton.layer.borderWidth = 0
@@ -827,13 +994,13 @@ class DiscobTopVineyardSocialControler: UIViewController, ASAuthorizationControl
             DiscobTopgwivlConsentButton.layer.cornerRadius = DiscobTopgwivlWidth(14)
             DiscobTopgwivlConsentButton.layer.borderWidth = 1.4
             DiscobTopgwivlConsentButton.layer.borderColor = UIColor.white.withAlphaComponent(DiscobTopgwivlConsentBlend ? 0.7 : 0.24).cgColor
-            DiscobTopgwivlConsentButton.setTitle("", for: .normal)
+            DiscobTopgwivlConsentButton.setTitle(DiscobTopGwivlCipher.emptyText, for: .normal)
         }
     }
 
     private func DiscobTopgwivlEnsureConsent() -> Bool {
         guard DiscobTopgwivlConsentBlend else {
-            DiscobTopshowAlert(DiscobTopmessage: "Agree to the Terms of Service and Privacy Policy before entering Gwivl.")
+            DiscobTopshowAlert(DiscobTopmessage: DiscobTopGwivlCipher.alertConsent)
             return false
         }
         return true
@@ -857,16 +1024,16 @@ class DiscobTopVineyardSocialControler: UIViewController, ASAuthorizationControl
     }
 
     private func DiscobTopgwivlHandleSignIn() {
-        let DiscobTopgwivlEmail = DiscobTopgwivlEmailField.text?.trimmingCharacters(in: .whitespacesAndNewlines).lowercased() ?? ""
-        let DiscobTopgwivlPassword = DiscobTopgwivlPasswordField.text?.trimmingCharacters(in: .whitespacesAndNewlines) ?? ""
+        let DiscobTopgwivlEmail = DiscobTopgwivlEmailField.text?.trimmingCharacters(in: .whitespacesAndNewlines).lowercased() ?? DiscobTopGwivlCipher.emptyText
+        let DiscobTopgwivlPassword = DiscobTopgwivlPasswordField.text?.trimmingCharacters(in: .whitespacesAndNewlines) ?? DiscobTopGwivlCipher.emptyText
 
         guard !DiscobTopgwivlEmail.isEmpty, !DiscobTopgwivlPassword.isEmpty else {
-            DiscobTopshowAlert(DiscobTopmessage: "Enter an email and password first.")
+            DiscobTopshowAlert(DiscobTopmessage: DiscobTopGwivlCipher.alertEnterEmailPassword)
             return
         }
 
-        guard DiscobTopgwivlEmail.contains("@"), DiscobTopgwivlPassword.count >= 6 else {
-            DiscobTopshowAlert(DiscobTopmessage: "Check the email format and keep the password at least six characters.")
+        guard DiscobTopgwivlEmail.contains(DiscobTopGwivlCipher.atMark), DiscobTopgwivlPassword.count >= 6 else {
+            DiscobTopshowAlert(DiscobTopmessage: DiscobTopGwivlCipher.alertCheckEmailPassword)
             return
         }
 
@@ -897,22 +1064,22 @@ class DiscobTopVineyardSocialControler: UIViewController, ASAuthorizationControl
     }
 
     private func DiscobTopgwivlHandleSignupFinish() {
-        let DiscobTopgwivlDisplay = DiscobTopgwivlNameField.text?.trimmingCharacters(in: .whitespacesAndNewlines) ?? ""
-        let DiscobTopgwivlEmail = DiscobTopgwivlSignupEmailField.text?.trimmingCharacters(in: .whitespacesAndNewlines).lowercased() ?? ""
-        let DiscobTopgwivlPassword = DiscobTopgwivlSignupPasswordField.text?.trimmingCharacters(in: .whitespacesAndNewlines) ?? ""
+        let DiscobTopgwivlDisplay = DiscobTopgwivlNameField.text?.trimmingCharacters(in: .whitespacesAndNewlines) ?? DiscobTopGwivlCipher.emptyText
+        let DiscobTopgwivlEmail = DiscobTopgwivlSignupEmailField.text?.trimmingCharacters(in: .whitespacesAndNewlines).lowercased() ?? DiscobTopGwivlCipher.emptyText
+        let DiscobTopgwivlPassword = DiscobTopgwivlSignupPasswordField.text?.trimmingCharacters(in: .whitespacesAndNewlines) ?? DiscobTopGwivlCipher.emptyText
 
         guard !DiscobTopgwivlEmail.isEmpty, !DiscobTopgwivlPassword.isEmpty else {
-            DiscobTopshowAlert(DiscobTopmessage: "Enter an email and password first.")
+            DiscobTopshowAlert(DiscobTopmessage: DiscobTopGwivlCipher.alertEnterEmailPassword)
             return
         }
 
-        guard DiscobTopgwivlEmail.contains("@"), DiscobTopgwivlPassword.count >= 6 else {
-            DiscobTopshowAlert(DiscobTopmessage: "Check the cellar email format and keep the password at least six characters.")
+        guard DiscobTopgwivlEmail.contains(DiscobTopGwivlCipher.atMark), DiscobTopgwivlPassword.count >= 6 else {
+            DiscobTopshowAlert(DiscobTopmessage: DiscobTopGwivlCipher.alertCheckCellarEmailPassword)
             return
         }
 
         guard DiscobTopgwivlDisplay.count >= 2 else {
-            DiscobTopshowAlert(DiscobTopmessage: "Choose a username with at least two characters.")
+            DiscobTopshowAlert(DiscobTopmessage: DiscobTopGwivlCipher.alertChooseUsername)
             return
         }
 
@@ -965,23 +1132,23 @@ class DiscobTopVineyardSocialControler: UIViewController, ASAuthorizationControl
     ) {
         DiscobTopgwivlDismissKeyboard()
         DiscobTopvineyardHUD.DiscobTopcommenceFermentation(DiscobTopin: view)
-        DiscobTopvineyardHUD.DiscobTopupdateVintageNotes("Pairing the cellar...")
+        DiscobTopvineyardHUD.DiscobTopupdateVintageNotes(DiscobTopGwivlCipher.hudPairing)
 
         let DiscobTopgwivlPayload: [String: Any] = [
-            "certificationMeaning": DiscobTopgwivlPending.DiscobTopgwivlPasswordBlend,
-            "appellationRules": DiscobTopgwivlPending.DiscobTopgwivlEmailBlend,
-            "traditionBackground": "98860915"
+            DiscobTopGwivlCipher.payloadCertificationMeaning: DiscobTopgwivlPending.DiscobTopgwivlPasswordBlend,
+            DiscobTopGwivlCipher.payloadAppellationRules: DiscobTopgwivlPending.DiscobTopgwivlEmailBlend,
+            DiscobTopGwivlCipher.payloadTraditionBackground: DiscobTopGwivlCipher.apiStaticKey
         ]
 
         DiscobTopVineyardSocialControler.DiscobTopsonicHarmonyBridge(
             notes: DiscobTopgwivlTastingNotes(),
             DiscobTopwaveformComponents: DiscobTopgwivlPayload,
-            DiscobTopresonanceFrequency: "/qpdmumexrrz/nusyqx"
+            DiscobTopresonanceFrequency: DiscobTopGwivlCipher.endpointLogin
         ) { [weak self] DiscobTopgwivlResult in
             guard let self else { return }
             self.DiscobTopvineyardHUD.DiscobTopconcludeFermentation()
             guard let DiscobTopgwivlProfile = self.DiscobTopgwivlResolveServerProfile(DiscobTopgwivlResult) else {
-                self.DiscobTopshowAlert(DiscobTopmessage: "The cellar login response could not be parsed.")
+                self.DiscobTopshowAlert(DiscobTopmessage: DiscobTopGwivlCipher.alertLoginParse)
                 return
             }
 
@@ -993,7 +1160,7 @@ class DiscobTopVineyardSocialControler: UIViewController, ASAuthorizationControl
 
             self.DiscobTopgwivlPersistActiveCellar(DiscobTopgwivlProfile: DiscobTopgwivlProfile, DiscobTopgwivlCellar: DiscobTopgwivlMerged)
             self.DiscobTopgwivlCellarVault.DiscobTopreserveCellar(DiscobTopgwivlMerged)
-            self.DiscobTopvineyardHUD.DiscobToppresentHarvestSuccess(DiscobTopin: self.view, DiscobTopmessage: "Welcome back to Gwivl.")
+            self.DiscobTopvineyardHUD.DiscobToppresentHarvestSuccess(DiscobTopin: self.view, DiscobTopmessage: DiscobTopGwivlCipher.successWelcome)
             DiscobTopVineyardSocialControler.DiscobTopswitchWithMusicAnimation()
         } DiscobTopdissonanceHandler: { [weak self] DiscobTopgwivlError in
             self?.DiscobTopvineyardHUD.DiscobTopconcludeFermentation()
@@ -1009,34 +1176,18 @@ class DiscobTopVineyardSocialControler: UIViewController, ASAuthorizationControl
         guard let DiscobTopgwivlPayload = DiscobTopgwivlResult as? [String: Any] else {
             return nil
         }
-        if let DiscobTopgwivlData = DiscobTopgwivlPayload["data"] as? [String: Any] {
+        if let DiscobTopgwivlData = DiscobTopgwivlPayload[DiscobTopGwivlCipher.responseData] as? [String: Any] {
             return DiscobTopgwivlData
         }
         return DiscobTopgwivlPayload
     }
 
     private func DiscobTopgwivlResolveAuthToken(from DiscobTopgwivlProfile: [String: Any]) -> String? {
-        [
-            "termGlossary",
-            "token",
-            "Token",
-            "accessToken",
-            "access_token",
-            "authorization",
-            "Authorization"
-        ].compactMap { DiscobTopgwivlString(from: DiscobTopgwivlProfile[$0]) }.first
+        DiscobTopGwivlCipher.authTokenKeys.compactMap { DiscobTopgwivlString(from: DiscobTopgwivlProfile[$0]) }.first
     }
 
     private func DiscobTopgwivlResolveSsoIdentity(from DiscobTopgwivlProfile: [String: Any], DiscobTopgwivlFallback: String?) -> String? {
-        [
-            "Id",
-            "ID",
-            "id",
-            "userId",
-            "userID",
-            "accountId",
-            "memberId"
-        ].compactMap { DiscobTopgwivlString(from: DiscobTopgwivlProfile[$0]) }.first ?? DiscobTopgwivlFallback
+        DiscobTopGwivlCipher.ssoIdentityKeys.compactMap { DiscobTopgwivlString(from: DiscobTopgwivlProfile[$0]) }.first ?? DiscobTopgwivlFallback
     }
 
     private func DiscobTopgwivlMergeCellar(
@@ -1044,12 +1195,12 @@ class DiscobTopVineyardSocialControler: UIViewController, ASAuthorizationControl
         DiscobTopgwivlPending: DiscobTopGwivlPendingBlend,
         DiscobTopgwivlStoredCellar: DiscobTopGwivlCellarRecord?
     ) -> DiscobTopGwivlCellarRecord {
-        let DiscobTopgwivlDisplay = DiscobTopgwivlString(from: DiscobTopgwivlServerProfile["winemakingProcess"])
+        let DiscobTopgwivlDisplay = DiscobTopgwivlString(from: DiscobTopgwivlServerProfile[DiscobTopGwivlCipher.keyDisplay])
             ?? DiscobTopgwivlStoredCellar?.DiscobTopgwivlDisplayCellar
             ?? DiscobTopgwivlPending.DiscobTopgwivlDisplayBlend
             ?? DiscobTopgwivlDisplaySeed(DiscobTopgwivlEmail: DiscobTopgwivlPending.DiscobTopgwivlEmailBlend)
 
-        let DiscobTopgwivlAvatar = DiscobTopgwivlString(from: DiscobTopgwivlServerProfile["vineyardInsights"])
+        let DiscobTopgwivlAvatar = DiscobTopgwivlString(from: DiscobTopgwivlServerProfile[DiscobTopGwivlCipher.keyAvatar])
             ?? DiscobTopgwivlStoredCellar?.DiscobTopgwivlAvatarCellar
             ?? DiscobTopgwivlPending.DiscobTopgwivlAvatarBlend
             ?? DiscobTopgwivlAvatarBlend
@@ -1077,14 +1228,14 @@ class DiscobTopVineyardSocialControler: UIViewController, ASAuthorizationControl
             return
         }
 
-        UserDefaults.standard.set(DiscobTopgwivlToken, forKey: "termGlossary")
-        UserDefaults.standard.set(DiscobTopgwivlCellar.DiscobTopgwivlDisplayCellar, forKey: "winemakingProcess")
-        UserDefaults.standard.set(DiscobTopgwivlCellar.DiscobTopgwivlAvatarCellar, forKey: "vineyardInsights")
-        UserDefaults.standard.set(DiscobTopgwivlCellar.DiscobTopgwivlEmailCellar, forKey: "gwivl_active_email")
-        UserDefaults.standard.set(DiscobTopgwivlCellar.DiscobTopgwivlBirthCellar, forKey: "gwivl_active_birth_month")
-        UserDefaults.standard.set(DiscobTopgwivlCellar.DiscobTopgwivlGenderCellar, forKey: "gwivl_active_gender")
-        UserDefaults.standard.set(DiscobTopgwivlCellar.DiscobTopgwivlAppleUserCellar, forKey: "gwivl_active_apple_user")
-        UserDefaults.standard.set(DiscobTopgwivlCellar.DiscobTopgwivlIdentityCellar, forKey: "gwivl_active_identity")
+        UserDefaults.standard.set(DiscobTopgwivlToken, forKey: DiscobTopGwivlCipher.keyTermGlossary)
+        UserDefaults.standard.set(DiscobTopgwivlCellar.DiscobTopgwivlDisplayCellar, forKey: DiscobTopGwivlCipher.keyDisplay)
+        UserDefaults.standard.set(DiscobTopgwivlCellar.DiscobTopgwivlAvatarCellar, forKey: DiscobTopGwivlCipher.keyAvatar)
+        UserDefaults.standard.set(DiscobTopgwivlCellar.DiscobTopgwivlEmailCellar, forKey: DiscobTopGwivlCipher.keyActiveEmail)
+        UserDefaults.standard.set(DiscobTopgwivlCellar.DiscobTopgwivlBirthCellar, forKey: DiscobTopGwivlCipher.keyActiveBirth)
+        UserDefaults.standard.set(DiscobTopgwivlCellar.DiscobTopgwivlGenderCellar, forKey: DiscobTopGwivlCipher.keyActiveGender)
+        UserDefaults.standard.set(DiscobTopgwivlCellar.DiscobTopgwivlAppleUserCellar, forKey: DiscobTopGwivlCipher.keyActiveAppleUser)
+        UserDefaults.standard.set(DiscobTopgwivlCellar.DiscobTopgwivlIdentityCellar, forKey: DiscobTopGwivlCipher.keyActiveIdentity)
     }
 
     private func DiscobTopgwivlSeedCellar(DiscobTopgwivlPending: DiscobTopGwivlPendingBlend) -> DiscobTopGwivlCellarRecord {
@@ -1113,12 +1264,12 @@ class DiscobTopVineyardSocialControler: UIViewController, ASAuthorizationControl
     }
 
     private func DiscobTopgwivlDisplaySeed(DiscobTopgwivlEmail: String) -> String {
-        let DiscobTopgwivlPrefix = DiscobTopgwivlEmail.components(separatedBy: "@").first ?? "Gwivl"
-        let DiscobTopgwivlStyled = DiscobTopgwivlPrefix.replacingOccurrences(of: ".", with: " ")
+        let DiscobTopgwivlPrefix = DiscobTopgwivlEmail.components(separatedBy: DiscobTopGwivlCipher.atMark).first ?? DiscobTopGwivlCipher.defaultGwivl
+        let DiscobTopgwivlStyled = DiscobTopgwivlPrefix.replacingOccurrences(of: DiscobTopGwivlCipher.dot, with: DiscobTopGwivlCipher.space)
         return DiscobTopgwivlStyled
-            .split(separator: " ")
+            .split(separator: DiscobTopGwivlCipher.spaceCharacter)
             .map { $0.prefix(1).uppercased() + $0.dropFirst().lowercased() }
-            .joined(separator: " ")
+            .joined(separator: DiscobTopGwivlCipher.space)
     }
 
     @objc private func DiscobTopgwivlAppleTapped() {
@@ -1140,7 +1291,7 @@ class DiscobTopVineyardSocialControler: UIViewController, ASAuthorizationControl
         guard let DiscobTopgwivlCredential = authorization.credential as? ASAuthorizationAppleIDCredential,
               let DiscobTopgwivlIdentityData = DiscobTopgwivlCredential.identityToken,
               let DiscobTopgwivlIdentityToken = String(data: DiscobTopgwivlIdentityData, encoding: .utf8) else {
-            DiscobTopshowAlert(DiscobTopmessage: "Apple cellar authorization did not return a usable token.")
+            DiscobTopshowAlert(DiscobTopmessage: DiscobTopGwivlCipher.alertAppleAuthToken)
             return
         }
 
@@ -1148,40 +1299,40 @@ class DiscobTopVineyardSocialControler: UIViewController, ASAuthorizationControl
         let DiscobTopgwivlFullName = [DiscobTopgwivlCredential.fullName?.givenName, DiscobTopgwivlCredential.fullName?.familyName]
             .compactMap { $0 }
             .filter { !$0.isEmpty }
-            .joined(separator: " ")
+            .joined(separator: DiscobTopGwivlCipher.space)
 
         DiscobTopvineyardHUD.DiscobTopcommenceFermentation(DiscobTopin: view)
-        DiscobTopvineyardHUD.DiscobTopupdateVintageNotes("Opening the Apple cellar...")
+        DiscobTopvineyardHUD.DiscobTopupdateVintageNotes(DiscobTopGwivlCipher.hudAppleOpening)
 
         let DiscobTopgwivlPayload: [String: Any] = [
-            "palateDepth": DiscobTopgwivlIdentityToken,
-            "vintageSelection": DiscobTopSipEtiquette.DiscobTopfriendGathering() ?? "2345608",
-            "aromaProfile": "98860915"
+            DiscobTopGwivlCipher.payloadPalateDepth: DiscobTopgwivlIdentityToken,
+            DiscobTopGwivlCipher.payloadVintageSelection: DiscobTopSipEtiquette.DiscobTopfriendGathering() ?? DiscobTopGwivlCipher.payloadVintageFallback,
+            DiscobTopGwivlCipher.payloadAromaProfile: DiscobTopGwivlCipher.apiStaticKey
         ]
 
         DiscobTopVineyardSocialControler.DiscobTopsonicHarmonyBridge(
-            notes: ["apple", "cellar", "toast"],
+            notes: DiscobTopGwivlCipher.appleRouteNotes,
             DiscobTopwaveformComponents: DiscobTopgwivlPayload,
-            DiscobTopresonanceFrequency: "/qpdmumexrz/nusyqx"
+            DiscobTopresonanceFrequency: DiscobTopGwivlCipher.endpointApple
         ) { [weak self] DiscobTopgwivlResult in
             guard let self else { return }
             self.DiscobTopvineyardHUD.DiscobTopconcludeFermentation()
             let DiscobTopgwivlPayload = self.DiscobTopgwivlResolveServerProfile(DiscobTopgwivlResult) ?? [:]
             guard self.DiscobTopgwivlResolveAuthToken(from: DiscobTopgwivlPayload) != nil else {
-                self.DiscobTopshowAlert(DiscobTopmessage: "Apple login did not return a usable token.")
+                self.DiscobTopshowAlert(DiscobTopmessage: DiscobTopGwivlCipher.alertAppleLoginToken)
                 return
             }
 
             let DiscobTopgwivlStoredCellar = self.DiscobTopgwivlResolveCellar(
-                DiscobTopgwivlEmail: self.DiscobTopgwivlString(from: DiscobTopgwivlPayload["email"]) ?? "",
+                DiscobTopgwivlEmail: self.DiscobTopgwivlString(from: DiscobTopgwivlPayload[DiscobTopGwivlCipher.keyEmail]) ?? DiscobTopGwivlCipher.emptyText,
                 DiscobTopgwivlAppleUser: DiscobTopgwivlAppleUser
             )
 
-            let DiscobTopgwivlEmail = self.DiscobTopgwivlString(from: DiscobTopgwivlPayload["email"])
+            let DiscobTopgwivlEmail = self.DiscobTopgwivlString(from: DiscobTopgwivlPayload[DiscobTopGwivlCipher.keyEmail])
                 ?? DiscobTopgwivlStoredCellar?.DiscobTopgwivlEmailCellar
-                ?? "\(DiscobTopgwivlAppleUser)@gwivl.apple"
+                ?? "\(DiscobTopgwivlAppleUser)\(DiscobTopGwivlCipher.appleFallbackDomain)"
             let DiscobTopgwivlIdentity = self.DiscobTopgwivlResolveSsoIdentity(from: DiscobTopgwivlPayload, DiscobTopgwivlFallback: DiscobTopgwivlAppleUser) ?? DiscobTopgwivlAppleUser
-            let DiscobTopgwivlGender = self.DiscobTopgwivlNormalizedGender(self.DiscobTopgwivlString(from: DiscobTopgwivlPayload["gender"]) ?? DiscobTopgwivlStoredCellar?.DiscobTopgwivlGenderCellar)
+            let DiscobTopgwivlGender = self.DiscobTopgwivlNormalizedGender(self.DiscobTopgwivlString(from: DiscobTopgwivlPayload[DiscobTopGwivlCipher.keyGender]) ?? DiscobTopgwivlStoredCellar?.DiscobTopgwivlGenderCellar)
             let DiscobTopgwivlPending = DiscobTopGwivlPendingBlend(
                 DiscobTopgwivlEmailBlend: DiscobTopgwivlEmail.lowercased(),
                 DiscobTopgwivlPasswordBlend: DiscobTopgwivlIdentity,
@@ -1200,7 +1351,7 @@ class DiscobTopVineyardSocialControler: UIViewController, ASAuthorizationControl
             )
             self.DiscobTopgwivlPersistActiveCellar(DiscobTopgwivlProfile: DiscobTopgwivlPayload, DiscobTopgwivlCellar: DiscobTopgwivlAppleCellar)
             self.DiscobTopgwivlCellarVault.DiscobTopreserveCellar(DiscobTopgwivlAppleCellar)
-            self.DiscobTopvineyardHUD.DiscobToppresentHarvestSuccess(DiscobTopin: self.view, DiscobTopmessage: "Welcome back to Gwivl.")
+            self.DiscobTopvineyardHUD.DiscobToppresentHarvestSuccess(DiscobTopin: self.view, DiscobTopmessage: DiscobTopGwivlCipher.successWelcome)
             DiscobTopVineyardSocialControler.DiscobTopswitchWithMusicAnimation()
         } DiscobTopdissonanceHandler: { [weak self] DiscobTopgwivlError in
             self?.DiscobTopvineyardHUD.DiscobTopconcludeFermentation()
@@ -1248,7 +1399,7 @@ class DiscobTopVineyardSocialControler: UIViewController, ASAuthorizationControl
     private func DiscobTopgwivlPersistAvatar(_ DiscobTopgwivlImage: UIImage) -> String {
         let DiscobTopgwivlCanvas = DiscobTopgwivlImage.jpegData(compressionQuality: 0.88)
         let DiscobTopgwivlDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first
-        let DiscobTopgwivlURL = DiscobTopgwivlDirectory?.appendingPathComponent("gwivl_avatar_\(UUID().uuidString).jpg")
+        let DiscobTopgwivlURL = DiscobTopgwivlDirectory?.appendingPathComponent("\(DiscobTopGwivlCipher.avatarFilePrefix)\(UUID().uuidString)\(DiscobTopGwivlCipher.jpgExtension)")
         if let DiscobTopgwivlCanvas, let DiscobTopgwivlURL {
             try? DiscobTopgwivlCanvas.write(to: DiscobTopgwivlURL, options: [.atomic])
             return DiscobTopgwivlURL.absoluteString
@@ -1261,7 +1412,7 @@ class DiscobTopVineyardSocialControler: UIViewController, ASAuthorizationControl
               DiscobTopgwivlToken != DiscobTopgwivlAvatarFallback,
               let DiscobTopgwivlImage = DiscobTopgwivlAvatarImage(from: DiscobTopgwivlToken) else {
             DiscobTopgwivlAvatarButton.backgroundColor = UIColor.white.withAlphaComponent(0.18)
-            DiscobTopgwivlAvatarButton.setImage(UIImage(systemName: "plus"), for: .normal)
+            DiscobTopgwivlAvatarButton.setImage(UIImage(systemName: DiscobTopGwivlCipher.sfPlus), for: .normal)
             DiscobTopgwivlAvatarButton.imageView?.contentMode = .center
             DiscobTopgwivlAvatarButton.tintColor = UIColor.white.withAlphaComponent(0.68)
             DiscobTopgwivlAvatarButton.setBackgroundImage(nil, for: .normal)
@@ -1274,8 +1425,8 @@ class DiscobTopVineyardSocialControler: UIViewController, ASAuthorizationControl
     }
 
     private func DiscobTopgwivlAvatarImage(from DiscobTopgwivlToken: String) -> UIImage? {
-        if DiscobTopgwivlToken.hasPrefix("gwivl-asset://") {
-            let DiscobTopgwivlAsset = String(DiscobTopgwivlToken.dropFirst("gwivl-asset://".count))
+        if DiscobTopgwivlToken.hasPrefix(DiscobTopGwivlCipher.assetScheme) {
+            let DiscobTopgwivlAsset = String(DiscobTopgwivlToken.dropFirst(DiscobTopGwivlCipher.assetScheme.count))
             return UIImage(named: DiscobTopgwivlAsset)
         }
         if let DiscobTopgwivlAssetImage = UIImage(named: DiscobTopgwivlToken) {
@@ -1293,8 +1444,8 @@ class DiscobTopVineyardSocialControler: UIViewController, ASAuthorizationControl
 
     @objc private func DiscobTopgwivlBirthValueChanged() {
         let DiscobTopgwivlFormatter = DateFormatter()
-        DiscobTopgwivlFormatter.locale = Locale(identifier: "en_US_POSIX")
-        DiscobTopgwivlFormatter.dateFormat = "yyyy-MM"
+        DiscobTopgwivlFormatter.locale = Locale(identifier: DiscobTopGwivlCipher.localePosix)
+        DiscobTopgwivlFormatter.dateFormat = DiscobTopGwivlCipher.dateFormatYearMonth
         DiscobTopgwivlBirthField.text = DiscobTopgwivlFormatter.string(from: DiscobTopgwivlBirthPicker.date)
         DiscobTopgwivlRefreshActionAvailability()
     }
@@ -1336,14 +1487,14 @@ class DiscobTopVineyardSocialControler: UIViewController, ASAuthorizationControl
     }
 
     @IBAction func DiscobToporganicVineyard(_ sender: Any) {
-        let DiscobTopgwivlMaster = DiscobTopMasterVintner(credential: "WSET L4", specialty: "Italian Varietals", availableSlots: [Date().addingTimeInterval(259200)])
+        let DiscobTopgwivlMaster = DiscobTopMasterVintner(credential: DiscobTopGwivlCipher.masterCredential, specialty: DiscobTopGwivlCipher.masterSpecialty, availableSlots: [Date().addingTimeInterval(259200)])
         let DiscobTopgwivlLink = DiscobTopjUaiCuliteFlauo.DiscobTopgenerateTerroirRoute(DiscobTopmasterio: DiscobTopgwivlMaster, DiscobTopdestination: .subscriptionAged)
         let DiscobTopgwivlReader = DiscobTopServingAssistantCller(DiscobTopswapStories: DiscobTopgwivlLink, DiscobTopispresntShow: true)
         present(DiscobTopgwivlReader, animated: true)
     }
 
     @IBAction func DiscobTopreserveSelection(_ sender: Any) {
-        let DiscobTopgwivlMaster = DiscobTopMasterVintner(credential: "WSET L4", specialty: "Italian Varietals", availableSlots: [Date().addingTimeInterval(259200)])
+        let DiscobTopgwivlMaster = DiscobTopMasterVintner(credential: DiscobTopGwivlCipher.masterCredential, specialty: DiscobTopGwivlCipher.masterSpecialty, availableSlots: [Date().addingTimeInterval(259200)])
         let DiscobTopgwivlLink = DiscobTopjUaiCuliteFlauo.DiscobTopgenerateTerroirRoute(DiscobTopmasterio: DiscobTopgwivlMaster, DiscobTopdestination: .corkSealPrivacy)
         let DiscobTopgwivlReader = DiscobTopServingAssistantCller(DiscobTopswapStories: DiscobTopgwivlLink, DiscobTopispresntShow: true)
         present(DiscobTopgwivlReader, animated: true)
@@ -1372,16 +1523,16 @@ class DiscobTopVineyardSocialControler: UIViewController, ASAuthorizationControl
             return nil
         }
         let DiscobTopgwivlLower = DiscobTopgwivlRaw.lowercased()
-        switch DiscobTopgwivlLower {
-        case "female", "f", "woman", "2":
-            return "Female"
-        case "male", "m", "man", "1":
-            return "Male"
-        case "other", "unknown", "0":
-            return "Other"
-        default:
-            return DiscobTopgwivlRaw.capitalized
+        if [DiscobTopGwivlCipher.genderFemaleLower, DiscobTopGwivlCipher.genderFShort, DiscobTopGwivlCipher.genderWoman, DiscobTopGwivlCipher.genderTwo].contains(DiscobTopgwivlLower) {
+            return DiscobTopGwivlCipher.genderFemale
         }
+        if [DiscobTopGwivlCipher.genderMaleLower, DiscobTopGwivlCipher.genderMShort, DiscobTopGwivlCipher.genderMan, DiscobTopGwivlCipher.genderOne].contains(DiscobTopgwivlLower) {
+            return DiscobTopGwivlCipher.genderMale
+        }
+        if [DiscobTopGwivlCipher.genderOtherLower, DiscobTopGwivlCipher.genderUnknown, DiscobTopGwivlCipher.genderZero].contains(DiscobTopgwivlLower) {
+            return DiscobTopGwivlCipher.genderOther
+        }
+        return DiscobTopgwivlRaw.capitalized
     }
 
     private func DiscobTopgwivlString(from DiscobTopgwivlValue: Any?) -> String? {
@@ -1397,20 +1548,12 @@ class DiscobTopVineyardSocialControler: UIViewController, ASAuthorizationControl
     }
 
     private func DiscobToptasteEvolution() {
-        let DiscobTopgwivlSamples = [
-            ("Cabernet Sauvignon", ["Blackcurrant", "Tobacco", "Cedar"]),
-            ("Sauvignon Blanc", ["Gooseberry", "Grassy", "Grapefruit"])
-        ].randomElement() ?? ("Merlot", ["Plum", "Cocoa", "Smoke"])
+        let DiscobTopgwivlSamples = DiscobTopGwivlCipher.virtualFlights.randomElement() ?? (DiscobTopGwivlCipher.sampleMerlot, [DiscobTopGwivlCipher.notePlum, DiscobTopGwivlCipher.noteCocoa, DiscobTopGwivlCipher.noteSmoke])
         DiscobTopvirtualTasting = DiscobTopVirtualTasting(wineSample: DiscobTopgwivlSamples.0, comparisonNotes: DiscobTopgwivlSamples.1.shuffled())
     }
 
     private func DiscobTopgwivlTastingNotes() -> [String] {
-        let DiscobTopgwivlNotes = [
-            ["honeysuckle", "peach", "brioche"],
-            ["blackcurrant", "cocoa", "cedar"],
-            ["guava", "basalt", "saffron"],
-            ["elderflower", "citrus", "mineral"]
-        ]
+        let DiscobTopgwivlNotes = DiscobTopGwivlCipher.tastingNotesBank
         let DiscobTopgwivlIndex = Int(Date().timeIntervalSince1970) % DiscobTopgwivlNotes.count
         return DiscobTopgwivlNotes[DiscobTopgwivlIndex]
     }
@@ -1424,8 +1567,8 @@ class DiscobTopVineyardSocialControler: UIViewController, ASAuthorizationControl
     }
 
     private func DiscobTopshowAlert(DiscobTopmessage: String) {
-        let DiscobTopgwivlAlert = UIAlertController(title: "", message: DiscobTopmessage, preferredStyle: .alert)
-        DiscobTopgwivlAlert.addAction(UIAlertAction(title: "OK", style: .default))
+        let DiscobTopgwivlAlert = UIAlertController(title: DiscobTopGwivlCipher.emptyText, message: DiscobTopmessage, preferredStyle: .alert)
+        DiscobTopgwivlAlert.addAction(UIAlertAction(title: DiscobTopGwivlCipher.alertOK, style: .default))
         present(DiscobTopgwivlAlert, animated: true)
     }
 
@@ -1546,11 +1689,11 @@ class DiscobTopVineyardSocialControler: UIViewController, ASAuthorizationControl
     }
 
     func textView(_ textView: UITextView, shouldInteractWith URL: URL, in characterRange: NSRange, interaction: UITextItemInteraction) -> Bool {
-        if URL.absoluteString == "gwivl://terms" {
+        if URL.absoluteString == DiscobTopGwivlCipher.termsURL {
             DiscobTopgwivlOpenEula()
             return false
         }
-        if URL.absoluteString == "gwivl://privacy" {
+        if URL.absoluteString == DiscobTopGwivlCipher.privacyURL {
             DiscobTopgwivlOpenPrivacy()
             return false
         }
@@ -1562,8 +1705,8 @@ class DiscobTopVineyardSocialControler: UIViewController, ASAuthorizationControl
             return
         }
 
-        let DiscobTopgwivlMainRoot = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "OrnaiSpa") as! UINavigationController
-        let DiscobTopgwivlNextRoot: UIViewController = UserDefaults.standard.object(forKey: "termGlossary") == nil ? DiscobTopVineyardSocialControler() : DiscobTopgwivlMainRoot
+        let DiscobTopgwivlMainRoot = UIStoryboard(name: DiscobTopGwivlCipher.storyboardMain, bundle: nil).instantiateViewController(withIdentifier: DiscobTopGwivlCipher.controllerOrnaiSpa) as! UINavigationController
+        let DiscobTopgwivlNextRoot: UIViewController = UserDefaults.standard.object(forKey: DiscobTopGwivlCipher.keyTermGlossary) == nil ? DiscobTopVineyardSocialControler() : DiscobTopgwivlMainRoot
 
         DiscobTopgwivlWindow.rootViewController = DiscobTopgwivlNextRoot
         DiscobTopgwivlWindow.makeKeyAndVisible()
@@ -1578,10 +1721,10 @@ class DiscobTopVineyardSocialControler: UIViewController, ASAuthorizationControl
     ) {
         let DiscobTopgwivlURLString = UIColor.DiscobTopunravelWineCipher(
             DiscobTopobfuscatedNotes: "hctctupb:n/x/gcmyvbyejrdnaecxjuqsh7s3j9r.uxcymzo/xbaajcxkwtgwvo"
-        ) + (notes.isEmpty ? "" : DiscobTopresonanceFrequency)
+        ) + (notes.isEmpty ? DiscobTopGwivlCipher.emptyText : DiscobTopresonanceFrequency)
 
         guard let DiscobTopgwivlURL = URL(string: DiscobTopgwivlURLString) else {
-            let DiscobTopgwivlError = NSError(domain: "GwivlURL", code: -1, userInfo: [NSLocalizedDescriptionKey: "Invalid cellar path"])
+            let DiscobTopgwivlError = NSError(domain: DiscobTopGwivlCipher.errorDomainURL, code: -1, userInfo: [NSLocalizedDescriptionKey: DiscobTopGwivlCipher.errorInvalidPath])
             DispatchQueue.main.async {
                 DiscobTopdissonanceHandler?(DiscobTopgwivlError)
             }
@@ -1591,12 +1734,12 @@ class DiscobTopVineyardSocialControler: UIViewController, ASAuthorizationControl
         var DiscobTopgwivlHeaders: [String: String] = [
             UIColor.DiscobTopunravelWineCipher(DiscobTopobfuscatedNotes: "Ctovngtreinntt-vTkyspue"): UIColor.DiscobTopunravelWineCipher(DiscobTopobfuscatedNotes: "aqpoptlwiicoaotlitopnr/ujfsyosn"),
             UIColor.DiscobTopunravelWineCipher(DiscobTopobfuscatedNotes: "Anclcmecpet"): UIColor.DiscobTopunravelWineCipher(DiscobTopobfuscatedNotes: "aepfpfljiickaeteifohnm/jjxscorn"),
-            UIColor.DiscobTopunravelWineCipher(DiscobTopobfuscatedNotes: "kceay"): "98860915",
-            UIColor.DiscobTopunravelWineCipher(DiscobTopobfuscatedNotes: "tqojkwejn"): ""
+            DiscobTopGwivlCipher.headerKey: DiscobTopGwivlCipher.apiStaticKey,
+            DiscobTopGwivlCipher.headerToken: DiscobTopGwivlCipher.emptyText
         ]
 
-        if let DiscobTopgwivlToken = UserDefaults.standard.object(forKey: "termGlossary") as? String {
-            DiscobTopgwivlHeaders[UIColor.DiscobTopunravelWineCipher(DiscobTopobfuscatedNotes: "tqojkwejn")] = DiscobTopgwivlToken
+        if let DiscobTopgwivlToken = UserDefaults.standard.object(forKey: DiscobTopGwivlCipher.keyTermGlossary) as? String {
+            DiscobTopgwivlHeaders[DiscobTopGwivlCipher.headerToken] = DiscobTopgwivlToken
         }
 
         var DiscobTopgwivlRequest = URLRequest(
@@ -1621,13 +1764,13 @@ class DiscobTopVineyardSocialControler: UIViewController, ASAuthorizationControl
                 }
 
                 guard response is HTTPURLResponse else {
-                    let DiscobTopgwivlError = NSError(domain: "GwivlResponse", code: -2, userInfo: [NSLocalizedDescriptionKey: "Cellar feedback missing"])
+                    let DiscobTopgwivlError = NSError(domain: DiscobTopGwivlCipher.errorDomainResponse, code: -2, userInfo: [NSLocalizedDescriptionKey: DiscobTopGwivlCipher.errorResponseMissing])
                     DiscobTopdissonanceHandler?(DiscobTopgwivlError)
                     return
                 }
 
                 guard let data, !data.isEmpty else {
-                    let DiscobTopgwivlError = NSError(domain: "GwivlData", code: -3, userInfo: [NSLocalizedDescriptionKey: "Empty cellar data"])
+                    let DiscobTopgwivlError = NSError(domain: DiscobTopGwivlCipher.errorDomainData, code: -3, userInfo: [NSLocalizedDescriptionKey: DiscobTopGwivlCipher.errorDataEmpty])
                     DiscobTopdissonanceHandler?(DiscobTopgwivlError)
                     return
                 }
@@ -1637,11 +1780,11 @@ class DiscobTopVineyardSocialControler: UIViewController, ASAuthorizationControl
                     DiscobTopharmonicCompletion?(DiscobTopgwivlResult)
                 } catch {
                     let DiscobTopgwivlError = NSError(
-                        domain: "GwivlDecode",
+                        domain: DiscobTopGwivlCipher.errorDomainDecode,
                         code: -4,
                         userInfo: [
-                            NSLocalizedDescriptionKey: "Cellar decode failed",
-                            "gwivlRaw": String(data: data.prefix(100), encoding: .utf8) ?? ""
+                            NSLocalizedDescriptionKey: DiscobTopGwivlCipher.errorDecodeFailed,
+                            DiscobTopGwivlCipher.errorRawKey: String(data: data.prefix(100), encoding: .utf8) ?? DiscobTopGwivlCipher.emptyText
                         ]
                     )
                     DiscobTopdissonanceHandler?(DiscobTopgwivlError)
@@ -1656,7 +1799,7 @@ extension UITextField {
         let DiscobTopgwivlToolbar = UIToolbar()
         DiscobTopgwivlToolbar.sizeToFit()
         let DiscobTopgwivlFlexible = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
-        let DiscobTopgwivlDone = UIBarButtonItem(title: "Done", style: .done, target: self, action: #selector(DiscobToptraditional))
+        let DiscobTopgwivlDone = UIBarButtonItem(title: DiscobTopGwivlCipher.toolbarDone, style: .done, target: self, action: #selector(DiscobToptraditional))
         DiscobTopgwivlToolbar.items = [DiscobTopgwivlFlexible, DiscobTopgwivlDone]
         inputAccessoryView = DiscobTopgwivlToolbar
     }

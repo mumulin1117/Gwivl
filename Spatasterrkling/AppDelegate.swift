@@ -28,7 +28,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     private func DiscobToprecordFermentationStatus() {
-        // 记录发酵状态，无需额外操作
+       
     }
 
     private func DiscobTophandleUnknownVintage() {

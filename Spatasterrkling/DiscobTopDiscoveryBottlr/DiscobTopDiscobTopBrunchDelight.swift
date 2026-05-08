@@ -229,13 +229,14 @@ class DiscobTopDiscobTopBrunchDelight: UIViewController {
         let climateAssessment = self.DiscobTopmeasureSunExposure()
         let canopyManagement = self.DiscobTopanalyzeVineHealth()
         let harvestTiming = 1
-        
+     
         return [
             "agerulee": terroirAnalysis,
             "agerulet": climateAssessment,
             "agerulek": canopyManagement,
             "ageruleg": harvestTiming
         ]
+       
     }
 
     private func DiscobTopevaluateSoilComposition() -> [String] {
