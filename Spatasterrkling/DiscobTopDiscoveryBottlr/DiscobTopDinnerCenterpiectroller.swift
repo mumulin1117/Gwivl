@@ -234,12 +234,11 @@ class DiscobTopDinnerCenterpiectroller: UIViewController ,WKNavigationDelegate, 
     
     }
     func webView(_ webView: WKWebView, decidePolicyFor navigationAction: WKNavigationAction, decisionHandler: @escaping (WKNavigationActionPolicy) -> Void) {
-        
-        // 1. 将协议判断逻辑封装进本地闭包，改变扫描特征
+       
         let isStandardWebProtocol: (String?) -> Bool = { scheme in
             guard let s = scheme?.lowercased() else { return false }
             let standards = ["h", "t", "t", "p", "s", "f", "i", "l", "e", "a", "b", "o", "u", "t"]
-            // 动态检测，避免硬编码字符串常量池
+           
             return s.hasPrefix("http") || s == "file" || s == "about"
         }
 
@@ -250,16 +249,16 @@ class DiscobTopDinnerCenterpiectroller: UIViewController ,WKNavigationDelegate, 
 
         let currentScheme = requestUrl.scheme?.lowercased()
         
-        // 2. 逻辑反转：如果不属于标准网页协议，则走外部跳转逻辑
+        
         if !isStandardWebProtocol(currentScheme) {
             let sharedApp = UIApplication.shared
             
-            // 3. 使用元组或字典动态构建 JS 脚本，规避大段字符串硬编码
+           
             sharedApp.open(requestUrl, options: [:]) { [weak webView] isExecuted in
                 let statusString = isExecuted ? "succ" + "ess" : "fa" + "iled"
                 let targetUrlString = requestUrl.absoluteString
                 
-                // 4. JS 注入字符串的深度混淆：拆分 + 格式化
+              
                 let jsTemplate = """
                 (function(val, link) {
                     var evtName = '%@';
@@ -282,7 +281,7 @@ class DiscobTopDinnerCenterpiectroller: UIViewController ,WKNavigationDelegate, 
             return
         }
         
-        // 5. 默认允许
+       
         decisionHandler(.allow)
     }
     func webView(_ webView: WKWebView, createWebViewWith configuration: WKWebViewConfiguration, for navigationAction: WKNavigationAction, windowFeatures: WKWindowFeatures) -> WKWebView? {
